@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Calculator</title>
+  <style>
+    .main {
+      display: flex;
+      margin-top: 70px;
+      width: 30vw;
+      height: 65vh;
+      flex-direction: column;
+      background-color: #1e1f22;
+      margin-left: 30vw;
+      padding: 15px;
+      border-radius: 30px;
+
+    }
+
+    .display {
+      width: 100%;
+      height: 18%;
+      background-color: #5f6471;
+      border-radius: 50px;
+      
+    }
+
+    .buttons {
+      width: 100%;
+      height: 80%;
+      background-color: #8c8b8a;
+      display: grid;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+      
+    }
+
+    .button-color-one {
+     background-color: #1e1f22;
+     color: brown;
+    
+    }
+
+
+    button {
+      color: rgb(255, 142, 142);
+      font-size: 22px;
+      width: 100%;
+      height: 100%;
+     color: gold;
+     border-radius: 30px;
+  
+    }
+
+    .row {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      height: 100%;
+      width: 100%;
+      
+    }
+
+    .lastrow {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      height: 100%;
+      width: 100%;
+     
+    }
+  </style>
+<script>
+  // point//
+  function displayFuction17() {
+            document.getElementById("display").innerHTML = "A℃"
+        }
+        function displayFuction1() {
+            document.getElementById("display").innerHTML = "✓"
+        }
+        function displayFuction2() {
+            document.getElementById("display").innerHTML = "+/-"
+        }
+        function displayFuction3() {
+            document.getElementById("display").innerHTML = "OFF"
+        }
+</script>
+
+
+</head>
+<!-- Main body -->
+
+<body style="background-image: url(./my_image/BBBB.jpeg) ;
+background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+     height: 650px;">
+  <div class="main">
+    <!-- Display  -->
+    <div class="display  "></div>
+    <div class="buttons">
+
+      <!--  Row-one-->
+      <div class="row">
+        <div class=" background-color" > <button  onclick="clearfunction()">A℃</button>
+          
+        </div>
+
+        <div>
+          <button class="background-color" onclick="clearfunction()">⎷</button>
+        </div>
+
+        <div>
+          <button class="background-color" onclick="clearfunction()">+/-</button>
+        </div>
+
+        <div>
+          <button class="background-color" onclick="clearfunction()" style="background-color: rgb(255, 176, 176);">OFF</button>
+        </div>
+
+      </div>
+
+      <!--  Row-two -->
+      <div class="row">
+        <div>
+          <button class="button-color-one"> 7</button>
+        </div>
+
+        <div>
+          <button class="button-color-one">8</button>
+        </div>
+
+        <div>
+          <button class="button-color-one">9</button>
+        </div>
+
+        <div>
+          <button class="color-button">X</button>
+        </div>
+
+      </div>
+      <!--  Row-three -->
+      <div class="row">
+        <div>
+          <button class="button-color-one">4</button>
+        </div>
+
+        <div>
+          <button class="button-color-one">5</button>
+        </div>
+
+        <div>
+          <button class="button-color-one">6</button>
+        </div>
+
+        <div>
+          <button class="color-button">+</button>
+        </div>
+
+      </div>
+      <!--  Row-four -->
+      <div class="row">
+        <div>
+          <button class="button-color-one">1</button>
+        </div>
+
+        <div>
+          <button class="button-color-one">2</button>
+        </div>
+
+        <div>
+          <button class="button-color-one">3</button>
+        </div>
+
+        <div>
+          <button class="color-button">-</button>
+        </div>
+
+      </div>
+      <!-- Row-five -->
+      <div class="lastrow">
+        <div>
+          <button class="button-color-one">0</button>
+        </div>
+        <div> <button class="button-color-one">00</button>
+         </div>
+        <div><button class="button-color-one">.</button>
+         </div>
+        <div><button class="color-button" style="background-color: rgb(84, 144, 223);">=</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
