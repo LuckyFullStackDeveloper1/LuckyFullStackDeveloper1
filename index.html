@@ -71,11 +71,11 @@
         let questionNumber = 0;
         function questionOne() {
             document.getElementById("display-text").innerHTML =
-                "1)  Which of these technologies was the first to be developed?";
-            document.getElementById("answer-one").innerHTML = " A)World Wide Web";
-            document.getElementById("answer-two").innerHTML = " B)Digital camera";
-            document.getElementById("answer-three").innerHTML = " C)Electric car";
-            document.getElementById("answer-four").innerHTML = " D)Mobile phone";
+                "1) fist match of ipl  2024   ";
+            document.getElementById("answer-one").innerHTML = " A) csk VS mi";
+            document.getElementById("answer-two").innerHTML = " B) csk vs dc";
+            document.getElementById("answer-three").innerHTML = " C) mi vs rcb ";
+            document.getElementById("answer-four").innerHTML = " D) csk vs rcb";
 
         }
         function questionTwo() {
@@ -219,7 +219,7 @@
         function answer(givenAnswer) {
             let ned = new Audio("./my_image/shi j.m4a");
             if (questionNumber == 1) {
-                if (givenAnswer == 1) {
+                if (givenAnswer == 4) {
 
                     answerOne(true, 2);
                     ned.play();
