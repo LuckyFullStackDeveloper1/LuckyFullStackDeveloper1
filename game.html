@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Numpuz</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    .container {
+        display: grid;
+        grid-template-columns: repeat(3, 100px);
+        grid-template-rows: repeat(3, 100px);
+        gap: 5px;
+        margin-left: 200px;
+        margin-top: 100px;
+        border-style: solid;
+        width: 310px;
+        font-size: 60px;
+        background-color: #FFBB64;
+        border-width: 20px;
+        border-radius: 30px;
+    }
+    .tile {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #ff8d8d;
+        cursor: pointer;
+        font-size: 24px;
+        color: #ff8d8d;
+    }
+</style>
+</head>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const container = document.getElementById('container');
+    const tiles = [];
+    let emptyRow = 2;
+    let emptyCol = 2;
+
+    function createGrid() {
+        for (let i = 0; i < 3; i++) {
+            tiles[i] = [];
+            for (let j = 0; j < 3; j++) {
+                const tile = document.createElement('div');
+                tile.className = 'tile';
+                tile.dataset.row = i;
+                tile.dataset.col = j;
+                tile.addEventListener('click', moveTile);
+                tiles[i][j] = tile;
+                container.appendChild(tile);
+            }
+        }
+        shuffle();
+    }
+
+    function shuffle() {
+        const numbers = Array.from({ length: 9 }, (_, index) => index + 1);
+        numbers.sort(() => Math.random() - 0.5);
+        for (let i = 0; i < 3; i++) {
+            for (let j = 0; j < 3; j++) {
+                const tile = tiles[i][j];
+                if (i === emptyRow && j === emptyCol) {
+                    tile.textContent = '';
+                } else {
+                    tile.textContent = numbers.shift();
+                }
+            }
+        }
+    }
+
+    function moveTile(event) {
+        const tile = event.target;
+        const row = parseInt(tile.dataset.row);
+        const col = parseInt(tile.dataset.col);
+        if ((row === emptyRow && Math.abs(col - emptyCol) === 1) || (col === emptyCol && Math.abs(row - emptyRow) === 1)) {
+            tiles[emptyRow][emptyCol].textContent = tile.textContent;
+            tile.textContent = '';
+            emptyRow = row;
+            emptyCol = col;
+        }
+        if (checkWin()) {
+            setTimeout(() => {
+                alert('Congratulations! You solved the puzzle!');
+                shuffle();
+            }, 100);
+        }
+    }
+
+    function checkWin() {
+        for (let i = 0; i < 3; i++) {
+            for (let j = 0; j < 3; j++) {
+                if (i === 2 && j === 2) {
+                    continue;
+                }
+                if (parseInt(tiles[i][j].textContent) !== i * 3 + j + 1) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
+    createGrid();
+});
+</script>
+<body>
+    <div class="container" id="container"></div>
+</body>
+</html>

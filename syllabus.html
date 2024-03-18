@@ -5,47 +5,56 @@
 
     <!-- links -->
 
-    <link rel="stylesheet" href="">
+
     <!-- styles -->
     <style>
         table,
         th,
         td {
             border-style: double;
-            background-color: #E98;
+            background-color: rgb(241, 90, 255);
             width: 800px;
             height: 30px;
             margin-left: 240px;
             margin-top: 30px;
             font-family: Georgia, 'Times New Roman', Times, serif;
-            width: 900px;
+            width: 950px;
+            border-width: 4px;
+        }
 
+        /* header */
+        .qaz {
 
-
+            font-size: 2vmin;
+            color: #000;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
         }
 
 
         .CHEMISTRY {
-            background-color: rgb(194, 221, 86);
+            background-image: url(./my_image/chem.jpeg);
             padding: 15px;
-            font-family: 'Rubik Glitch Pop', system-ui;
             font-size: 20px;
+            color: rgb(255, 255, 255);
 
         }
 
         .PHYSICS {
-            background-color: rgb(240, 106, 216);
+            background-image: url(my_image/physics.jpeg);
             padding: 15px;
             font-size: 20px;
+            color: rgb(255, 255, 255);
 
 
         }
 
         .MATH {
-            background-color: rgb(255, 196, 0);
+            color: white;
             padding: 15px;
-            font-family: 'Rubik Glitch Pop', system-ui;
             font-size: 20px;
+            background-image: url(./my_image/./math.jpeg);
 
         }
 
@@ -68,24 +77,47 @@
 
         }
 
+        .dt {
+            padding: 30px;
+            font-family: 'Rubik Glitch Pop', system-ui;
+            background-color: coral;
+
+        }
+
         .the {
             text-align: center;
             font-size: 13px;
             color: rgb(220, 255, 20);
             background-color: rgb(122, 140, 255);
         }
-        .and{
-            color: rgb(93, 247, 47);
+
+        .and {
+            color: rgb(247, 47, 47);
             text-align: center;
             font-family: monospace;
-           
+            background-color: rgb(145, 194, 41);
+
+
+        }
+
+        .deign {
+            color: rgb(33, 65, 180);
+            text-align: center;
+            font-family: monospace;
+            background-color: darkorange;
         }
     </style>
 
     <!-- title -->
 </head>
 
+
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+
+
 <body style="background-image: url(./imagesthree.jpeg);height: 3000; background-size: cover;">
+
     <table>
 
 
@@ -95,12 +127,28 @@
             <tr>
                 <th class="st">SR.NO</th>
                 <th class="rt"> CHAPTERS</th>
+                <th class="dt">TOPICS</th>
                 <th class="tp">PERCENTAGE </th>
+
             </tr>
             <!-- first  -->
             <tr>
                 <td class="the">1</td>
-                <td class="and"> Units and Measurements</td>
+                <td class="and"> Units and Measurements </td>
+                <td class="deign">
+                    <details>
+                        <div class="qaz">
+                            <span id="element">
+                            </span>
+                        </div>
+                        <script>
+                            var typed = new Typed('#element', {
+                                strings: ['', '1)_ Physical quantity', '2)_ Fundamental and derived units', '1.SI units 2.Dimensions ', '3)_ Application of Dimensional Analysiso 1.Limitations of Dimensional Analysis', '4)_ Rounding off', '5)_Significant Figures', '6)_ Order of Magnitude', '7)_ Errors of Measurement', '8)_ Propagation of Errors.'],
+                                typeSpeed: 100,
+                            });
+                        </script>
+                    </details>
+                </td>
                 <td class="the">[ 30%]</td>
 
             </tr>
@@ -438,10 +486,11 @@
                 <td class="the"> [ 0% ] </td>
             </tr>
     </table>
-
-
-
     </tbody>
+
+
 </body>
+
+
 
 </html>

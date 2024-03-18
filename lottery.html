@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    .main-container {
+      background-color: rgb(248, 241, 44);
+      width: 40vw;
+      margin-left: 30vw;
+      height: 30vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      margin-top: 10%;
+    }
+
+    .input-container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .display {
+      background-color: rgb(202, 230, 173);
+      width: 96.18%;
+      height: 40%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 32px;
+      padding: 10px;
+    }
+
+    .input-box {
+      height: 44px;
+      width: 80%;
+      font-size: 22px;
+    }
+
+    .button {
+      width: 30%;
+      margin: 20px;
+      height: 30px;
+      background-color: lightgreen;
+      font-size: 22px;
+    }
+
+    .loader {
+      border: 16px solid #f3f3f3;
+      border-radius: 50%;
+      border-top: 16px solid #db3434;
+      border-bottom: 16px solid #34db4a;
+      border-right: 16px solid #ffea00;
+      border-left: 16px solid #04f9e9;
+      width: 120px;
+      height: 120px;
+      -webkit-animation: spin 2s linear infinite;
+      /* Safari */
+      animation: spin 2s linear infinite;
+    }
+
+    /* Safari */
+    @-webkit-keyframes spin {
+      0% {
+        -webkit-transform: rotate(0deg);
+      }
+
+      100% {
+        -webkit-transform: rotate(360deg);
+      }
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+  <script>
+    let coins = 100;
+
+    function startPlay() {
+      document.getElementById("loader").style.display = "block";
+      setTimeout(() => {
+        startlottry();
+      }, 1000)
+    }
+
+    function startlottry() {
+      document.getElementById("loader").style.display = "none";
+      let output = parseInt((Math.random() * 100) / 10);
+      let betnumber = document.getElementById("input").value;
+      let betcoins;
+    }
+
+
+
+
+  </script>
+</head>
+
+<body style="margin: 0px">
+  <div class="main-container">
+    <div class="display" id="display">
+      <h1 class="display-text" id="display-text"></h1>
+      <div id="loader" class="loader"></div>
+    </div>
+
+    <div class="input-container">
+      <input id="input" type="number" class="input-box" placeholder="Bet Number" />
+      <input id="coins" type="number" class="input-box" placeholder="Coins" />
+      <button class="button" onclick="startPlay()">CLICK ME</button>
+    </div>
+  </div>
+</body>
+
+</html>

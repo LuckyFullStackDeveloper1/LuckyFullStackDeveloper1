@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- styling -->
+    <style>
+        .main-container {
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwyhtvVmmNGGeGkqPQ6Ju_CKol2ihqvGg38FZrbo86baMf_JILUk4UCBqmdLGqwFes6iM&usqp=CAU);
+            background-size: cover;
+            height: 80vh;
+            width: 50vw;
+            margin-left: 20%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            margin-top: 40px;
+            border-style: solid;
+            box-shadow: 20px 40px 100px 20px rgb(13, 195, 219);
+
+        }
+
+        .display {
+
+    
+            height: 70%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 22px;
+           
+
+
+        }
+
+
+        .input-box {
+            background-color: #0abeff;
+            height: 50px;
+            width: 60%;
+            margin: 10%;
+           
+            display: flex;
+            align-self: center;
+            border-style: solid;
+            border-width: 3px;
+            border-color: black;
+            color: antiquewhite;
+
+        }
+
+
+        .button {
+            background-color: rgb(80, 209, 192);
+            height: 60px;
+            width: 40%;
+            margin-left: 30%;
+            font-family: monospace;
+        }
+       
+    </style>
+    <!-- using script -->
+    <script>
+
+        function displaytext() {
+            let x = document.getElementById("input").value;
+            let output = "";
+            let y = 1;
+            while (y <= 10) {
+                
+                let result = y * x;
+                output = output + x + " * " + y + " = " + result;
+                output = output + "<br/>";
+                y = y + 1;
+            }
+
+            document.getElementById("display").innerHTML = output;
+        }
+
+        function Cleartext() {
+            document.getElementById("display").innerHTML = "";
+        }
+
+    </script>
+</head>
+
+<body style=" margin: 0px;">
+    <!-- main container -->
+    <div class="main-container">
+       
+       </button> <div class="display" class="image" id="display">    </div>
+        <input class="input-box" id="input" >
+        <div class="input-container">
+            <button class="button" onmouseenter=" displaytext()" onmouseleave="Cleartext()" >Click here</button>
+
+        </div>
+    </div>
+</body>
+
+</html>
