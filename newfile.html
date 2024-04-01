@@ -1,151 +1,38 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 
 <head>
     <style>
-        .maion {
-            height: 660px;
-            width: 550px;
-            background-color: rgb(0, 0, 0);
-            border-style: solid;
-            margin-left: 100px;
-            margin-top: 70px;
-            margin-bottom: 10px;
-            border-width: 10px;
-        }
-
-        .main-container {
-            background-color: rgb(239, 114, 114);
-            width: 25vw;
-            height: 80vh;
-            display: flex;
-            flex-direction: column;
-            margin: 0%;
-            margin-left: 100px;
-            margin-top: 70px;
-            border-style: solid;
-            border-radius: 50%;
-        }
-
-        .display {
-            background-color: rgb(62, 182, 100);
-            width: 200px;
-            height: 30%;
-            border-radius: 40%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 32px;
-            padding: 10px;
-            margin-left: 65px;
-            margin-top: 70px;
-
-        }
-
         .button {
-            width: 30%;
-            margin: 20px;
-            height: 30px;
-            background-color: lightgreen;
-            font-size: 22px;
-            margin-left: 120px;
-        }
+            color: rgb(169, 36, 36);
+            height: 50px;
+            width: 100px;
+            background-color: rgb(169, 36, 36);
 
-
-        .input-box {
-            height: 24px;
-            width: 40%;
-            font-size: 22px;
-            margin-left: 20px;
-            background-color: rgb(92, 227, 159);
-            margin-top: 60px;
         }
     </style>
 
     <script>
-        //    function          
-        function remaningDasy() {
-            // input
-            let x = 123;
-            // prosess
-            let y = x.toString();
-            let z = 100 - y;
-
-            // output
-            console.log("print y", y, x)
-            document.getElementById("display").innerHTML = y + "daysRemaning";
-        }
-
-    </script>
-</head>
-
-<body style="background-color: rgb(0, 0, 0);">
-    <div class="maion">
-        <div class="main-container">
-            <div class="display" id="display">
-                <h1 class="display-text" id="display-text"></h1>
-                <div id="loader" class="loader"></div>
-            </div>
-
-            <div class="input-container">
-                <input id="input" type="number" class="input-box" placeholder="" />
-                <input id="point" type="number" class="input-box" placeholder="" />
-                <br>
-                <button class="button" onclick="remaningDasy()">PLAY</button>
-            </div>
-        </div>
-    </div>
-</body>
-
-</html> -->
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <style>
-        .ticket {
-  border: 1px solid #000;
-  padding: 10px;
-  margin-bottom: 10px;
-}
-
-.half {
-  background-color: lightblue;
-}
-
-.full {
-  background-color: lightgreen;
-}
-
-.bought {
-  opacity: 0.5;
-}   
-    </style>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ticketing System</title>
-    <script>// Function to buy a ticket
-        function buyTicket(type) {
-            const tickets = document.querySelectorAll('.ticket');
-            tickets.forEach(ticket => {
-                if (ticket.classList.contains(type)) {
-                    ticket.classList.add('bought');
-                }
-            });
+        function table() {
+            let input = [];
+            for (let x = 0; x < 3; x++) {
+                input[x] = prompt("ENTER YOUR MUMBER = " + x + " index = ");
+            }
+            for (let y = 2; y >= 0; y--){
+              console.log(" THE ANS IS ", input[y]); }
         }
     </script>
 </head>
 
 <body>
-    <div id="tickets">
-        <div class="ticket half">Half Ticket</div>
-        <div class="ticket full">Full Ticket</div>
+    <!-- main container -->
+
+    <div id="display"></div>
+    <input type="text">
+    <button class="button" onclick="table()">chack</button>
+
     </div>
-
-    <button onclick="buyTicket('half')">Buy Half Ticket</button>
-    <button onclick="buyTicket('full')">Buy Full Ticket</button>
-
-    <script src="script.js"></script>
+    </div>
 </body>
 
 </html>

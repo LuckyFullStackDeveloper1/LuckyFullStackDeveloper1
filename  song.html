@@ -7,16 +7,15 @@
   <style>
     /* main */
     .main {
-      margin-left: 300px;
-      margin-top: 60px;
-      height: 500px;
-      width: 560px;
+
+
+      height: 300px;
+      width: 500px;
       border-style: solid;
-      border-width: 10px;
-      border-radius: 50%;
-      background-image: url(./my_image/songbacjpeg.jpeg);
+      background-image: url(./image_project/songbacjpeg.jpeg);
       background-repeat: no-repeat;
       background-size: cover;
+      border-radius: 10%;
     }
 
 
@@ -25,141 +24,83 @@
       background-color: lightblue;
       height: 50px;
       width: 100px;
-      margin-left: 170px;
+
       ;
-      border-radius: 20%;
+      border-radius: 50%;
     }
+
+
 
     .Pause {
       height: 50px;
       width: 100px;
       background-color: lightcoral;
-      margin-left: 170px;
-      ;
-      border-radius: 20%;
+      border-radius: 50%;
     }
 
-    .Stop {
-      background-color: rgb(201, 143, 255);
-      height: 50px;
-      width: 100px;
-      border-radius: 20%;
-      margin-left: 170px;
-      ;
-    }
+
+
 
     .Next {
       background-color: cadetblue;
       height: 50px;
       width: 100px;
-      margin-left: 125px;
-      ;
-      border-radius: 20%;
+      border-radius: 50%;
     }
 
-    /* button- background */
-    .one {
-      background-color: rgb(148, 255, 255);
-      width: 457px;
-      height: 50px;
-      border-radius: 40%;
-      margin-left: 9%;
-    }
-
-    .two {
-      background-color: rgb(255, 113, 163);
-      width: 457px;
-      height: 50px;
-      border-radius: 40%;
-      margin-left: 9%;
-    }
-
-    .three {
-      background-color: rgb(120, 255, 122);
-      width: 457px;
-      height: 50px;
-      margin-left: 9%;
-      border-radius: 40%;
 
 
-    }
-
-    .four {
-      background-color: rgb(255, 207, 136);
-      width: 370px;
-      height: 50px;
-      margin-left: 17%;
-      border-radius: 40%;
-    }
 
     /* main-image  */
     .main-two {
-      background-image: url("./my_image/songggggg.png") ;
+      background-image: url("./my_image/songggggg.png");
       height: 200px;
       width: 500px;
-     margin-left: 250px;
+      margin-left: 250px;
       background-repeat: no-repeat;
-     
+
     }
 
-    
-
-    /* HTML: <div class="loader"></div> */
-    .loader {
-      width: 80px;
-      height: 70px;
-      border: 5px solid #000;
-      padding: 0 8px;
-      box-sizing: border-box;
-      background:
-        linear-gradient(#fff 0 0) 0 0/8px 20px,
-        linear-gradient(#fff 0 0) 100% 0/8px 20px,
-        radial-gradient(farthest-side, #fff 90%, #0000) 0 5px/8px 8px content-box,
-        #000;
-      background-repeat: no-repeat;
-      animation: l3 2s infinite linear;
-    }
-
-    @keyframes l3 {
-      25% {
-        background-position: 0 0, 100% 100%, 100% calc(100% - 5px)
-      }
-
-      50% {
-        background-position: 0 100%, 100% 100%, 0 calc(100% - 5px)
-      }
-
-      75% {
-        background-position: 0 100%, 100% 0, 100% 5px
-      }
+    .lucky {
+      display: flex;
+      flex-direction: column;
+      
+      justify-content: space-around;
+      /* flex-direction: row; */
+      justify-content: center;
+      align-items: center;
+  
     }
   </style>
 </head>
 
 <!-- BODY  -->
 
-<body style="background-size: cover;" background="./my_image/BBBB.jpeg">
+<body>
   <audio id="myAudio"></audio>
   <!-- DIV-CLASS -->
-  <div class="loader">
-  
-  </div>
+
+
+
   <div class="main">
-    <div class="main-two"></div>
-  
-    <div class="three"> <button class="play" onclick="playAudio()">Play</button></div>
-    <div class="one"> <button class="Pause" onclick="pauseAudio()">Pause</button></div>
-    <div class="two"> <button class="Stop" onclick="stopAudio()">Stop</button></div>
-    <div class="four"> <button class="Next" onclick="nextSong()">Next Song</button> </div>
+
+    <div class="lucky">
+      <div class="three"> <button class="play" onclick="playAudio()">▲</button></div>
+      <br><br>
+      <div class="one"> <button class="Pause" onclick="pauseAudio()">❑</button></div>
+      <br><br>
+
+      <div class="four"> <button class="Next" onclick="nextSong()">⇥</button> </div>
+    </div>
 
   </div>
   <!-- Script -->
   <script>
-    const songs = ["Game - Sidhu Moose Wala (1).mp3", "295(PaglaSongs) (1).mp3", "Tu Hai Kahan(PagalWorld.com.pe).mp3", "Ye Tune Kya Kiya-(PagalWorld).mp3", "Besharam Bewaffa 128 Kbps.mp3", "128-Main Rang Sharbaton Ka - Phata Poster Nikhla Hero 128 Kbps.mp3"];
+    let songs = ["./image_project/Ye Tune Kya Kiya-(PagalWorld).mp3"];
     let currentSongIndex = 0;
     const audio = document.getElementById("myAudio");
     // 
-    function playAudio() {
+          function playAudio() {
       audio.play();
     }
 
@@ -167,10 +108,7 @@
       audio.pause();
     }
 
-    function stopAudio() {
-      audio.pause();
-      audio.currentTime = 0;
-    }
+
 
     function nextSong() {
       currentSongIndex = (currentSongIndex + 1) % songs.length;
@@ -178,6 +116,7 @@
       audio.play();
     }
   </script>
+  </div>
 </body>
 
 </html>
