@@ -14,12 +14,22 @@
 
     <script>
         function table() {
-            let input = [];
-            for (let x = 0; x < 3; x++) {
-                input[x] = prompt("ENTER YOUR MUMBER = " + x + " index = ");
+            let student = {};
+            let i = 0;
+            while (i < 3) {
+                student["firsName  "] = prompt("ENTER FIRST NAME =");
+                student["lastName  "] = prompt("ENTER LAST NAME =");
+                console.log(student)
+                i++;
+
             }
-            for (let y = 2; y >= 0; y--){
-              console.log(" THE ANS IS ", input[y]); }
+            ;
+            let a = 0;
+            while (a < student.length) {
+                console.log("first name = ", student.firstName + "last name =", student.lastName);
+                a++;
+
+            }
         }
     </script>
 </head>

@@ -221,7 +221,6 @@
             let ned = new Audio("./image_project/shi j.m4a");
             if (questionNumber == 1) {
                 if (givenAnswer == 4) {
-
                     answerOne(true, 2);
                     ned.play();
                 } else {
@@ -328,7 +327,7 @@
                 }, 1000);
             } else {
                 document.getElementById("display-text").innerHTML =
-                    " Galat Jawab ❌";
+                    " Galat Jawab ❎";
                 document.getElementById("container").style.backgroundColor =
                     "#FF0000";
                 setTimeout(() => {
