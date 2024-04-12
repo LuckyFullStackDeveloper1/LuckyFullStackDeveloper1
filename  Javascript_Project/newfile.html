@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .button {
+            color: rgb(169, 36, 36);
+            height: 50px;
+            width: 100px;
+            background-color: rgb(169, 36, 36);
+
+        }
+    </style>
+
+    <script>
+        function table() {
+            let student = {};
+            let i = 0;
+            while (i < 3) {
+                student["firsName  "] = prompt("ENTER FIRST NAME =");
+                student["lastName  "] = prompt("ENTER LAST NAME =");
+                console.log(student)
+                i++;
+
+            }
+            ;
+            let a = 0;
+            while (a < student.length) {
+                console.log("first name = ", student.firstName + "last name =", student.lastName);
+                a++;
+
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <!-- main container -->
+
+    <div id="display"></div>
+    <input type="text">
+    <button class="button" onclick="table()">chack</button>
+
+    </div>
+    </div>
+</body>
+
+</html>

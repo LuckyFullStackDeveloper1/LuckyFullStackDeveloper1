@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Search Page</title>
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+HK" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./googlepagesss.css">
+  
+  <script>
+    function search() {
+      let input = document.getElementById("searchInput").value.toLowerCase();
+      let resultsDiv = document.getElementById("results");
+      let studentNames = [
+        "ayush lolusare",
+        "himanshu",
+        "yash",
+        "ayush nakade",
+        "nikhil",
+        "ratnesh",
+        "soundary",
+        "yogesh sir"
+      ];
+
+      let foundStudent = false;
+      let foundTeacher = false;
+
+      for (let name of studentNames) {
+        if (input.includes(name)) {
+          foundStudent = true;
+          break;
+        }
+      }
+
+      if (input.includes('yogesh sir')) {
+        foundTeacher = true;
+      }
+
+      if (foundStudent) {
+        if (foundTeacher) {
+          resultsDiv.innerText = "This sir is teaching in Enjoy Programming.";
+          resultsDiv.style.color = "blue";
+        } else {
+          resultsDiv.innerText = "This student is a student of Enjoy Programming.";
+          resultsDiv.style.color = "green";
+        }
+      } else {
+        resultsDiv.innerText = "This student is not associated with Enjoy Programming.";
+        resultsDiv.style.color = "red";
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <nav>
+    <a href="" class="navtext">Gmail</a>
+    <a href="" class="navtext">Images</a>
+    <span class="material-icons apps">apps</span>
+    <img src="avatar3.png" alt="" class="avatar">
+  </nav>
+  <div class="main">
+    <div class="">
+      <img style="height: 360px;"
+        src="../ Javascript_Project/image_project/enjoyy.png  "
+        alt="" class="google">
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="searchb">
+      <span class="material-icons searchicon">Search</span>
+      <input type="text" id="searchInput">
+      <img src="miclogo.png" alt="" class="mic">
+    </div>
+    <div class="sbutton">
+      <button onclick="search()">Search</button>
+      <button onclick="feelingLucky()">I'm Feeling Lucky</button>
+      <div id="results"></div>
+    </div>
+  </div>
+</body>
+
+</html>
