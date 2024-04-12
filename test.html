@@ -2,96 +2,213 @@
 <html>
 
 <head>
-
+    <!-- CSS Styles -->
     <style>
+        /* Styling for the header */
         .header {
-            background-color: #8cbcff;
-            color: rgb(0, 0, 0);
-            text-align: center;
-            padding: 1em 0;
-            height: 120px;
-            border-style: solid;
-            font-family: Arial, Helvetica, sans-serif;
-
+            background-color: grey; /* Background color */
+            text-align: center; /* Center-align text */
+            height: 200px; /* Set height */
+            width: 1440px; /* Set width */
         }
 
-
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: cursive;
-            background-color: #f4f4f4;
+        /* Global CSS reset */
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-family: monospace; /* Set font family */
+            box-sizing: border-box; /* Include padding and border in the element's total width and height */
+            text-decoration: none; /* Remove underline from links */
         }
 
-        /* Changing color on hover */
-        .gnos {
-            font-size: x-large;
-            color: rgb(0, 0, 0);
-
+        /* Styling for the navigation links */
+        .wrapper {
+            position: relative;
+            display: inline-block;
+            padding: 23px 60px; /* Add padding */
         }
 
-        .divone {
-            border: #8cbcff;
-            height: 500px;
-            width: 900px;
-            border-style: solid;
-            border-width: 10px;
-            margin-left: 250px;
-            background-image: url(./my_image/bing4.jpg);
+        a {
+            position: relative;
+            display: inline-block;
+            padding: 25px 30px; /* Add padding */
+            text-transform: uppercase; /* Transform text to uppercase */
+            letter-spacing: 4px; /* Add letter spacing */
+            color: #03e9f4; /* Text color */
+            font-size: 1.rem; /* Font size */
+            font-weight: bold; /* Font weight */
+            transition: .5s; /* Smooth transition */
+            overflow: hidden;
+            margin-right: 70px; /* Add margin to create space between links */
         }
-        .two{
-            height: 320px;
-            width: 750px;
-            border-style: solid;
-            margin-left: 30px;
-            border-width: 10px;
-            background-image: url(./my_image/bing3.jpg);
-            text-align: center;
 
+        /* Styling for the navigation links on hover */
+        a:hover {
+            background-color: #f45f03; /* Background color on hover */
+            color: #ffffff; /* Text color on hover */
+            box-shadow: 0 0 5px #f43f03, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 200px #13f403; /* Box shadow on hover */
+            -webkit-box-reflect: below 1px linear-gradient(transparent, #0005); /* Reflection effect */
+        }
+
+        /* Add hue rotation to first and last navigation links */
+        a:first-child {
+            filter: hue-rotate(225deg);
+        }
+
+        a:last-child {
+            filter: hue-rotate(90deg);
+        }
+
+        /* Styling for the animated spans within the links */
+        a span {
+            position: absolute;
+            display: block;
+        }
+
+        /* Animation for first span */
+        a span:nth-child(1) {
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #f56213);
+            animation: animate1 1s infinite; /* Apply animation */
+        }
+
+        /* Animation for second span */
+        @keyframes animate1 {
+            0% {
+                left: -100%;
+            }
+            100% {
+                left: 100%;
+            }
+        }
+
+        /* Animation for second span */
+        a span:nth-child(2) {
+            top: -100%;
+            right: 0;
+            width: 3px;
+            height: 100%;
+            background: linear-gradient(180deg, transparent, #f56213);
+            animation: animate2 1s infinite;
+            animation-delay: .25s; /* Delay animation */
+        }
+
+        @keyframes animate2 {
+            0% {
+                top: -100%;
+            }
+            100% {
+                top: 100%;
+            }
+        }
+
+        /* Animation for third span */
+        a span:nth-child(3) {
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(20deg, transparent, #f56213);
+            animation: animate3 1s infinite;
+            animation-delay: 0.5s; /* Delay animation */
+        }
+
+        @keyframes animate3 {
+            0% {
+                right: -100%;
+            }
+            100% {
+                right: 100%;
+            }
+        }
+
+        /* Animation for fourth span */
+        a span:nth-child(4) {
+            bottom: -100%;
+            left: 0;
+            width: 3px;
+            height: 100%;
+            background: linear-gradient(360deg, transparent, #f56213);
+            animation: animate4 1s infinite;
+            animation-delay: .75s; /* Delay animation */
+        }
+
+        @keyframes animate4 {
+            0% {
+                bottom: -100%;
+            }
+            100% {
+                bottom: 100%;
+            }
         }
     </style>
 </head>
 
-<body style="background-image: url(./my_image/BBBB.jpeg);background-repeat: no-repeat;background-size: cover;">
-
+<body style="background-image: url(./my_image/tayr.mp4); background-repeat: no-repeat; background-size: cover;">
+    <!-- Header -->
     <div class="header">
-        <h1>Welcome To My Project ..</h1>
+        <!-- Welcome message -->
+        <h1 style="font-family: monospace; padding-top: 5%; color: #25f4c7;">Welcome To My Project ..</h1>
     </div>
     <br>
-    <!-- SONG  -->
-    <div class="divone">
-        <ul style="margin-left: 700px;
-          margin-top: 50px">
-            <li class="song"> <a class="gnos" href="../ Javascript_Project/ song.html"> SONG </a>
-            </li>
-        </ul>
-        <!--  KBC -->
-        <ul><div class="two">
-            <li class="song"> <a class="gnos" href="../ Javascript_Project/kbc.html"> KBC</a>
-            </li>
-        </div></ul>
-        <!-- MATH TABLE -->
-        <ul style="margin-left: 700px;
-        margin-top: 50px;">
-            <li class="song"> <a class="gnos" href="../ Javascript_Project/math.html"> MATH </a>
-            </li>
-        </ul>
-        <!-- ODD OR EVEN OR EQUOL OR CHECK FOR VOTE -->
-        <ul>
-            <li class="song"> <a class="gnos" href="../ Javascript_Project/oddnumber (1).html"> ODD EVEN </a>
-            </li>
-        </ul>
-        <!--  -->
-        <ul style="margin-left:650px;
-          margin-top: 50px">
-            <li class="song"> <a class="gnos" href="../ Javascript_Project/javasciptone.html"> CALCULATOR </a>
-            </li>
-        </ul>
-        <!-- vowel or not -->
-        <ul>
-            <li class="song"> <a class="gnos" href="../ Javascript_Project/vowel.html"> VOWEL </a>
-            </li>
-        </ul>
+    <!-- Navigation links -->
+    <div class="wrapper">
+        <!-- Link to 'song.html' -->
+        <a href="../ Javascript_Project/ song.html">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            SONG
+        </a>
+        <!-- Link to 'kbc.html' -->
+        <a href="../ Javascript_Project/kbc.html">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            KBC
+        </a>
+        <!-- Link to 'math.html' -->
+        <a href="../ Javascript_Project/math.html">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            MATH
+        </a>
+        <!-- Link to 'oddnumber (1).html' -->
+        <a href="../ Javascript_Project/oddnumber (1).html">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            ODD EVE
+        </a>
+        <!-- Link to 'javasciptone.html' -->
+        <a href="../ Javascript_Project/calculatorgrid.html">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            CALCULATOR
+        </a>
+        <!-- Link to 'vowel.html' -->
+        <a href="../ Javascript_Project/vowel.html">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            VOWEL
+        </a>
+    </div>
+</body>
+
+</html>
+
 
 
     </div>
