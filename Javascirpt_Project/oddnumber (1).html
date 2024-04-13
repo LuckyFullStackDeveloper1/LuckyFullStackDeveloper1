@@ -1,0 +1,150 @@
+<!Doctype html>
+<html>
+
+<head>
+    <style>
+        /* main box */
+        .box {
+            border-style: solid;
+            border-width: 30px;
+            width: 600px;
+            background-color: rgb(188, 255, 94);
+            margin-left: 300px;
+            margin-top: 50px;
+            border-color: rgb(247, 255, 132);
+            border-right-color: rgb(136, 255, 255);
+            border-top-color: rgb(134, 134, 255);
+            border-bottom-color: rgb(189, 255, 119);
+            border-left-color: rgb(255, 154, 208);
+            border-radius: 50px;
+        }
+        /* display */
+        #display {
+            height: 100px;
+            background-color: rgb(255, 166, 166);
+            width: 30vw;
+            border-radius: 20px;
+            margin-left: 5vw;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            border-style: solid;
+            border-width: 5px;
+         }
+
+        /* box two */
+
+        .one {
+            background-color: gray;
+            width: 598px;
+            height: 300px;
+            padding: 1px;
+        }
+
+        /* eligible */
+
+        .input{
+            height: 30px;
+            width: 100px;
+            margin-left: 120px;
+            color: red;
+        }
+        
+        /* check butten */
+
+        .check {
+            font-family: cursive;
+            height: 40px;
+            background-color: #ffff01;
+            color: rgb(255, 25, 0);
+            width: 200px;
+            border-width: 5px;
+            margin-left: 200px;
+            border-color: rgb(255, 112, 91);
+        }
+    </style>
+
+
+    <script>
+
+        // evev or odd
+        let number;
+
+        function result() {
+            number = document.getElementById("one").value;
+
+            if (number % 2 == 0) {
+                document.getElementById("display").innerHTML = "This number is even";
+            } else {
+                document.getElementById("display").innerHTML = "This number is odd";
+            }
+        }
+        // check for  vote
+        let vote;
+        function check() {
+            vote = document.getElementById("one").value;
+
+            if (vote >= 18) {
+                document.getElementById("display").innerHTML = "Eligible for vote.";
+            } else {
+                document.getElementById("display").innerHTML = "Not eligible for vote.";
+            }
+        }
+
+        // Equal  or not
+
+        function equal() {
+            x = Number(document.getElementById("one").value);
+            y = Number(document.getElementById("two").value);
+
+            if (x == y) {
+                document.getElementById("display").innerHTML = "Number is equal.";
+            } else {
+                document.getElementById("display").innerHTML = "Number is not equal.";
+            }
+        }
+
+        // clear
+        function clearFunction() {
+            document.getElementById("display").innerHTML = ""
+        }
+
+    </script>
+</head>
+
+<body>
+    <div class="box">
+        <!-- display -->
+        <h1 style="font-family:monospace;;" id="display"></h1>
+        <!-- input -->
+        <div class="one">
+            <input  style="font-family: cursive; border-width: 4px; border-color: rgb(75, 255, 240);" id="one" class="input">↩︎
+                            
+            <input style="font-family: cursive;  border-width: 4px; border-color: rgb(89, 255, 252);" id="two"  class="input">↩︎
+            <br>
+            <br><br>
+
+            <!-- buttons -->
+            <button onclick="result()" class="check">Check Even or Odd </button>
+            <br>
+            <br>
+            <button onclick="check()" class="check">Check For Vote </button>
+            <br>
+            <br>        
+            <button  onclick="equal()" class="check">Check Number  Equal or Not</button>
+            <br>
+            <br>
+            <button class="check" onclick="clearFunction()">Clear</button>
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+
+
+
+
+
+

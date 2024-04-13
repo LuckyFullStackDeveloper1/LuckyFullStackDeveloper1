@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Data</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Georgia&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        fieldset {
+            margin-bottom: 20px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            background-color: #fff;
+            padding: 20px;
+        }
+
+
+        legend {
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: underline;
+            margin-bottom: 10px;
+        }
+
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="date"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .education-options {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 10px;
+        }
+
+        .education-option {
+            margin-right: 20px;
+            white-space: nowrap;
+        }
+
+        .education-option input[type="radio"] {
+            margin-right: 5px;
+        }
+
+
+        .buttons {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .buttons button {
+            padding: 10px 20px;
+            margin: 0 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .buttons button:hover {
+            background-color: #45a049;
+        }
+
+
+        .page-two {
+            display: none;
+        }
+
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- PAGE ONE -->
+    <div class="form-container" id="page-one">
+        <!-- buttons -->
+        <div class="buttons">
+            <button onclick="dataFunction()">Student's Data Entry</button>
+            <button onclick="listFunction()">Student's List</button>
+        </div>
+        <div>
+            <!-- form -->
+            <!-- form -->
+            <form>
+                <fieldset>
+                    <legend>ENJOY PROGRAMMING : ENTER YOUR DETAILS</legend>
+                    <label for="first-name">First Name:</label>
+                    <input type="text" placeholder="Enter First Name" id="first-name">
+                    <label for="last-name">Last Name:</label>
+                    <input type="text" placeholder="Enter Last Name" id="last-name">
+                    <!-- Select Your Education heading -->
+                    <label for="edu">Enter Your Education:</label>
+                    <!-- Education options -->
+                    <div class="education-options">
+                        <div class="education-option">
+                            <input type="radio" value="Schooling" name="education" id="Schooling">
+                            <label for="Schooling">Schooling</label>
+                        </div>
+                        <div class="education-option">
+                            <input type="radio" value="Jr. College" name="education" id="jr-college">
+                            <label for="jr-college">Jr. College</label>
+                        </div>
+                        <div class="education-option">
+                            <input type="radio" value="Graduation" name="education" id="graduation">
+                            <label for="graduation">Graduation</label>
+                        </div>
+                        <div class="education-option">
+                            <input type="radio" value="Post-Graduation" name="education" id="post-graduation">
+                            <label for="post-graduation">Post-Graduation</label>
+                        </div>
+                        <div class="education-option">
+                            <input type="radio" value="Ph.D" name="education" id="phd">
+                            <label for="phd">Ph.D</label>
+                        </div>
+                    </div>
+                    <!-- Date Of Birth -->
+                    <label for="age">Date Of Birth:</label>
+                    <input type="date" id="age">
+                    <!-- Email -->
+                    <label for="email-id">Email:</label>
+                    <input type="text" placeholder="Enter Your Email" id="email-id">
+                    <!-- Contact No. -->
+                    <label for="contact-no">Contact No.:</label>
+                    <select name="number" id="nation">
+
+                        <option value="+11QU">+11</option>
+                        <option value="+21USA">+21</option>
+                        <option value="+31UK">+31</option>
+                        <option value="+41AUS">+41</option>
+                        <option value="+51JAP">+51</option>
+                        <option value="+61QU">+61</option>
+                        <option value="+71JAP">+71</option>
+                        <option value="+81QU">+81</option>
+                        <option value="+91Ind">+91</option>
+                    </select>
+                    <input type="number" placeholder="Enter Contact Number" id="contact-no">
+                    <!-- Address -->
+                    <label for="address-l1">Address:</label>
+                    <input type="text" placeholder="Address Line 1" id="address-l1">
+                    <input type="text" placeholder="Address Line 2" id="address-l2">
+                    <input type="text" placeholder="Address Line 3" id="address-l3">
+                    <!-- Submit Button -->
+                    <input type="button" value="Submit" onclick="inputData()">
+                </fieldset>
+            </form>
+
+        </div>
+    </div>
+
+    <!-- page-two -->
+    <!-- buttons -->
+    <div class="page-two" id="show">
+        <div class="buttons">
+            <button onclick="dataFunction()">Student's Data Entry</button>
+            <button onclick="listFunction()">Student's List</button>
+        </div>
+        <table>
+            <!-- Table Caption -->
+            <caption>
+                <h1> Students' Information</h1>
+            </caption>
+            <tbody class="table-style">
+                <!-- Table Heading -->
+                <tr class="td">
+                    <th colspan="2" class="td">Sr. No./ Roll No.</th>
+                    <th class="td">Student Name</th>
+                    <th class="td">Contact Number</th>
+                    <th class="td">DOB</th>
+                    <th class="td">Email-Id</th>
+                    <th class="td">Address</th>
+                </tr>
+                <!-- first row -->
+                <tr class="td">
+                    <td class="tr">1.</td>
+                    <td class="tr">001</td>
+                    <td class="tr" id="name"></td>
+                    <td class="tr" id="contact"></td>
+                    <td class="tr" id="date"></td>
+                    <td class="tr" id="education"></td>
+                    <td class="tr" id="mail">
+                        <p class="par1"></p>
+                    </td>
+                    <td class="tr" id="address"></td>
+                </tr>
+                <!-- 2nd row -->
+                <tr class="td">
+                    <td class="tr">2.</td>
+                    <td class="tr">002</td>
+                    <td class="tr"></td>
+                    <td class="tr"></td>
+                    <td class="tr"></td>
+                    <td class="tr"></td>
+                    <td class="tr">
+                        <p class="par1"></p>
+                    </td>
+                    <td class="tr" id=""></td>
+                </tr>
+                <!-- 3rd row -->
+                <tr class="td">
+                    <td class="tr">3.</td>
+                    <td class="tr">003</td>
+                    <td class="tr"></td>
+                    <td class="tr"></td>
+                    <td class="tr"></td>    
+                    <td class="tr"></td>
+                    <td class="tr">
+                        <p class="par1"></p>
+                    </td>
+                    <td class="tr" id=""></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        // Global Variables
+        let students = [];
+
+        // Function to show the first page and hide the second page
+        function dataFunction() {
+            document.getElementById("page-one").style.display = "block";
+            document.getElementById("show").style.display = "none";
+        }
+
+        // Function to show the second page and hide the first page
+        function listFunction() {
+            document.getElementById("page-one").style.display = "none";
+            document.getElementById("show").style.display = "block";
+
+            // Populate student table
+            populateStudentTable();
+        }
+
+        // Function to input data
+        function inputData() {
+            let information = {};
+            information["firstName"] = document.getElementById("first-name").value;
+            information["lastName"] = document.getElementById("last-name").value;
+            information["contactNo"] = document.getElementById("contact-no").value;
+            information["emailID"] = document.getElementById("email-id").value;
+            information["addressl1"] = document.getElementById("address-l1").value;
+            information["addressl2"] = document.getElementById("address-l2").value;
+            information["addressl3"] = document.getElementById("address-l3").value;
+            information["education"] = document.querySelector('input[name="education"]:checked') ? document.querySelector('input[name="education"]:checked').value : "";
+            students.push(information)
+                ;
+            console.log("STUDENT--", students, information);
+
+            // Clear form fields after submission
+            document.getElementById("student-form").reset();
+        }
+
+        // Function to populate student table
+        function populateStudentTable() {
+            let tableBody = document.querySelector("#student-table tbody");
+            // Clear existing rows
+            tableBody.innerHTML = "";
+
+            // Add rows for each student
+            students.forEach((student, index) => {
+                let row = tableBody.insertRow();
+                row.classList.add("td");
+                row.innerHTML = `
+                    <td class="tr">${index + 1}.</td>
+                    <td class="tr">${index + 1}</td>
+                    <td class="tr">${student.firstName} ${student.lastName}</td>
+                    <td class="tr">${student.contactNo}</td>
+                    <td class="tr">${student.age}</td>
+                    <td class="tr">${student.education}</td>
+                    <td class="tr">${student.emailID}</td>
+                    <td class="tr">${student.addressl1}, ${student.addressl2}, ${student.addressl3}</td>
+                `;
+            });
+        }
+
+        // Execute dataFunction onload
+        window.onload = function () {
+            dataFunction();
+        }
+    </script>
+</body>
+
+</html>

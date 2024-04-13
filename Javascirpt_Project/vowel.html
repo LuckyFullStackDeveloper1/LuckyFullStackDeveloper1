@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        /* display */
+        .display {
+            height: 100px;
+            background-color: rgb(85, 76, 76);
+            width: 30vw;
+            border-radius: 20px;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            border-style: solid;
+            border-width: 5px;
+            color: rgb(67, 156, 156);
+        }
+
+        /* box two */
+
+        .one {
+            background-color: gray;
+            width: 598px;
+            height: 300px;
+            padding: 1px;
+        }
+
+        /* eligible */
+
+        .input {
+            height: 50px;
+            width: 150px;
+            color: red;
+        }
+
+        /* check butten */
+    </style>
+
+
+    <title>vowel</title>
+    <script>
+        function vowel() {
+            let x = document.getElementById("input").value;
+
+            if ((x == "a") || (x == "e") || (x == "i") || (x == "o") || (x == "u")) {
+
+                document.getElementById("display").innerHTML = "VOWEL";
+            }
+            else {
+                document.getElementById("display").innerHTML = "IT IS NOT VOWEL";
+            }
+        }
+
+
+    </script>
+
+
+</head>
+
+<body>
+
+    <!-- input -->
+    <div class="one">
+        <div class="display " id="display"></div>
+        <button class="input " onclick="vowel()"> Chack vowel or not vowel</button> 
+     <input type="text" class="input" id="input">
+</body>
+
+</html>

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Keyboard</title>
+    <style>
+        .main {
+           
+           background-color: palegreen;
+            display: grid;
+            gap: 50px;
+            height: 200px;
+            width: 70vw;
+      margin-bottom: 40px;
+        text-align: center;
+        margin-left: 220px;
+       
+           
+
+        }
+
+       
+        .left {
+            background-color: #000000;
+
+            grid-template-columns: 1fr;
+            width: 70vw;
+            height: 350px;
+            margin-right: 1px;
+            padding: 15px;
+            border-radius: 10px;        
+            margin-top: 0px;
+            margin-left: 200px;
+
+
+        }
+
+
+        .first {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1.4fr;
+            grid-template-rows: 1fr;
+            background-color: rgb(255, 152, 152);
+            width: 100%;
+            height: 12%;
+        }
+
+
+        .sec {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
+            background-color: coral;
+            width: 100%;
+            height: 18%;
+
+        }
+
+
+        .third {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1.2fr;
+            grid-template-rows: 1fr;
+            background-color: seagreen;
+            width: 100%;
+            height: 18%;
+        }
+
+        .forth-row {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1.6fr;
+            grid-template-rows: 1fr;
+            background-color: aqua;
+            width: 100%;
+            height: 18%;
+
+        }
+
+
+        .fifth-row {
+            display: grid;
+            grid-template-columns: 1.6fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1.8fr;
+            grid-template-rows: 1fr;
+            background-color: orangered;
+            width: 100%;
+            height: 18%;
+
+        }
+
+
+        .sixth-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 7fr 1fr 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
+            background-color: yellow;
+            width: 100%;
+            height: 18%;
+            color: white;
+
+        }
+
+        .color {
+            background-color: rgb(255, 206, 122);
+            margin: 5px;
+            border-radius: 10px;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            color: rgb(0, 0, 0);
+            font-weight: bold;
+            font-family: cursive;
+
+        }
+
+
+
+        .item {
+            display: grid;
+            grid-row: span 2;
+        }
+
+        .two-button {
+            width: 100%;
+            height: 40%;
+            margin-right: 5px;
+        }
+    </style>
+    <script>
+
+
+        let total = 0;
+        let displayString = "";
+
+        function showresult() {
+            total = total + Number(displayString);
+            displayString = total;
+            document.getElementById("display").innerHTML = displayString;
+        }
+        function clearFunction() {
+            total = 0;
+            displayString = "";
+            document.getElementById("display").innerHTML = "";
+        }
+
+        function numbertype(passnumber) {
+            displayString = displayString + passnumber.toString();
+            document.getElementById("display").innerHTML = displayString;
+        }
+        function add() {
+            total = total + Number(displayString);
+            displayString = "";
+            document.getElementById("display").innerHTML = displayString;
+
+        }
+        function sub() {
+            total = total - Number(displayString);
+            displayString = "";
+            document.getElementById("display").innerHTML = displayString;
+
+        }
+
+        function div() {
+            total = total / Number(displayString);
+            displayString = "";
+            document.getElementById("display").innerHTML = displayString;
+
+        }
+        function mul() {
+            total = total * Number(displayString);
+            displayString = "";
+            document.getElementById("display").innerHTML = displayString;
+
+        }
+
+
+
+    </script>
+
+</head>
+
+<body>
+    
+    
+    <div class="main">
+        <h1 id="display"></h1>
+
+
+        </div>
+        <!-- left -->
+        <div class="left">
+            <!-- row one -->
+            <div class="first">
+                <button class="color" onclick="displayfunctionEsc()">Esc</button>
+                <button class="color" onclick="displayfunctionF1()">F 1 </button>
+                <button class="color" onclick="displayfunctionF2()">F 2</button>
+                <button class="color" onclick="displayfunctionF3()">F 3</button>
+                <button class="color" onclick="displayfunctionF4()">F 4</button>
+                <button class="color" onclick="displayfunctionF5()">F 5</button>
+                <button class="color">F 6</button>
+                <button class="color">F 7</button>
+                <button class="color">F 8</button>
+                <button class="color">F 9</button>
+                <button class="color">F 10</button>
+                <button class="color">F 11</button>
+                <button class="color">F 12</button>
+                <button class="color" id="submit" onclick="clearFunction()"
+                style="font-family: monospace; background-color: rgb(255, 96, 38);">CLEAR</button>
+
+            </div>
+            <!-- row two -->
+            <div class="sec">
+                <button class="color">~ <br> `</button>
+                <button class="color" onclick="numbertype(1)"> 1 </button>
+                <button class="color" onclick="numbertype(2)"> 2</button>
+                <button class="color" onclick="numbertype(3)"> 3</button>
+                <button class="color" onclick="numbertype(4)"> 4</button>
+                <button class="color" onclick="numbertype(5)"> 5</button>
+                <button class="color" onclick="numbertype(6)"> 6</button>
+                <button class="color" onclick="numbertype(7)"> 7</button>
+                <button class="color" onclick="numbertype(8)"> 8</button>
+                <button class="color" onclick="numbertype(9)"> 9</button>
+                <button class="color" onclick="numbertype(0)">0</button>
+                <button class="color" onclick="mul()">* </button>
+                <button class="color" onclick="add()">+ </button>
+                <button class="color">Backspace</button>
+            </div>
+            <!-- row three -->
+            <div class="third">
+                <button class="color">Bab</button>
+                <button class="color">Q</button>
+                <button class="color">W</button>
+                <button class="color">E</button>
+                <button class="color">R</button>
+                <button class="color">T</button>
+                <button class="color">Y</button>
+                <button class="color">U</button>
+                <button class="color">I</button>
+                <button class="color">O</button>
+                <button class="color">P</button>
+                <button class="color" onclick="sub()"> - </button>
+                <button class="color" onclick=" div()">/</button>
+                <button class="color" onclick=" showresult()">=</button>
+            </div>
+            <!-- row four -->
+            <div class="forth-row">
+                <button class="color">Caps lock</button>
+                <button class="color">A</button>
+                <button class="color">S</button>
+                <button class="color">D</button>
+                <button class="color">F</button>
+                <button class="color">G</button>
+                <button class="color">H</button>
+                <button class="color">J</button>
+                <button class="color">K</button>
+                <button class="color">L</button>
+                <button class="color">: <br> ;</button>
+                <button class="color">" <br> '</button>
+                <button class="color"> Enter</button>
+            </div>
+            <!-- row five -->
+            <div class="fifth-row">
+                <button class="color">Shift</button>
+                <button class="color">Z</button>
+                <button class="color">X</button>
+                <button class="color">C</button>
+                <button class="color">V</button>
+                <button class="color">B</button>
+                <button class="color">N</button>
+                <button class="color">M</button>
+                <button class="color">
+                    <<br> ,
+                </button>
+                <button class="color">> <br> .</button>
+                <button class="color">?<br> /</button>
+                <button class="color">Pause <br> Shift</button>
+            </div>
+            <!--row six  -->
+            <div class="sixth-row">
+                <button class="color">Ctrl</button>
+                <button class="color">Fn</button>
+                <button class="color"><b>⌘</b></button>
+                <button class="color">Alt</button>
+                <button class="color"></button>
+                <button class="color">Alt</button>
+                <button class="color">Ctrl</button>
+                <button class="color">◄</button>
+                <div style="margin-right: 7px;">
+                    <button class="color two-button">▲</button>
+                    <button class="color two-button">▼</button>
+                </div>
+                <button class="color">►</button>
+            </div>
+
+
+        </div>
+
+    </div>
+    </div>
+    </div>
+</body>
+
+</html>
