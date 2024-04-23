@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>.green {
+    background-color: rgb(234, 76, 13);
+    color: white;
+}
+
+.red {
+    background-color: rgb(255, 0, 162);
+    color: white;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+</style>
+<script>
+function changeColor() {
+    var button = document.getElementById("colorButton");
+    if (button.classList.contains("green")) {
+        button.classList.add("red");
+    } else {
+        button.classList.remove("red");
+
+    }
+}
+</script>
+</head>
+<body>
+
+<button id="colorButton" class="green" onclick="changeColor()">Click Me</button>
+
+</body>
+</html>

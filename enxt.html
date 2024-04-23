@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <title>Document</title>
+  <style>
+.box{
+  height: 600px;
+  width: 100vw;
+  border-style: solid;
+  text-align: center;
+}
+#sec-one{
+background-color: aqua;
+font-family: monospace;
+}
+#sec-two{
+background-color: coral;
+font-family: monospace;
+}
+#sec-three{
+background-color: darkorange;
+font-family: monospace;
+
+}
+.manu{
+  display:flex ;
+  flex-direction: row;
+  justify-content: space-evenly;
+  background-color: gray;
+  height: 100px;padding: 50px;
+  position: relative;
+}
+a{
+  font-size: xx-large;
+}
+html{
+  scroll-behavior: smooth;
+}
+  </style>
+</head>
+<body style="margin: 0;">
+  <div class="manu">
+<a href="#sec-one">Sec-one</a>
+<a href="#sec-two">Sec-two</a>
+<a href="#sec-three">Sec-three</a>
+  </div>
+  <div id="sec-one" class="box">
+    <h1>Sec-one</h1>
+  </div>
+  <div id="sec-two" class="box">
+    <h1>Sec-two</h1>
+  </div>
+  <div id="sec-three" class="box">
+    <h1>Sec-three</h1>
+  </div>
+</body>
+</html>

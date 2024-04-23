@@ -2,119 +2,136 @@
 <html>
 
 <head>
-
-  <title>Song </title>
+ 
+  <title>music play </title>
   <style>
-    /* main */
-    .main {
-
-
-      height: 300px;
-      width: 500px;
-      border-style: solid;
-      background-image: url(./image_project/songbacjpeg.jpeg);
-      background-repeat: no-repeat;
-      background-size: cover;
-      border-radius: 10%;
-    }
-
-
     /* button */
-    .play {
-      background-color: lightblue;
-      height: 50px;
-      width: 100px;
 
-      ;
-      border-radius: 50%;
-    }
-
-
-
-    .Pause {
-      height: 50px;
-      width: 100px;
-      background-color: lightcoral;
-      border-radius: 50%;
-    }
-
-
-
-
-    .Next {
-      background-color: cadetblue;
-      height: 50px;
-      width: 100px;
-      border-radius: 50%;
-    }
-
-
-
-
-    /* main-image  */
-    .main-two {
-      background-image: url("./my_image/songggggg.png");
-      height: 200px;
-      width: 500px;
-      margin-left: 250px;
-      background-repeat: no-repeat;
-
-    }
-
-    .lucky {
+    .main {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
       display: flex;
-      flex-direction: column;
-      
-      justify-content: space-around;
-      /* flex-direction: row; */
+      flex-direction: row;
       justify-content: center;
       align-items: center;
-  
+      height: 49vh;
+      background-image: url(../my_image/bing5.jpg);
+      width: 450px;
+      margin-left: 450px;
+      margin-top: 200px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      border-style: solid;
+      border-radius: 20px;
+      border-width: 10px;
+
+    }
+
+    /* body */
+    body {
+      background-image: url(../my_image/BBBB.jpeg);
+      background-repeat: no-repeat;
+      background-size: cover;
+
+
+    }
+
+    /* volume */
+    .volume {
+      margin-left: 630px;
+
+    }
+
+    .one {
+      margin-top: 250px;
+
+
+    }
+
+    /* button */
+    .button {
+      border-radius: 150%;
+      height: 70px;
+      width: 10px;
+
+    }
+
+    .option {
+      font-family: 'Courier New', Courier, monospace;
+      margin-bottom: 310px;
+      width: 160px;
+      margin-left: 10px;
+
+
     }
   </style>
+
 </head>
 
 <!-- BODY  -->
 
 <body>
+
   <audio id="myAudio"></audio>
   <!-- DIV-CLASS -->
-
-
-
   <div class="main">
-
-    <div class="lucky">
-      <div class="three"> <button class="play" onclick="playAudio()">▲</button></div>
-      <br><br>
-      <div class="one"> <button class="Pause" onclick="pauseAudio()">❑</button></div>
-      <br><br>
-
-      <div class="four"> <button class="Next" onclick="nextSong()">⇥</button> </div>
+    <!-- option -->
+    <div class="option">
+      <select id="options" onchange="openLink()">
+        <option> OPTIONS👁️‍🗨️ CHOSE YOUR APP 🎵 </option>
+     <option value="https://www.youtube.com/"> YOUTUBE 🎧 ⟿</option>
+        <option value="https://music.youtube.com/"> MUSIC 🎧 ⟿</option>
+        <option value="https://open.spotify.com/"> SPOTIFY 🎧 ⟿</option>
+        <option value="https://gaana.com/"> GAANA 🎧 ⟿</option>
+        <option value="https://www.jiosaavn.com/"> JIOSAAVN 🎧 ⟿</option>
+        <option value="https://youtu.be/qiKKjLVzHd4?si=fy6rXKIkrlBUZAAl"> cham cham chapal chalanta    🎧 ⟿</option>
+      </select>
     </div>
 
+
+    <div class="one" onclick="playAudio()"><img style=" border-radius: 50%;" src="./image_project/play.png"
+        height="70px" width="90px"></div>
+    <div class="one" onclick="pauseAudio()"><img style=" border-radius: 50%;" src="./image_project/pouse.png"
+        height="70px" width="90px"></div>
+    <div class="one" onclick="nextSong()"><img style=" border-radius: 50%;" src="./image_project/next .png"
+        height="70px " width="90px"></div>
+
   </div>
-  <!-- Script -->
+
+  <!--  lable -->
+
+  <label class="volume" for="range"></label>
+  <input class="v" type="range" min="0" max="2" step="0.1" value="1">
+
+  <!--script  -->
   <script>
-    let songs = ["./image_project/Ye Tune Kya Kiya-(PagalWorld).mp3"];
+
+    function openLink() {
+      var selectBox = document.getElementById("options");
+      var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+      window.open(selectedValue, "_blank");
+    }
+
+
+
+    let songs = ["/Users/enjoy_23_ep/Documents/Lucky/Javascript_Project/image_project/Silsila Ye Chahat Ka - Remix-(PagalSongs.Com.IN).mp3", "/Users/enjoy_23_ep/Documents/Lucky/Javascript_Project/image_project/Tu Hai Kahan(PagalWorld.com.pe).mp3", "/Users/enjoy_23_ep/Documents/Lucky/Javascript_Project/image_project/Besharam Bewaffa 128 Kbps.mp3", "/Users/enjoy_23_ep/Documents/Lucky/Javascript_Project/image_project/295(PaglaSongs) (1).mp3", "/Users/enjoy_23_ep/Documents/Lucky/Javascript_Project/image_project/old_Rakta Charitra - Mila Toh Marega.mp3"];
     let currentSongIndex = 0;
     const audio = document.getElementById("myAudio");
     // 
-          function playAudio() {
+    function playAudio() {
       audio.play();
     }
 
     function pauseAudio() {
       audio.pause();
     }
-
-
-
     function nextSong() {
       currentSongIndex = (currentSongIndex + 1) % songs.length;
       audio.src = songs[currentSongIndex];
       audio.play();
     }
+    // close 
   </script>
   </div>
 </body>
