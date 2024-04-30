@@ -1,107 +1,127 @@
 <!DOCTYPE html>
 <html>
-
+ <title>APLICATION FORM</title>
 <head>
     <!-- Internal Style-->
     <style>
         .labeltext {
             font-family: 'Quicksand', sans-serif;
-            color: #e01414;
-            padding: 50px;
-            width: 770px;
-            background-color: #F7B787;
+            color: black;
+
+            width: 630px;
+            margin-left: 200px;
+            background-color: #969696;
+            border-width: 10px;
+        }
+
+        .label {
+            font-family: cursive;
+            
+            font-size: 17px;
+        }
+
+        .inputD {
+            margin-left: 10px;
+        }
+
+        .inputB {
+            margin-left: 8px;
+        }
+
+        .inputE {
+            margin-left: 57px;
+        }
+
+        .inputC {
+            margin-left: 46px;
+        }
+
+        .inputA {
+            margin-left: 69px;
+        }
+
+        .inputP {
+            margin-left: 32px;
+        }
+        .inputy{
+            margin-left: 37px;
+            width: 160px;
+            height: 20px;
+        }
+        .inputh{
+            margin-left: 28px;
+            width: 155px;
         }
     </style>
-</head> 
+</head>
 
 <body>
 
-           <!-- Section -->
-           <form style="font-family: 'Beau Rivage', cursive;padding: background-color #214c88 ;padding: 20px;" action="./pageFour.html" ></form>
-           
-           
-           <!-- bordering -->
-             <fieldset class="labeltext">
-            <!-- batch section -->
-            <legend style="font-family: 'Rajdhani', sans-serif; "> Enjoy programing: Personal Details</legend>
-            <!-- Option -->
-                </optgroup>
-            </select>
-            <br>
-            <br>
-            <label style="font-family: 'Beau Rivage', cursive;  " for="fname">Pteferred Timings</label>
-            <input type="time" id="fname" name="fname">
-            <label for="time">to</label>
-            <input type="time" id="time ">
-            <br>
-            <br>
-            <hr>
-            <br>
-            <br>
-            <label style=" font-family: 'Beau Rivage', cursive;  " for="lname">Preferred Batch Date</label>
-            <input type="Date" id="fname " name="lname ">
-            <label for="DOB">to</label>
-            <input type="date" id="fname" >
-            <br>
-            <br>
-            <hr>
-            <br>
-            <br>
-            <label style="font-family: 'Beau Rivage', cursive;  "> Data of Birth</label>
-            <input type="datetime-local" id="Dob">
-             <br>
-             <hr>
-             <br>
-             <br>
-            <label style="font-family: 'Beau Rivage', cursive; text-transform: capitalize ;  "for="Email">Email</label>
-            <input type="Email" id="Email" name="Email">
-            <br>
-            <hr>
-            <br>
-            <br>
-            <label style="font-family: 'Beau Rivage', cursive; text-transform: capitalize ; ; "for="Email">contact no</label>
-            <input type="contact" id="contact" name="contact">
-            <br>
-            <hr>
-            <br>
-            <br>
-           <label for="range" style="font-family: 'Beau Rivage', cursive; text-transform: capitalize ; ;">Communication skill (out of 10)</label>
-           <input type="range">
-            <br>
-            <hr>
-            <br>
-            <br>
-            <label style="font-family: 'Beau Rivage', cursive;  " for="Pass"> Age</label>
-            <input type=" Age" id="Pass">
-            <br>
-            <hr>
-            <br>
-            <br>
-            <label style="font-family: 'Beau Rivage', cursive;  " for="city">Choose your city form list:</label>
-            <select style="font-family: 'Beau Rivage', cursive; " name="city" id="city">
-            <option style="font-family: 'Beau Rivage', cursive; " value="Nagpur">Ayodhya</option>
-            <option style="font-family: 'Beau Rivage', cursive; " value="Katol">Katol</option>
-            <option style="font-family: 'Beau Rivage', cursive; " value="Mumbai">Mumbai</option>
-            <option style="font-family: 'Beau Rivage', cursive; " value="Kolkata"> Kolkata</optio>
-                <option style="font-family: 'Beau Rivage', cursive; " value="Narsingi"> Narsingi</optio>
-            
-            </select>
-            <br>
-            <hr>
-            <br>
-            <br>
-            <textarea style="font-family:'Beau Rivage', cursive; padding: 20PX; " id="Tall Somethink About Yourseil" name="feed"
+    <!-- Section -->
+    <form action="./pageFour.html"></form>
+
+
+    <!-- bordering -->
+    <fieldset class="labeltext">
+        <!-- batch section -->
+        <legend>
+            <h2> Enjoy programing ❖ Personal Details </h2>
+        </legend>
+        <!-- Option -->
+        </optgroup>
+        </select>
+        <br>
+        <br>
+        <label class="label"> First Name ★</label>
+        <input type="text" placeholder="Name">
+        <br>
+        <br>
+        <label class="label"> Last Name ★</label>
+        <input type="text" placeholder="Sar_Name">
+        <br>
+        <br>
+        <label class="label"> Data of Birth..</label>
+        <input class="inputB" type="datetime">
+        <br>
+        <br>
+        <label class="label">Email..</label>
+        <input class="inputE" type="Email"> <br>
+        <br>
+        <label class="label">Password..</label>
+        <input class="inputP" type="password">
+        <br>
+        <BR>
+        <label class="label">Contact..</label>
+        <input class="inputC" type="number">
+        <br>
+        <br>
+        <label class="label"> Age..</label>
+        <input class="inputA" type=" Age">
+        <br>
+        <br>
+        <label class="label" for="city">Your City </label>
+        <select class="inputy" name="city" id="city">
+        <option class="inputy" value="Nagpur">Ayodhya</option>
+        <option class="inputy" value="Katol">Katol</option>
+        <option class="inputy" value="Mumbai">Mumbai</option>
+        <option class="inputy" value="Kolkata"> Kolkata</optio>
+        <option class="inputy" value="Narsingi"> Narsingi</optio>
+        </select>
+        <br>
+        <br>
+        <label class="label"> Batch Date</label>
+        <input class="inputh" type="date">
+        <br>
+        <br>
+        <textarea class="label" id="Tall Somethink About Yourseil" name="feed"
             placeholder="  Tall Somethink About Yourseil  ">Tall Somethink About Yourseil</textarea>
-            <br>
-            <hr>
-            <br>
-            <br>
-            <!-- submit -->
-                    <form >
-                        <button style=" text-align: center;padding: 15px; font-family: 'Beau Rivage', cursive; " type="submit">
-                            Submit </button>
-        </form>
-        </fieldset>
+        <br>
+        <br>
+        <label>Communication skill (out of 10)</label>
+        <input type="range">
+        <br>
+        <br>
+    </fieldset>
 
 
 
