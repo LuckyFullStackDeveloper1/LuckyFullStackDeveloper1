@@ -153,12 +153,33 @@
             document.getElementById("answer-three").innerHTML = "C) CSK, SRH ";
             document.getElementById("answer-four").innerHTML = "D) KKR, CSK  ";
         }
+        // 
         function questionTan() {
             document.getElementById("display-text").innerHTML =
-                " YOU WIN Rs 7 crore  ";
-
-
+                "10) India is a federal union comprising twenty-eight states and how many union territories?";
+            document.getElementById("answer-one").innerHTML = " A) 6  ";
+            document.getElementById("answer-two").innerHTML = " B) 7 ";
+            document.getElementById("answer-three").innerHTML = "C) 8 ";
+            document.getElementById("answer-four").innerHTML = "D) 9  ";
         }
+        function question11() {
+            document.getElementById("display-text").innerHTML =
+                "11) Which of the following is the capital of Arunachal Pradesh?";
+            document.getElementById("answer-one").innerHTML = " A) Itanagar ";
+            document.getElementById("answer-two").innerHTML = " B)  Dispur";
+            document.getElementById("answer-three").innerHTML = "C) Imphal  ";
+            document.getElementById("answer-four").innerHTML = "D)  Panaji ";
+        }
+        function question12() {
+            document.getElementById("display-text").innerHTML =
+                "12)  What are the major languages spoken in Andhra Pradesh?";
+            document.getElementById("answer-one").innerHTML = " A) Odia and Telugu ";
+            document.getElementById("answer-two").innerHTML = " B) Telugu and Urdu";
+            document.getElementById("answer-three").innerHTML ="C) Telugu and Kannada ";
+            document.getElementById("answer-four").innerHTML = "D)  All of the above languages ";
+        }
+       
+        
         function question(question) {
             document.getElementById("container").style.backgroundColor = "#124076";
             let audio = new Audio("./tyar.m4a");
@@ -206,12 +227,26 @@
                 questionNumber = 9;
                 questionNine();
                 audio.play();
-
+// 
             } else if (question == 10) {
                 questionNumber = 10;
                 questionTan();
                 audio.play();
-            } else {
+            } 
+            
+            else if (question == 11) {
+                questionNumber = 11;
+                question11();
+                audio.play();
+            } 
+               
+            else if (question == 12) {
+                questionNumber = 12;
+                question12();
+                audio.play();
+            }
+            
+            else {
                 document.getElementById("display-text").innerHTML =
                     "";
             }
@@ -298,9 +333,10 @@
                     xyz.play();
                 }
             }
+            // 
             if (questionNumber == 9) {
                 if (givenAnswer == 1) {
-                    answerOne(true, 9);
+                    answerOne(true, 10);
                     ned.play();
                 } else {
                     let xyz = new Audio("./image_project/glate.m4a");
@@ -308,12 +344,41 @@
                     xyz.play();
                 }
             }
+           
             if (questionNumber == 10) {
-
+                if (givenAnswer == 3) {
+                    answerOne(true, 11);
+                    ned.play();
+                } else {
+                    let xyz = new Audio("./image_project/glate.m4a");
+                    answerOne(false, 0);
+                    xyz.play();
+                }
+            }
+            if (questionNumber == 11) {
+                if (givenAnswer == 1) {
+                    answerOne(true, 12);
+                    ned.play();
+                } else {
+                    let xyz = new Audio("./image_project/glate.m4a");
+                    answerOne(false, 0);
+                    xyz.play();
+                }
+            }
+            if (questionNumber == 12) {
+                if (givenAnswer == 2) {
+                    answerOne(true, 13);
+                    ned.play();
+                } else {
+                    let xyz = new Audio("./image_project/glate.m4a");
+                    answerOne(false, 0);
+                    xyz.play();
+                }
+            }
 
 
             }
-        }
+        
 
 
         function answerOne(correctAnswer, nextQuestion) {
