@@ -3,6 +3,7 @@
 
 
 <head>
+  <title>Home✖︎Page </title>
   <style>
     .main {
       margin-top: 50px;
@@ -37,23 +38,107 @@
       margin-left: 280px;
       color: #23ffb9;
 
-
     }
 
+    ul {
+      margin-left: 320px;
+      display: flex;
+      flex-direction: row;
+      transform: translate(-50%, -50%);
+      margin-top: 50px;
+    }
 
-    /* Hide the body content until password is entered */
+    ul li {
+      list-style: none;
+      margin: 0 15px;
+    }
+
+    ul li a {
+      position: relative;
+      display: block;
+      width: 60px;
+      height: 60px;
+      text-align: center;
+      line-height: 63px;
+      background: #333;
+      border-radius: 50%;
+      font-size: 30px;
+      color: #666;
+      transition: .5s;
+    }
+
+    ul li a::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: #10e7ff;
+      transition: .5s;
+      transform: scale(.9);
+      z-index: -1;
+    }
+
+    ul li a:hover::before {
+      transform: scale(1.1);
+      box-shadow: 0 0 15px #10f3ff;
+    }
+
+    ul li a:hover {
+      color: #10ffef;
+      box-shadow: 0 0 5px #0abde5;
+      text-shadow: 0 0 5px #10ffef;
+    }
+    &:last-child {
+                margin-right: 0
+            }
+
+          
+
+        .header {
+            margin-bottom: 50px;
+
+            &:hover,
+            &:focus {
+                color: #f01d16;
+                box-shadow: 0 0 100px 0 #ff0000
+            }
+        }
+
   </style>
 
-
+</head>
 
 <body>
 
 
   <div class="main">
 
-    <h1 class="home">WELCOME TO MY HOME PAGE </h1>
-    <br>
-    <h2 class=" name "> My Name:- Lucky Nakade</h2>
+    <ul>
+      <li>
+        <a href="https://join.skype.com/invite/pg5MVPg52IB0"> <img style="margin-top: 5px; border-radius: 40px;" src="./my_image/sk.png" height="50px" width="50px" alt="">
+          <i class="fab fa-edge"></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/LuckyFullStackDeveloper1/LuckyFullStackDeveloper1"><img style="margin-top: 5px; border-radius: 40px;" src="./my_image/github.png" height="50px" width="50px" >
+          <i class="fab fa-firefox"></i>
+        </a>
+      </li>
+      <li>
+        <a href="./Resume.html">
+          <i class="fab fa-chrome"></i> <img style="margin-top: 5px; border-radius: 40px;" src="./my_image/rasume.png" height="50px" width="50px" alt="">
+        </a>
+
+      </li>
+      <li>
+        <a href="./newhome.html">
+          <i class="fab fa-opera"></i><img style="margin-top: 5px; border-radius: 40px;" src="./my_image/project .jpeg" height="50px" width="50px" >
+        </a>
+      </li>
+    </ul>
 
     <br>
     <br>
@@ -61,9 +146,9 @@
     <hr>
     <hr>
     <br><br>
-    <a href="./pageOne.html">
+    <a href="https://luckyfullstackdeveloper1.github.io/LuckyFullStackDeveloper1/pageOne.html">
       <button
-        style="border-color: #000000;  border-style: solid;  margin-left: 200px; 
+        style="border-color: #000000;  border-style: solid;  margin-left: 200px ;
      background-position: center;
       background-repeat: no-repeat;
       background-size: cover;  background-image: url(data:image/png;base64,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);background-size: contain;  width:300px; height: 120px;"></button>
@@ -80,7 +165,7 @@
     </input>
     <!-- two -->
 
-    <a href="./luckyy.html">
+    <a href="https://luckyfullstackdeveloper1.github.io/LuckyFullStackDeveloper1/luckyy.html">
       <button
         style=" border-color: #000000;  border-style: solid;     margin-left: 200px; 
     background-position: center;
@@ -100,7 +185,7 @@
     <br>
     <!-- four -->
 
-    <a href="./ youtunvideo.html">
+    <a href="https://luckyfullstackdeveloper1.github.io/LuckyFullStackDeveloper1/%20youtunvideo.html">
       <button
         style="border-color: #000000;  border-style: solid;  margin-left: 195px; 
      background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3gu2soFgUuEzC2AKdiDnV_qdQxGkHMRJe9g&); width: 300px; height: 130px; font-family: cursive;"
@@ -115,7 +200,7 @@
     <br>
     <!-- five -->
 
-    <a href="./syllabus.html">
+    <a href="https://luckyfullstackdeveloper1.github.io/LuckyFullStackDeveloper1/syllabus.html">
       <button
         style=" border-color: #000000;  border-style: solid;     margin-left: 200px; 
      background-position: center;
@@ -135,7 +220,7 @@
     <br>
     <!-- five -->
 
-    <a href="./Calendar.html">
+    <a href="https://luckyfullstackdeveloper1.github.io/LuckyFullStackDeveloper1/Calendar.html">
       <button
         style="border-color: #000000;  border-style: solid; margin-left: 200px; 
     background-position: center;
@@ -154,7 +239,7 @@
     <br>
     <!-- EIGHT -->
 
-    <a href="./chess.html">
+    <a href="https://luckyfullstackdeveloper1.github.io/LuckyFullStackDeveloper1/chess.html">
       <button
         style="border-color: #000000;  border-style: solid;
          background-position: center;
@@ -171,7 +256,7 @@
     <br>
     <br>
 
-    <a href="./Resume.html">
+    <a href="https://luckyfullstackdeveloper1.github.io/LuckyFullStackDeveloper1/Resume.html">
       <button
         style="border-color: #000000;  border-style: solid;    margin-left: 200px;  width: 290px; height: 120px;
         background-position: center;
@@ -189,7 +274,7 @@
     <br>
     <br>
     <!-- 11-->
-    <a href="./calculatorjs.html">
+    <a href="https://luckyfullstackdeveloper1.github.io/LuckyFullStackDeveloper1/calculatorjs.html">
       <button
         style="border-color: #000000;  border-style: solid;    margin-left: 200px; width: 300px; height: 120px;
         background-position: center;
@@ -209,7 +294,7 @@
     <br>
     <br>
     <!-- 12 -->
-    <a href="./keyboard.html">
+    <a href="https://luckyfullstackdeveloper1.github.io/LuckyFullStackDeveloper1/keyboard.html">
       <button
         style="border-color: #000000;  border-style: solid;;   margin-left: 200px;  width: 300px; height: 120px;
         background-position: center;
@@ -226,7 +311,7 @@
     <br>
     <br>
     <!-- 13 -->
-    <a href="./math.html">
+    <a href="./math.html  ">
       <button
         style="border-color: #000000;  border-style: solid;  margin-left: 200px; ;width: 300px; height: 120px;
         background-position: center;
@@ -243,7 +328,7 @@
     <br>
     <br>
     <!-- 14 -->
-    <a href="./ song.html">
+    <a href="https://luckyfullstackdeveloper1.github.io/LuckyFullStackDeveloper1/%20song.html">
       <button
         style="border-color: #000000;  border-style: solid;   margin-left: 200px; width: 300px; height: 120px;
         background-position: center;
@@ -260,7 +345,7 @@
     <br>
     <br>
     <!-- 15 -->
-    <a href="./kbc.html">
+    <a href="https://luckyfullstackdeveloper1.github.io/LuckyFullStackDeveloper1/kbc.html">
       <button
         style="border-color: #000000;  border-style: solid;  margin-left: 200px; width: 300px; height: 120px;
     background-position: center;
@@ -277,7 +362,7 @@
     <br>
     <br>
     <!-- 16 -->
-    <a href="./flags.html">
+    <a href="https://luckyfullstackdeveloper1.github.io/LuckyFullStackDeveloper1/flags.html">
       <button style=" 
     background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYK75p5QF69DGbnsv8lQ1dJmCQgjPGDhqHfQ&usqp=CAU);
     border-color: #000000;  border-style: solid;   margin-left: 200px; width: 300px; height: 120px;
@@ -292,7 +377,7 @@
     <hr>
     <br>
     <br>
-    <br><a href="./test.html">
+    <br><a href="https://luckyfullstackdeveloper1.github.io/LuckyFullStackDeveloper1/test.html">
       <button style=" 
     background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_e_KPuJQf1eWoZxtpqNttx3H5Fxuvi1wMmg&s);
     border-color: #000000;  border-style: solid;   margin-left: 200px; width: 300px; height: 120px;
@@ -308,39 +393,39 @@
     <br>
     <br>
     <br>
-<!--  -->
-<br><a href="./pearentform.html">
-  <button style=" 
+    <!--  -->
+    <br><a href="https://luckyfullstackdeveloper1.github.io/LuckyFullStackDeveloper1/pearentform.html">
+      <button style=" 
 background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmPOLnQHwVLt8IXHQ04Kyhb_8tzprUhkpNurCTdv2pTs_9jyV7);
 border-color: #000000;  border-style: solid;   margin-left: 200px; width: 300px; height: 120px;
 background-position: center;
 " type="submit" onclick="alert">
 
-  </button><br><br><br>
-</a>
-<br>
-<hr>
-<details class="details ">Application form. using Form tage 👈🏿</details>
-<hr>
-<br>
-<br>
-<br>
-<br><a href="./flex.html">
-  <button style=" 
+      </button><br><br><br>
+    </a>
+    <br>
+    <hr>
+    <details class="details ">Application form. using Form tage 👈🏿</details>
+    <hr>
+    <br>
+    <br>
+    <br>
+    <br><a href="https://luckyfullstackdeveloper1.github.io/LuckyFullStackDeveloper1/flex.html">
+      <button style=" 
 background-image: url(../Lucky/my_image/flex.jpeg);
 border-color: #000000;  border-style: solid;   margin-left: 200px; width: 300px; height: 120px;
 background-position: center;
 " type="submit" onclick="alert">
 
-  </button><br><br><br>
-</a>
-<br>
-<hr>
-<details class="details ">Layout using Flex 👈🏿</details>
-<hr>
-<br>
-<br>
-<br>
+      </button><br><br><br>
+    </a>
+    <br>
+    <hr>
+    <details class="details ">Layout using Flex 👈🏿</details>
+    <hr>
+    <br>
+    <br>
+    <br>
 
   </div>
 </body>

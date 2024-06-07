@@ -2,495 +2,391 @@
 <html>
 
 <head>
+<style>
+    /* General Styles */
 
-    <!-- links -->
+    td{
+        font-family: monospace;
+    }
+    body {
+        background-color: burlywood;
+        font-family: Arial, Helvetica, sans-serif;
+    }
 
+    .table_one {
+        margin-left: 210px;
+        margin-top: 20px;
+        width: 900px;
+    }
 
-    <!-- styles -->
-    <style>
-        table,
-        th,
-        td {
-            border-style: double;
-            background-color: rgb(241, 90, 255);
-            width: 800px;
-            height: 30px;
-            margin-left: 240px;
-            margin-top: 30px;
-            font-family: Georgia, 'Times New Roman', Times, serif;
-            width: 950px;
-            border-width: 4px;
-        }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
 
-        /* header */
-        .qaz {
+    th, td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: center;
+        background-color: #ff9291;}
+        
 
-            font-size: 2vmin;
-            color: #000;
-            display: flex;
-            align-items: flex-end;
-            justify-content: center;
-        }
+    th {
+        background-color: #5ccfda;
+    }
 
+    /* Subject Header Styles */
+    .subject-header {
+        font-size: 30px;
+        padding: 10px;
+        color: white;
+    }
 
-        .CHEMISTRY {
-            background-image: url(./my_image/chem.jpeg);
-            padding: 15px;
-            font-size: 20px;
-            color: rgb(255, 255, 255);
+    .PHYSICS {
+        background-color: rgb(33, 150, 243);
+    }
 
-        }
+    .Chemistry {
+        background-color: rgb(76, 175, 80);
+    }
 
-        .PHYSICS {
-            background-image: url(my_image/physics.jpeg);
-            padding: 15px;
-            font-size: 20px;
-            color: rgb(255, 255, 255);
-
-
-        }
-
-        .MATH {
-            color: white;
-            padding: 15px;
-            font-size: 20px;
-            background-image: url(./my_image/./math.jpeg);
-
-        }
-
-        .st {
-            padding: 30px;
-            font-family: 'Rubik Glitch Pop', system-ui;
-            background-color: coral;
-        }
-
-        .rt {
-            padding: 30px;
-            font-family: 'Rubik Glitch Pop', system-ui;
-            background-color: coral;
-        }
-
-        .tp {
-            padding: 30px;
-            font-family: 'Rubik Glitch Pop', system-ui;
-            background-color: coral;
-
-        }
-
-        .dt {
-            padding: 30px;
-            font-family: 'Rubik Glitch Pop', system-ui;
-            background-color: coral;
-
-        }
-
-        .the {
-            text-align: center;
-            font-size: 13px;
-            color: rgb(220, 255, 20);
-            background-color: rgb(122, 140, 255);
-        }
-
-        .and {
-            color: rgb(247, 47, 47);
-            text-align: center;
-            font-family: monospace;
-            background-color: rgb(145, 194, 41);
-
-
-        }
-
-        .deign {
-            color: rgb(33, 65, 180);
-            text-align: center;
-            font-family: monospace;
-            background-color: darkorange;
-        }
+    .Mathematics {
+        background-color: rgb(255, 87, 34);
+    }
+    .deign{
+        width: 200px;
+    }
     </style>
-
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <!-- title -->
 </head>
 
-
-<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-
-
-
-<body style="background-image: url(./imagesthree.jpeg);height: 3000; background-size: cover;">
-
-    <table>
-
-
-        <tbody>
-            <!-- table  -->
-            <caption class="PHYSICS">𝐏HYSICS</caption>
-            <tr>
-                <th class="st">SR.NO</th>
-                <th class="rt"> CHAPTERS</th>
-                <th class="dt">TOPICS</th>
-                <th class="tp">PERCENTAGE </th>
-
-            </tr>
-            <!-- first  -->
-            <tr>
-                <td class="the">1</td>
-                <td class="and"> Units and Measurements </td>
-                <td class="deign">
-                    <details>
-                        <div class="qaz">
-                            <span id="element">
-                            </span>
-                        </div>
-                        <script>
-                            var typed = new Typed('#element', {
-                                strings: ['', '1)_ Physical quantity', '2)_ Fundamental and derived units', '1.SI units 2.Dimensions ', '3)_ Application of Dimensional Analysiso 1.Limitations of Dimensional Analysis', '4)_ Rounding off', '5)_Significant Figures', '6)_ Order of Magnitude', '7)_ Errors of Measurement', '8)_ Propagation of Errors.'],
-                                typeSpeed: 100,
-                            });
-                        </script>
-                    </details>
-                </td>
-                <td class="the">[ 30%]</td>
-
-            </tr>
-            <!-- 2nd s-->
-            <tr>
-                <td class="the">2</td>
-                <td class="and">Motion in a Straight Line</td>
-                <td class="the"> [ 50% ]</td>
-
-            </tr>
-            <!-- 3rd-->
-            <tr>
-                <td class="the">3</td>
-                <td class="and"> Motion in a Plane</td>
-                <td class="the">[ 0%]</td>
-
-            </tr>
-            <!-- 4th  -->
-            <tr>
-                <td class="the">4</td>
-                <td class="and"> Laws of Motion</td>
-                <td class="the"> [ 70% ]</td>
-
-            </tr>
-            <!-- 5th  -->
-            <tr>
-                <td class="the">5</td>
-                <td class="and"> Work, Energy and Power</td>
-                <td class="the">[ 0% ]</td>
-
-            </tr>
-            <!-- 6th  -->
-            <tr>
-                <td class="the">6</td>
-                <td class="and"> System of Particles and Rotational Motion</td>
-                <td class="the">[ 0% ]</td>
-
-            </tr>
-            <!-- 7th  -->
-            <tr>
-                <td class="the">7</td>
-                <td class="and"> Gravitation</td>
-                <td class="the">[ 0% ]</td>
-
-            </tr>
-            <!-- 8th  -->
-            <tr>
-                <td class="the">8</td>
-                <td class="and"> Mechanical Properties of Solids</td>
-                <td class="the">[ 0% ]</td>
-
-            </tr>
-            <!-- 9th -->
-            <tr>
-                <td class="the">9</td>
-                <td class="and"> Mechanical Properties of Fluids</td>
-                <td class="the">[ 0% ]</td>
-
-            </tr>
-            <!-- 10th  -->
-            <tr>
-                <td class="the">10</td>
-                <td class="and"> Thermal Properties of Matter</td>
-                <td class="the">[ 0% ]</td>
-
-            </tr>
-            <!-- 11th  -->
-            <tr>
-                <td class="the">11</td>
-                <td class="and"> Thermodynamics</td>
-                <td class="the">[ 10% ]</td>
-
-            </tr>
-            <!-- 12th  -->
-            <tr>
-                <td class="the">12</td>
-                <td class="and"> Kinetic Theory</td>
-                <td class="the">[ 30% ]</td>
-
-            </tr>
-            <!-- 13th  -->
-            <tr>
-                <td class="the">13</td>
-                <td class="and">Oscillations</td>
-                <td class="the">[ 0% ]</td>
-
-            </tr>
-            <!-- 14th  -->
-            <tr>
-                <td class="the">14</td>
-                <td class="and"> Waves</td>
-                <td class="the"> [ 15% ] </td>
-    </table>
-    </tr>
-    <table>
-        <br>
-        <hr>
-        <hr>
-        <br>
-        <tbody>
-            <!-- table  -->
-            <caption class="CHEMISTRY"> 𝐂HEMISTRY</caption>
-            <tr>
-                <th class="st">SR.NO</th>
-                <th class="st">CHAPTERS</th>
-                <th class="st">PERCENTAGE </th>
-            </tr>
-            <!-- first  -->
-            <tr>
-                <td class="the">1</td>
-                <td class="and"> Some Basic Concepts Of Chemistry
-                </td>
-                <td class="the">[0%]</td>
-
-            </tr>
-            <!-- 2nd s-->
-            <tr>
-                <td class="the">2</td>
-                <td class="and">Structure Of Atom</td>
-                <td class="the"> [ 0% ]</td>
-
-            </tr>
-            <!-- 3rd-->
-            <tr>
-                <td class="the">3</td>
-                <td class="and">Classification of Elements and Periodicity </td>
-                <td class="the">[0%]</td>
-
-            </tr>
-            <!-- 4th  -->
-            <tr>
-                <td class="the">4</td>
-                <td class="and"> Chemical Bonding And Molecular Structure</td>
-                <td class="the"> [ 0% ]</td>
-
-            </tr>
-            <!-- 5th  -->
-            <tr>
-                <td class="the">5</td>
-                <td class="and"> States Of Matter</td>
-                <td class="the">[ 0% ]</td>
-
-            </tr>
-            <!-- 6th  -->
-            <tr>
-                <td class="the">6</td>
-                <td class="and">Thermodynamics </td>
-                <td class="the">[ 0% ]</td>
-
-            </tr>
-            <!-- 7th  -->
-            <tr>
-                <td class="the">7</td>
-                <td class="and"> Equilibrium </td>
-                <td class="the">[ 0% ]</td>
-
-            </tr>
-            <!-- 8th  -->
-            <tr>
-                <td class="the">8</td>
-                <td class="and"> Redox Reactions</td>
-                <td class="the">[ 0% ]</td>
-
-            </tr>
-            <!-- 9th -->
-            <tr>
-                <td class="the">9</td>
-                <td class="and">Hydrogen </td>
-                <td class="the">[ 0% ]</td>
-
-            </tr>
-            <!-- 10th  -->
-            <tr>
-                <td class="the">10</td>
-                <td class="and"> The s -Block Elements</td>
-                <td class="the">[ 0% ]</td>
-
-            </tr>
-            <!-- 11th  -->
-            <tr>
-                <td class="the">11</td>
-                <td class="and">The p -Block Elements</td>
-                <td class="the">[ 0% ]</td>
-
-            </tr>
-            <!-- 12th  -->
-            <tr>
-                <td class="the">12</td>
-                <td class="and">Organic Chemistry- Some Basic Principles And Techniques </td>
-                <td class="the">[ 0% ]</td>
-
-            </tr>
-            <!-- 13th  -->
-            <tr>
-                <td class="the">13</td>
-                <td class="and">Hydrocarbons</td>
-                <td class="the">[ 0% ]</td>
-
-            </tr>
-            <!-- 14th  -->
-            <tr>
-                <td class="the">14</td>
-                <td class="and">Environmental Chemistry</td>
-                <td class="the"> [ 0% ] </td>
-                <!-- 15th -->
-
-    </table>
-
-
-
-    </tbody>
-    </table>
-
-    <table>
-        <br>
-        <hr>
-        <hr>
-        <br>
-        <tbody>
-
-            <!-- table  -->
-            <caption class="MATH"> 𝐌ATH</caption>
-            <tr>
-                <th class="st">SR.NO</th>
-                <th class="st">CHAPTERS</th>
-                <th class="st">PERCENTAGE </th>
-            </tr>
-            <!-- first  -->
-            <tr>
-                <td class="the">1</td>
-                <td class="and"> Sets </td>
-                <td class="the">[ 0%]</td>
-
-            </tr>
-            <!-- 2nd s-->
-            <tr>
-                <td class="the">2</td>
-                <td class="and">Trigonometric Functions</td>
-                <td class="the"> [ 0% ]</td>
-
-            </tr>
-            <!-- 3rd-->
-            <tr>
-                <td class="the">3</td>
-                <td class="and">Relations and Functions </td>
-                <td class="the">[ 0%]</td>
-
-            </tr>
-            <!-- 4th  -->
-            <tr>
-                <td class="the">4</td>
-                <td class="and"> Principle of Mathematical Induction </td>
-                <td class="the"> [ 0% ]</td>
-
-            </tr>
-            <!-- 5th  -->
-            <tr>
-                <td class="the">5</td>
-                <td class="and">Complex Numbers and Quadratic Equations </td>
-                <td class="the">[ 0% ]</td>
-
-            </tr>
-            <!-- 6th  -->
-            <tr>
-                <td class="the">6</td>
-                <td class="and">Linear Inequalities </td>
-                <td class="the">[ 0% ]</td>
-
-            </tr>
-            <!-- 7th  -->
-            <tr>
-                <td class="the">7</td>
-                <td class="and"> Permutations and Combinations </td>
-                <td class="the">[ 0% ]</td>
-
-            </tr>
-            <!-- 8th  -->
-            <tr>
-                <td class="the">8</td>
-                <td class="and">Binomial Theorem </td>
-                <td class="the">[ 0% ]</td>
-
-            </tr>
-            <!-- 9th -->
-            <tr>
-                <td class="the">9</td>
-                <td class="and"> Sequences and Series</td>
-                <td class="the">[ 0% ]</td>
-
-            </tr>
-            <!-- 10th  -->
-            <tr>
-                <td class="the">10</td>
-                <td class="and">Straight Lines </td>
-                <td class="the">[ 0% ]</td>
-
-            </tr>
-            <!-- 11th  -->
-            <tr>
-                <td class="the">11</td>
-                <td class="and"> Conic Sections</td>
-                <td class="the">[ 0% ]</td>
-
-            </tr>
-            <!-- 12th  -->
-            <tr>
-                <td class="the">12</td>
-                <td class="and"> Introduction to Three Dimensional Geometry</td>
-                <td class="the">[ 0% ]</td>
-
-            </tr>
-            <!-- 13th  -->
-            <tr>
-                <td class="the">13</td>
-                <td class="and">Limits and Derivatives</td>
-                <td class="the">[ 0% ]</td>
-
-            </tr>
-            <!-- 14th  -->
-            <tr>
-                <td class="the">14</td>
-                <td class="and">Mathematical Reasoning</td>
-                <td class="the"> [ 0% ] </td>
-            </tr>
-            <!-- 15th  -->
-            <tr>
-                <td class="the">15</td>
-                <td class="and">Statistics</td>
-                <td class="the"> [ 0% ] </td>
-            </tr>
-            <!-- 16th  -->
-            <tr>
-                <td class="the">16</td>
-                <td class="and"> Probability</td>
-                <td class="the"> [ 0% ] </td>
-            </tr>
-    </table>
-    </tbody>
-
-
+<body>
+    <!-- physics -->
+    <details open>
+        <summary class="subject-header PHYSICS">PHYSICS</summary>
+        <table class="table_one">
+            <thead>
+                <tr>
+                    <th>SR.NO</th>
+                    <th> CHAPTERS</th>
+              
+                    <th>PERCENTAGE </th>
+                </tr>
+            </thead>
+                <!-- first  -->
+            
+                <tr>
+                    <td>1</td>
+                    <td> Units and Measurements </td>
+             
+                    <td>[ 30%]</td>
+                </tr>
+          
+            <tbody>
+                <!-- 2nd s-->
+                <tr>
+                    <td>2</td>
+                    <td>Motion in a Straight Line</td>
+             
+                    <td>[ 50%]</td>
+                </tr>
+                <!-- 3rd-->
+                <tr>
+                    <td>3</td>
+                    <td> Motion in a Plane</td>
+                    <td>[ 0%]</td>
+                </tr>
+                <!-- 4th  -->
+                <tr>
+                    <td>4</td>
+                    <td> Laws of Motion</td>
+                    <td> [ 70% ]</td>
+                </tr>
+                <!-- 5th  -->
+                <tr>
+                    <td>5</td>
+                    <td> Work, Energy and Power</td>
+                    <td>[ 0% ]</td>
+                </tr>
+                <!-- 6th  -->
+                <tr>
+                    <td>6</td>
+                    <td> System of Particles and Rotational Motion</td>
+                    <td>[ 0% ]</td>
+                </tr>
+                <!-- 7th  -->
+                <tr>
+                    <td>7</td>
+                    <td> Gravitation</td>
+                    <td>[ 0% ]</td>
+                </tr>
+                <!-- 8th  -->
+                <tr>
+                    <td>8</td>
+                    <td> Mechanical Properties of Solids</td>
+                    <td>[ 0% ]</td>
+                </tr>
+                <!-- 9th -->
+                <tr>
+                    <td>9</td>
+                    <td> Mechanical Properties of Fluids</td>
+                    <td>[ 0% ]</td>
+                </tr>
+                <!-- 10th  -->
+                <tr>
+                    <td>10</td>
+                    <td> Thermal Properties of Matter</td>
+                    <td>[ 0% ]</td>
+                </tr>
+                <!-- 11th  -->
+                <tr>
+                    <td>11</td>
+                    <td> Thermodynamics</td>
+                    <td>[ 10% ]</td>
+                </tr>
+                <!-- 12th  -->
+                <tr>
+                    <td>12</td>
+                    <td> Kinetic Theory</td>
+                    <td>[ 30% ]</td>
+                </tr>
+                <!-- 13th  -->
+                <tr>
+                    <td>13</td>
+                    <td>Oscillations</td>
+                    <td>[ 0% ]</td>
+                </tr>
+                <!-- 14th  -->
+                <tr>
+                    <td>14</td>
+                    <td> Waves</td>
+                    <td> [ 15% ] </td>
+                </tr>
+            </tbody>
+        </table>
+    </details>
+     <!-- Chemistry Section -->
+     <details>
+        <summary class="subject-header Chemistry">CHEMISTRY</summary>
+        <table class="table_one">
+            <thead>
+                <tr>
+                    <th>SR.NO</th>
+                    <th>CHAPTERS</th>
+                    <th>PERCENTAGE </th>
+                </tr>
+            </thead>
+                <!-- first  -->
+                <tbody>
+                <tr>
+                    <td>1</td>
+                    <td> Some Basic Concepts Of Chemistry</td>
+                    <td>[ 70% ]</td>
+                </tr>
+                <!-- 2nd s-->
+                <tr>
+                    <td>2</td>
+                    <td> Structure Of Atom</td>
+                    <td>[ 70% ]</td>
+                </tr>
+                <!-- 3rd-->
+                <tr>
+                    <td>3</td>
+                    <td> Classification of Elements and Periodicity in Properties</td>
+                    <td>[ 0% ]</td>
+                </tr>
+                <!-- 4th  -->
+                <tr>
+                    <td>4</td>
+                    <td> Chemical Bonding And Molecular Structure</td>
+                    <td> [ 0% ]</td>
+                </tr>
+                <!-- 5th  -->
+                <tr>
+                    <td>5</td>
+                    <td> States Of Matter : Gases And Liquids</td>
+                    <td>[ 0% ]</td>
+                </tr>
+                <!-- 6th  -->
+                <tr>
+                    <td>6</td>
+                    <td> Thermodynamics</td>
+                    <td>[ 70% ]</td>
+                </tr>
+                <!-- 7th  -->
+                <tr>
+                    <td>7</td>
+                    <td> Equilibrium</td>
+                    <td>[ 0% ]</td>
+                </tr>
+                <!-- 8th  -->
+                <tr>
+                    <td>8</td>
+                    <td> Redox Reactions</td>
+                    <td>[ 0% ]</td>
+                </tr>
+                <!-- 9th -->
+                <tr>
+                    <td>9</td>
+                    <td> Hydrogen</td>
+                    <td>[ 0% ]</td>
+                </tr>
+                <!-- 10th  -->
+                <tr>
+                    <td>10</td>
+                    <td> The s-Block Elements</td>
+                    <td>[ 0% ]</td>
+                </tr>
+                <!-- 11 -->
+                <tr>
+                    <td>11</td>
+                    <td> Some p-Block Elements</td>
+                    <td>[ 0% ]</td>
+                </tr>
+                <!-- 12th  -->
+                <tr>
+                    <td>12</td>
+                    <td> Organic Chemistry – Some Basic Principles & Techniques</td>
+                    <td>[ 0% ]</td>
+                </tr>
+                <!-- 13th  -->
+                <tr>
+                    <td>13</td>
+                    <td> Hydrocarbons</td>
+                    <td>[ 0% ]</td>
+                </tr>
+                <!-- 14th  -->
+                <tr>
+                    <td>14</td>
+                    <td> Environmental Chemistry</td>
+                    <td> [ 0% ] </td>
+                </tr>
+            </tbody>
+        </table>
+    </details>
+    <!-- math -->
+    <details>
+        <summary class="subject-header Mathematics">MATHEMATICS</summary>
+        <table class="table_one">
+        </thead>
+                <tr>
+                    <th>SR.NO</th>
+                    <th>CHAPTERS</th>
+                    <th>PERCENTAGE </th>
+                </tr>
+            </thead>
+                <!-- first  -->
+                <tr>
+                    <td>1</td>
+                    <td> Sets</td>
+                    <td>[ 10% ]</td>
+                </tr>
+       
+            <tbody>
+                <!-- 2nd s-->
+                <tr>
+                    <td>2</td>
+                    <td> Relations and Functions</td>
+                    <td>[ 0% ]</td>
+                </tr>
+                <!-- 3rd-->
+                <tr>
+                    <td>3</td>
+                    <td> Trigonometric Functions</td>
+                    <td>[ 0% ]</td>
+                </tr>
+                <!-- 4th  -->
+                <tr>
+                    <td>4</td>
+                    <td>Principle of Mathematical Induction</td>
+                    <td> [ 0% ]</td>
+                </tr>
+                <!-- 5th  -->
+                <tr>
+                    <td>5</td>
+                    <td> Complex Numbers and Quadratic Equations</td>
+                    <td>[ 0% ]</td>
+                </tr>
+                <!-- 6th  -->
+                <tr>
+                    <td>6</td>
+                    <td> Linear Inequalities</td>
+                    <td>[ 0% ]</td>
+                </tr>
+                <!-- 7th  -->
+                <tr>
+                    <td>7</td>
+                    <td> Permutations and Combinations</td>
+                    <td>[ 0% ]</td>
+                </tr>
+                <!-- 8th  -->
+                <tr>
+                    <td>8</td>
+                    <td> Binomial Theorem</td>
+                    <td>[ 0% ]</td>
+                </tr>
+                <!-- 9th -->
+                <tr>
+                    <td>9</td>
+                    <td> Sequence and Series</td>
+                    <td>[ 0% ]</td>
+                </tr>
+                <!-- 10th  -->
+                <tr>
+                    <td>10</td>
+                    <td> Straight Lines</td>
+                    <td>[ 0% ]</td>
+                </tr>
+                <!-- 11th  -->
+                <tr>
+                    <td>11</td>
+                    <td> Conic Sections</td>
+                    <td>[ 0% ]</td>
+                </tr>
+                <!-- 12th  -->
+                <tr>
+                    <td>12</td>
+                    <td>Introduction to Three–dimensional Geometry</td>
+                    <td>[ 0% ]</td>
+                </tr>
+                <!-- 13th  -->
+                <tr>
+                    <td>13</td>
+                    <td> Limits and Derivatives</td>
+                    <td>[ 0% ]</td>
+                </tr>
+                <!-- 14th  -->
+                <tr>
+                    <td>14</td>
+                    <td> Mathematical Reasoning</td>
+                    <td> [ 0% ] </td>
+                </tr>
+            </tbody>
+        </table>
+    </details>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            new Typed('.PHYSICS', {
+                strings: ["PHYSICS"],
+                typeSpeed: 100,
+                backSpeed: 195,
+                loop: false
+            });
+            new Typed('.Chemistry', {
+                strings: ["CHEMISTRY"],
+                typeSpeed: 150,
+                backSpeed: 195,
+                loop: false
+            });
+            new Typed('.Mathematics', {
+                strings: ["MATHEMATICS"],
+                typeSpeed: 150,
+                backSpeed: 195,
+                loop: false
+            });
+        });
+    </script>
 </body>
-
-
 
 </html>

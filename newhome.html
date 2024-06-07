@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: start;
+        align-items: start;
+        height: 100vh;
+        margin: 0;
+        background-color: #d29595;
+        margin-top: 10px;
+        margin-left: 120px;
+  
+    }
+    
+    .hover-container {
+        perspective: 1000px;
+    }
+    
+    .hover-card {
+        position: relative;
+        width: 300px;
+        height: 200px;
+        overflow: hidden;
+        border-radius: 50px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+    
+    .hover-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s;
+    }
+    
+    .hover-card:hover img {
+        transform: scale(1.1);
+    }
+    
+    .hover-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        opacity: 0;
+        transform: translateY(100%);
+        transition: transform 0.3s, opacity 0.3s;
+    }
+    
+    .hover-card:hover .hover-overlay {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+    .hover-overlay h2 {
+        margin: 0;
+        font-size: 1.5rem;
+        animation: fadeInUp 0.3s ease-out;
+    }
+    
+    .hover-overlay p {
+        margin: 0.5rem 0 0;
+        font-size: 1rem;
+        animation: fadeInUp 0.5s ease-out;
+    }
+    
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    a{
+ text-decoration: none;
+    }
+    
+    </style>
+</head>
+
+<body>
+    
+   
+    <div class="hover-container">
+        <div class="hover-card">
+            <img  src="./my_image/my con.jpg"  alt="Hover Image"> 
+            <div class="hover-overlay">
+               <a href="./flags.html"><h2 style="color: wheat; margin-left: 85px;">Explore More</h2></a> 
+                <p style="font-size: 20px; color:  rgb(254, 92, 92); margin-left: 125px;"> FLAGS </p>
+            </div>
+        </div>
+    </div>
+    <div class="hover-container">
+        <div class="hover-card">
+            <img src="./my_image/flex.jpeg" alt="Hover Image">
+            <div class="hover-overlay">
+                <a href="./flex.html"><h2 style="color: wheat; margin-left: 85px;">Explore More</h2></a> 
+
+                <p style="font-size: 20px; color:  rgb(254, 92, 92); margin-left: 125px;">FLEX</p>
+            </div>
+        </div>
+    </div>
+    <div class="hover-container">
+        <div class="hover-card">
+            <img src="./my_image/cla.png" alt="Hover Image">
+            <div class="hover-overlay">
+                <a href="./calenderflex.html"><h2 style="color: wheat; margin-left: 85px;">Explore More</h2></a> 
+
+                <p style="font-size: 20px; color:  rgb(254, 92, 92); margin-left: 100px;">CALENDAR</p>
+            </div>
+        </div>
+    </div>
+    <div class="hover-container">
+        <div class="hover-card">
+            <img src="./my_image/YOU.jpeg" alt="Hover Image">
+            <div class="hover-overlay">
+                <a href="./ youtunvideo.html"><h2 style="color: wheat; margin-left: 85px;">Explore More</h2></a> 
+
+                <p style="font-size: 20px; color:  rgb(254, 92, 92); margin-left: 100px;">YOUTUBE</p>
+               
+            </div>
+        </div>
+    </div>
+    
+    <br>
+    
+    
+</body>
+</html>
