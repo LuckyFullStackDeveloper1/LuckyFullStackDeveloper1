@@ -1,0 +1,206 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>KBC</title>
+    <style>
+        body {
+            background-image: url(https://lh5.googleusercontent.com/proxy/q0FnloDaRsRDWKfhvwnNmT_ivmeY3E3Vuhw2o59OjD-BpyDmaOXohb0fS6brySfWHEvyBcx6jWHPTFZVIEh_8HaDe-iqdlqttq9DeZA);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+        }
+
+        .main-container {
+            height: 100%;
+            width: 100%;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        /* start button */
+        .start-button {
+            height: 65px;
+            width: 170px;
+            background-color: #c7b53c;
+            font-size: 20px;
+            color: white;
+            border-radius: 30%;
+            margin-left: 600px;
+            margin-top: 300px;
+        }
+
+        /* display */
+        .display {
+            width: 90%;
+            height: 200px;
+            background-color: #051f5472;
+            margin-left: 5%;
+            border-radius: 120px;
+            border-style: solid;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        /* text display */
+        .text-display {
+            font-size: 50px;
+            color: white;
+            z-index: 1;
+        }
+
+        /* button */
+        .button {
+            height: 70px;
+            width: 400px;
+            border-radius: 250px;
+            margin: 10px;
+            margin-left: 15%;
+            margin-top: 40px;
+            background-color: #0b81b07f;
+            font-size: 30px;
+            color: white;
+            font-weight: bold;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <!-- start button -->
+    <button class="start-button" id="play-button" onclick="startGame()">LET'S START </button>
+    <!-- display -->
+    <div class="main-container" id="main-body" hidden="true">
+        <div class="display" id="container">
+            <h1 id="text-display" class="text-display"></h1>
+            <div class="loader-container" id="loader">
+                <div class="🤚">
+                    <div class="👉"></div>
+                    <div class="👉"></div>
+                    <div class="👉"></div>
+                    <div class="👉"></div>
+                    <div class="🌴"></div>
+                    <div class="👍"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- buttons -->
+        <button class="button" id="answer-one" onclick="answer(1)"></button>
+        <button class="button" id="answer-two" onclick="answer(2)"></button>
+        <button class="button" id="answer-three" onclick="answer(3)"></button>
+        <button class="button" id="answer-four" onclick="answer(4)"></button>
+    </div>
+
+    <script>
+
+        let audio = new Audio("newKbc.mp3")
+
+        function startGame() {
+            document.getElementById("main-body").hidden = false;
+            document.getElementById("play-button").hidden = true;
+            audio.play();
+            displayQuestion();
+        }
+
+
+        // Questions array
+        let questions = [
+
+            {
+                question: "1. Arrange these words in correct order to make a Hindi Proverb",
+                answers: ["A. Ungl", "B. Daanto", "C. Tal", "D.Dabann "],
+                correct: 1
+            },
+            {
+                question: "2.   The International Literacy Day is observed on",
+                answers: ["A. Sep 8", "B. Nov 28", "C. May 2", "D. Sep 22"],
+                correct: 1
+            },
+            {
+                question: "3.  The language of Lakshadweep. a Union Territory of India, is ",
+                answers: ["A. Tamil", "B. Hindi ", "C. Malayalam", "D.Telugu"],
+                correct: 3
+            },
+            {
+                question: "4.  In which group of places the Kumbha Mela is held every twelve years? ",
+                answers: ["A. Ujjain. Purl; Prayag. Haridwar", "B.Prayag. Haridwar, Ujjain,. Nasik", "C.Rameshwaram. Purl, Badrinath. Dwarika", "D.Chittakoot, Ujjain, Prayag,'Haridwar"],
+                correct: 2
+            },
+            {
+                question: "5.   Bahubali festival is related to",
+                answers: [" A. Islam", "B. Hinduism", "C. Buddhism", " D. Jainism "],
+                correct: 4
+            },
+            {
+                question: "6. Which day is observed as the World Standards  Day?",
+                answers: ["A. June 26", "B.Oct 14", "C. Nov 15", "D. Dec 2"],
+                correct: 2
+            },
+            {
+                question: "7.",
+                answers: ["A. ", "B.", "C. ", "D."],
+                correct: 4
+            },
+            {
+                question: "8.",
+                answers: ["A.", "B. ", "C.", "D. "],
+                correct: 1
+            },
+            {
+                question: "9.",
+                answers: ["A. ", "B. ", "C. ", "D. "],
+                correct: 4
+            },
+            {
+                question: "10.",
+                answers: ["A. ", "B.", "C. ", "D. "],
+                correct: 1
+            }
+        ];
+
+        let currentQuestionIndex = 0;
+
+        function displayQuestion() {
+            let q = questions[currentQuestionIndex];
+            document.getElementById("text-display").innerHTML = q.question;
+            document.getElementById("text-display").style.color = "";
+            document.getElementById("answer-one").innerHTML = q.answers[0];
+            document.getElementById("answer-two").innerHTML = q.answers[1];
+            document.getElementById("answer-three").innerHTML = q.answers[2];
+            document.getElementById("answer-four").innerHTML = q.answers[3];
+        }
+
+        function answer(givenAnswer) {
+            audio.pause();
+            document.getElementById("text-display").style.display = "none";
+            document.getElementById("loader").style.display = "block";
+            setTimeout(() => {
+                document.getElementById("loader").style.display = "none";
+                document.getElementById("text-display").style.display = "block";
+                if (questions[currentQuestionIndex].correct === givenAnswer) {
+                    document.getElementById("text-display").innerHTML = "सही जवाब";
+                    document.getElementById("text-display").style.color = "green";
+                    currentQuestionIndex++;
+                    if (currentQuestionIndex < questions.length) {
+                        setTimeout(displayQuestion, 1000);
+                    } else {
+                        document.getElementById("text-display").innerHTML = "मुबारको आप जीत चुके हैं पूरे 7 करोड़ रुपये";
+                    }
+                } else {
+                    document.getElementById("text-display").innerHTML = "गलत जवाब.";
+                    document.getElementById("text-display").style.color = "red";
+                    currentQuestionIndex = 0;
+                    setTimeout(displayQuestion, 500);
+                }
+            }, 600);
+        }
+    </script>
+</body>
+
+</html>
