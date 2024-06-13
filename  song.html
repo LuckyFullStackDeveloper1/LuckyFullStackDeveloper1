@@ -39,19 +39,30 @@
       margin-left: 450px;
 
     }
-    v{
+
+    v {
       height: 2vh;
       width: 8vw;
     }
 
     .one {
-      margin-top: 200px;
+      margin-top: 204px;
+      margin-left: -175px;
+    }
+
+    .one1 {
+      margin-top: 205px;
+      margin-left: -10px;
+    }
+
+    .one2 {
+      margin-top: 204px;
       margin-left: -15px;
+    }
 
-
-
-
-
+    .one3 {
+      margin-top: 204px;
+      margin-left: -15px;
     }
 
     /* button */
@@ -66,7 +77,7 @@
       font-family: 'Courier New', Courier, monospace;
       margin-top: 67px;
       width: 160px;
-      margin-left: 49px;
+      margin-left: 103px;
 
 
 
@@ -99,12 +110,13 @@
       </select>
     </div>
 
-
-    <div class="one" onclick="playAudio()"><img style=" border-radius: 50%;" src="./Home-image/play.png" height="70px"
+    <div class="one" onclick="previousAudio()"><img style=" border-radius: 50%;" src="./Home-image/previouspng.png"
+        height="72px" width="80px"></div>
+    <div class="one1" onclick="playAudio()"><img style=" border-radius: 50%;" src="./Home-image/play.png" height="70px"
         width="80px"></div>
-    <div class="one" onclick="pauseAudio()"><img style=" border-radius: 50%;" src="./Home-image/pouse.png" height="70px"
-        width="90px"></div>
-    <div class="one" onclick="nextSong()"><img style=" border-radius: 50%;" src="./Home-image/next .png" height="70px "
+    <div class="one2" onclick="pauseAudio()"><img style=" border-radius: 50%;" src="./Home-image/stop.png" height="70px"
+        width="80px"></div>
+    <div class="one3" onclick="nextSong()"><img style=" border-radius: 50%;" src="./Home-image/next.png" height="70px "
         width="80px"></div>
 
   </div>
@@ -128,16 +140,27 @@
     let songs = ["image_project/Silsila Ye Chahat Ka - Remix-(PagalSongs.Com.IN).mp3", "image_project/Game - Sidhu Moose Wala (1).mp3", "image_project/Besharam Bewaffa 128 Kbps.mp3", "image_project/128-Main Rang Sharbaton Ka - Phata Poster Nikhla Hero 128 Kbps.mp3", "image_project/Tu Hai Kahan(PagalWorld.com.pe).mp3  "];
     let currentSongIndex = 0;
     const audio = document.getElementById("myAudio");
-    // 
+    // play
     function playAudio() {
       audio.play();
     }
-
+    // pause
     function pauseAudio() {
       audio.pause();
     }
+    // next
     function nextSong() {
       currentSongIndex = (currentSongIndex + 1) % songs.length;
+      audio.src = songs[currentSongIndex];
+      audio.play();
+    }
+    // previous
+    function previousAudio() {
+      if (currentSongIndex > 0) {
+        currentSongIndex--;
+      } else {
+        currentSongIndex = songs.length - 1;
+      }
       audio.src = songs[currentSongIndex];
       audio.play();
     }
