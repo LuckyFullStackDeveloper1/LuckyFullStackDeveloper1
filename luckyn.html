@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Page</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f4;
+      color: #333;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .main {
+      margin-top: 50px;
+      padding: 20px;
+      border-radius: 10px;
+      background: #000000;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .header h1 {
+      font-family: 'Monospace', sans-serif;
+      color: #2e8b57;
+      font-size: 36px;
+      margin: 0;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      padding: 0;
+      margin: 40px 0;
+    }
+
+    .nav li {
+      margin: 0 15px;
+    }
+
+    .nav a {
+      display: block;
+      width: 60px;
+      height: 60px;
+      text-align: center;
+      line-height: 60px;
+      background: #333;
+      border-radius: 50%;
+      font-size: 30px;
+      color: #fff;
+      position: relative;
+      transition: all 0.5s;
+      overflow: hidden;
+    }
+
+    .nav a img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      transition: all 0.5s;
+    }
+
+    .nav a:hover img {
+      transform: scale(1.1);
+      box-shadow: 0 0 15px #70ff10;
+    }
+
+    .button-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .project-card {
+      border: 2px solid #000;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+      background: #6e5c5c;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .project-card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      transition: transform 0.3s;
+    }
+
+    .project-card h3 {
+      margin: 0;
+      padding: 15px;
+      background: #333;
+      color: #fff;
+      font-size: 18px;
+    }
+
+    .project-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .project-card:hover img {
+      transform: scale(1.1);
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 50px;
+      padding: 20px;
+      border-top: 1px solid #ccc;
+      background: #fff;
+      box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .footer p {
+      margin: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="main">
+      
+      <div class="button-container">
+        <div class="project-card">
+          <a href="./Lucky copy/pageOne.html">
+            <img src="./Home-image/form.png" alt="Form Project">
+            <h3>Form Project</h3>
+          </a>
+        </div>
+        <div class="project-card">
+          <a href="./Lucky copy/luckyy.html">
+            <img src="./Home-image/container.png" alt="Container Project">
+            <h3>Container Project</h3>
+          </a>
+        </div>
+        <div class="project-card">
+          <a href="./Lucky copy/ youtunvideo.html">
+            <img src="./Home-image/youtubee.jpeg" alt="YouTube Project">
+            <h3>YouTube Project</h3>
+          </a>
+        </div>
+        <div class="project-card">
+          <a href="./Lucky copy/parant_syllabus.html">
+            <img src="./Home-image/syllabus.jpeg" alt="Syllabus Project">
+            <h3>Syllabus Project</h3>
+          </a>
+        </div>
+        <div class="project-card">
+          <a href="./Lucky copy/parent_calender.html">
+            <img src="./Home-image/Calendar.jpeg" alt="Calendar Project">
+            <h3>Calendar Project</h3>
+          </a>
+        </div>
+        <div class="project-card">
+          <a href="./Lucky copy/parent_chass.html">
+            <img src="./Home-image/chessone.jpeg" alt="Chess Project">
+            <h3>Chess Project</h3>
+          </a>
+        </div>
+        <div class="project-card">
+          <a href="./Lucky copy/Resume.html">
+            <img src="./Home-image/rasume.jpeg" alt="Resume Project">
+            <h3>Resume Project</h3>
+          </a>
+        </div>
+        <div class="project-card">
+          <a href="./Lucky copy/parent_calculator.html">
+            <img src="./Home-image/calculator.jpeg" alt="Calculator Project">
+            <h3>Calculator Project</h3>
+          </a>
+        </div>
+        <div class="project-card">
+          <a href="./Lucky copy/keyboard.html">
+            <img src="./Home-image/jokerkeybo.webp" alt="Keyboard Project">
+            <h3>Keyboard Project</h3>
+          </a>
+        </div>
+        <div class="project-card">
+          <a href="./Lucky copy/math.html">
+            <img src="./Home-image/multiplication.webp" alt="Math Project">
+            <h3>Math Project</h3>
+          </a>
+        </div>
+        <div class="project-card">
+          <a href="./Lucky copy/ song.html">
+            <img src="./Home-image/enjoysong.jpeg" alt="Song Project">
+            <h3>Song Project</h3>
+          </a>
+        </div>
+        <div class="project-card">
+          <a href="./Lucky copy/kbc.html">
+            <img src="./Home-image/kbcback.jpeg" alt="KBC Project">
+            <h3>KBC Project</h3>
+          </a>
+        </div>
+        <div class="project-card">
+          <a href="./Lucky copy/flags.html">
+            <img src="./Home-image/mycon.jpg" alt="Flags Project">
+            <h3>Flags Project</h3>
+          </a>
+        </div>
+        <div class="project-card">
+          <a href="./Lucky copy/test.html">
+            <img src="./Home-image/project.png" alt="Test Project">
+            <h3>Test Project</h3>
+          </a>
+        </div>
+        <div class="project-card">
+          <a href="./Lucky copy/parent_form.html">
+            <img src="./Home-image/application.jpeg" alt="Application Project">
+            <h3>Application Project</h3>
+          </a>
+        </div>
+        <div class="project-card">
+          <a href="./Lucky copy/flex.html">
+            <img src="./Home-image/flex.jpeg" alt="Flex Project">
+            <h3>Flex Project</h3>
+          </a>
+        </div>
+        <div class="project-card">
+          <a href="./Lucky copy/googlePage.html">
+            <img src="./Home-image/googlehome.png" alt="Google Page Project">
+            <h3>Google Page Project</h3>
+          </a>
+        </div>
+      </div>
+
+
+      </div>
+    </div>
+  </div>
+</body>
