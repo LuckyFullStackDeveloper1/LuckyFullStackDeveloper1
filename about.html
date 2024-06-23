@@ -5,23 +5,51 @@
     <style>
         /*--------------------------------------------------------------
 # Sections General
---------------------------------------------------------------*/
+---------
+-----------------------------------------------------*/
 
-        section.section-show {
-            top: 100px;
-            bottom: auto;
-            opacity: 1;
-            padding-bottom: 45px;
+
+        .about-me .content h3 {
+            font-weight: 700;
+            font-size: 26px;
+            color: #18d26e;
         }
+
+        .about-me .content ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .about-me .content ul li {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .about-me .content ul strong {
+            margin-right: 10px;
+        }
+
+        .about-me .content ul i {
+            font-size: 16px;
+            margin-right: 5px;
+            color: #18d26e;
+            line-height: 0;
+        }
+
+        .about-me .content p:last-child {
+            margin-bottom: 0;
+        }
+
+
 
 
         .section-title h2 {
             font-size: 14px;
             font-weight: 500;
-            padding: 10;
+            padding: 0;
             line-height: 1px;
             margin: 0 0 20px 0;
-            margin: 10px;
             letter-spacing: 2px;
             text-transform: uppercase;
             color: #aaaaaa;
@@ -35,217 +63,137 @@
             display: inline-block;
             background: #4ceb95;
             margin: 4px 10px;
-            margin: 10px;
         }
 
-        .section-title p {
-            margin: 10px;
+        p {
+            margin: 0;
             margin: -15px 0 15px 0;
             font-size: 36px;
             font-weight: 700;
             text-transform: uppercase;
             font-family: "Poppins", sans-serif;
-            color: #fff;
-            margin: 10px;
+            color: #eeeedd;
         }
 
-        /* body */
-        body {
-            background-color: rgb(29, 27, 27);
-        }
-
-        /* main con */
-
-        .main {
-
-            margin: 53px;
+        .about {
+            background-color: #312c2c;
+            width: 1100px;
             border-style: solid;
-            height: 67vh;
-            width: 90vw;
-            background-color: black;
+            margin: 100px;
+            border-color: #55b9b9;
         }
 
-        h1 {
-            color: white;
-        }
-
-        img {
-            margin: 16px;
-        }
-
-        h3 {
-            color: rgb(75, 163, 75);
-            margin-left: 400px;
-            margin-top: -410px;
-            font-size: 35px;
-            font-family: "Poppins", sans-serif;
+        strong {
+            color: beige;
+            margin: 4px;
         }
 
         span {
-            color: #729762;
-        }
-
-        .lucky {
-            font-size: 18px;
-            margin-left: 400px;
-            font-family: "Poppins", sans-serif;
-            color: white;
-            margin-top: -20px;
-        }
-
-        .Birthday {
-            font-size: 18px;
-            margin-left: 400px;
-            font-family: "Poppins", sans-serif;
-            color: white;
-            margin-top: 30px;
-        }
-
-        .email {
-            font-size: 18px;
-            margin-left: 400px;
-            font-family: "Poppins", sans-serif;
-            color: white;
-            margin-top: 30px;
-        }
-
-        .Skype {
-            font-size: 18px;
-            margin-left: 400px;
-            font-family: "Poppins", sans-serif;
-            color: white;
-            margin-top: 30px;
-        }
-
-        .Phone {
-            font-size: 18px;
-            margin-left: 400px;
-            font-family: "Poppins", sans-serif;
-            color: white;
-            margin-top: 30px;
-        }
-
-        .Katol {
-            font-size: 18px;
-            margin-left: 400px;
-            font-family: "Poppins", sans-serif;
-            color: white;
-            margin-top: 30px;
-        }
-
-        .age {
-            font-size: 18px;
-            margin-left: 800px;
-            font-family: "Poppins", sans-serif;
-            color: white;
-            margin-top: -223px;
-
-
-        }
-
-        .Degree {
-            font-size: 18px;
-            margin-left: 800px;
-            font-family: "Poppins", sans-serif;
-            color: white;
-            margin-top: 30px;
-        }
-
-        .subject {
-            font-size: 18px;
-            margin-left: 800px;
-            font-family: "Poppins", sans-serif;
-            color: white;
-            margin-top: 30px;
-        }
-
-        .hobbies {
-            font-size: 18px;
-            margin-left: 800px;
-            font-family: "Poppins", sans-serif;
-            color: white;
-            margin-top: 30px;
-        }
-
-
-        h1 {
-            color: #698863;
-            margin-left: 108px;
-            font-size: 40px;
-            margin: 40px;
-            margin-top: 5px;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        a {
-            text-decoration: none;
-            color: rgb(255, 255, 255);
-            font-size: 20px;
-            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-            transition: color 0.3s, background-color 0.3s;
-            margin: 20px;
+            color: #66a885;
         }
 
         .home {
-      color: #fff;
-      margin-left: 20px;
-      font-size: 20px;
-    }
-
-        .About {
-            margin-left: 40px;
-
+            color: #ffffff;
+            margin-left: 0px;
+            font-size: 20px;
+            text-decoration: none;
         }
-
 
         /* For mobile phones: */
     </style>
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+
 </head>
 
-<body>
+<body style="background-color: #181717;">
 
     <!-- main two -->
 
 
     <!-- main one -->
+    <a class="home" href="./index.html">HOME</a>
+    <section id="about" class="about">
 
-    <div class="main">
-        <a class="home" href="./index.html">HOME</a>
-        <a class="About" href="">ABOUT</a>
-        <!-- sec title -->
-        <div class="section-title">
-            <!-- about -->
-<BR></BR>
-            <!-- ME -->
-            <p>Learn more about me</p>
+        <!-- ======= About Me ======= -->
+        <div class="about-me container">
+
+            <div class="section-title">
+
+                <p>Learn more about me </p>
+
+            </div>
+
+            <div class="row">
+                <div class="col-lg-4" data-aos="fade-right">
+                    <img style=" border-style: solid; margin: 10px;" height="200px" width="200px"
+                        src="./Home-image/lucky.jpg" class="img-fluid" alt="">
+                </div>
+                <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
+                    <h3> FULL STACK DEVELOPER</h3>
+                    <br>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <ul>
+                                <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>17 / Seb /
+                                        2007</span></li>
+                                <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong>
+                                    <span>nakadelucky8@gmail.com</span>
+                                </li>
+                                <li><i class="bi bi-chevron-right"></i> <strong>Skype ID:</strong> <span>Lucky
+                                        Nakade</span></li>
+                                <li><i class="bi bi-chevron-right"></i> <strong>Phone number:</strong>
+                                    <span>9226784527</span>
+                                </li>
+                                <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Katol</span></li>
+
+                            </ul>
+                        </div>
+                        <div class="col-lg-6">
+                            <ul>
+                                <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong><span>16</span></li>
+                                <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>11 Pass</span>
+                                </li>
+                                <li><i class="bi bi-chevron-right"></i> <strong> My favorite is
+                                        :</strong><span>Physics</span></li>
+                                <li><i class="bi bi-chevron-right"></i> <strong>My hobbies:</strong> <span>Lisinig
+                                        song</span></li>
+                                <li><i class="bi bi-chevron-right"></i> <strong> My favorite movie:</strong> <span>12th
+                                        Fail</span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div><!-- End About Me -->
+
+
+
+        <div class="swiper-pagination"></div>
         </div>
 
+        <div class="owl-carousel testimonials-carousel">
 
+        </div>
 
+        </div><!-- End Testimonials  -->
+        <!-- Vendor JS Files -->
+        <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+        <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+        <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
 
-        <img height="400px" width="250px" src="./Home-image/lucky.jpg">
+        <!-- Template Main JS File -->
+        <script src="assets/js/main.js"></script>
 
-        <h3> FULL STACK DEVELOPER</h3>
-        <br>
-        <li class="lucky"></i> <strong>Name:</strong> <span>Lucky Nakade</span></li>
-
-        <li class="Birthday"></i> <strong>Birthday:</strong> <span>17 / 09 / 2007</span></li>
-
-        <li class="email"></i> <strong>Email: </strong><span> nakadelucky8@gmail.com</span></li>
-
-        <li class="Phone"></i> <strong>Phone Number: </strong> <span> 9226784527</span></li>
-
-        <li class="Katol"></i> <strong>City:</strong> <span>Katol</span></li>
-
-        <li class="age"></i> <strong>Age:</strong><span>16</span></li>
-
-        <li class="Degree"></i> <strong>Class:</strong> <span>11 Pass</span></li>
-
-        <li class="subject"></i> <strong> My Favorite Subject Is :</strong> <span>Physics</span></li>
-
-        <li class="hobbies"></i> <strong>My Hobbies:</strong> <span> Playing Cricket</span></li>
-    </div>
-
+    </section><!-- End About Section -->
 </body>
 
 </html>
