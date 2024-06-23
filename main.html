@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Page</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #000000;
+      color: #333;
+    }
+
+    .container {
+      max-width: 1500px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .main {
+      margin-top: 50px;
+      padding: 20px;
+      border-radius: 10px;
+      background: rgb(30, 29, 29);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      padding: 0;
+      margin: 40px 0;
+    }
+
+    .nav li {
+      margin: 0 15px;
+    }
+
+    .nav a {
+      display: block;
+      width: 60px;
+      height: 60px;
+      text-align: center;
+      line-height: 60px;
+      background: #333;
+      border-radius: 50%;
+      font-size: 30px;
+      color: #fff;
+      position: relative;
+      transition: all 0.5s;
+      overflow: hidden;
+    }
+
+    .nav a img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      transition: all 0.5s;
+    }
+
+    .nav a:hover img {
+      transform: scale(1.1);
+      box-shadow: 0 0 15px #70ff10;
+    }
+
+    .button-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .project-card {
+      border: 3px solid #70c5b6;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+      background: #6e5c5c;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .project-card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      transition: transform 0.3s;
+    }
+
+    .project-card h3 {
+      margin: 0;
+      padding: 15px;
+      background: #8d5858;
+      color: #000000;
+      font-size: 18px;
+    }
+
+    .project-card:hover img {
+      transform: scale(1.1);
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 50px;
+      padding: 20px;
+      border-top: 1px solid #ccc;
+      background: #fff;
+      box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .footer p {
+      margin: 0;
+    }
+
+    .Home {
+      font-size: x-large;
+      font-family: monospace;
+      color: #f4f4f4;
+      margin-left: 540px;
+      text-decoration: none;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .home {
+      color: #fff;
+      margin-left: 1190px;
+      font-size: 20px;
+    }
+
+    .Projects {
+      margin-left: 40px;
+      color: #fff;
+      font-size: 20px;
+    }
+
+    @media (max-width: 1200px) {
+      .container {
+        padding: 10px;
+      }
+
+      .nav li {
+        margin: 0 10px;
+      }
+
+      .nav a {
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        font-size: 24px;
+      }
+
+      .home {
+        margin-left: 900px;
+        font-size: 18px;
+      }
+
+      .Projects {
+        margin-left: 30px;
+        font-size: 18px;
+      }
+    }
+
+    @media (max-width: 992px) {
+      .nav a {
+        width: 45px;
+        height: 45px;
+        line-height: 45px;
+        font-size: 20px;
+      }
+
+      .home {
+        margin-left: 700px;
+        font-size: 16px;
+      }
+
+      .Projects {
+        margin-left: 20px;
+        font-size: 16px;
+      }
+
+      .project-card img {
+        height: 130px;
+      }
+
+      .project-card h3 {
+        font-size: 16px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav {
+        flex-direction: column;
+      }
+
+      .nav li {
+        margin: 10px 0;
+      }
+
+      .nav a {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 18px;
+      }
+
+      .home {
+        margin-left: 500px;
+        font-size: 14px;
+      }
+
+      .Projects {
+        margin-left: 10px;
+        font-size: 14px;
+      }
+
+      .project-card img {
+        height: 100px;
+      }
+
+      .project-card h3 {
+        font-size: 14px;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .nav {
+        flex-direction: column;
+      }
+
+      .nav li {
+        margin: 5px 0;
+      }
+
+      .nav a {
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
+        font-size: 16px;
+      }
+
+      .home {
+        margin-left: 300px;
+        font-size: 12px;
+      }
+
+      .Projects {
+        margin-left: 5px;
+        font-size: 12px;
+      }
+
+      .project-card img {
+        height: 80px;
+      }
+
+      .project-card h3 {
+        font-size: 12px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="lucky ">
+    <!-- link -->
+  </div>
+  <div class="container">
+    <div class="main">
+      <div>
+        <a class="home" href="./mainhome.html">HOME</a>
+      </div>
+      <div class="button-container">
+        <div class="project-card">
+          <a href="pageOne.html">
+            <img src="./Home-image/registration .jpg" alt="Form Project">
+            <h3>Form </h3>
+          </a>
+        </div>
+        <div class="project-card">
+          <a href="oddnumber (1).html">
+            <img src="./Home-image/odd or even.jpg" alt="Odd or Even Project">
+            <h3>Odd or Even</h3>
+          </a>
+        </div>
+        <div class="project-card">
+          <a href="./ youtunvideo.html">
+            <img src="./Home-image/youtube.png" alt="YouTube Project">
+            <h3>YouTube </h3>
+          </a>
+        </div>
+        <div class="project-card">
+          <a href="parant_syllabus.html">
+            <img src="./Home-image/SYLLABUS.jpg" alt="Syllabus Project">
+            <h3>Syllabus </h3>
+          </a>
+        </div>
+        <div class="project-card">
+          <a href="parent_calender.html">
+            <img src="./Home-image/ CALENDER .jpg" alt="Calendar Project">
+            <h3>Calendar </h3>
+          </a>
+        </div>
+        <div class="project-card">
+          <a href="parent_chass.html">
+            <img src="./Home-image/chess.jpg" alt="Chess Project">
+            <h3>Chess </h3>
+          </a>
+        </div>
+        <div class="project-card">
+          <a href="Resume.html">
+            <img src="./Home-image/RESUME.jpg" alt="Resume Project">
+            <h3>Resume </h3>
+          </a>
+        </div>
+        <div class="project-card">
+          <a href="parent_calculator.html">
+            <img src="./Home-image/calculator.jpeg" alt="Calculator Project">
+            <h3>Calculator </h3>
+          </a>
+        </div>
+        <div class="project-card">
+          <a href="keyboard.html">
+            <img src="./Home-image/KEYBORAD.jpg" alt="Keyboard Project">
+            <h3>Keyboard </h3>
+          </a>
+        </div>
+        <div class="project-card">
+          <a href="math.html">
+            <img src="./Home-image/MATH.jpg" alt="Math Project">
+            <h3>Math </h3>
+          </a>
+        </div>
+        <div class="project-card">
+          <a href="./ song.html">
+            <img src="./Home-image/SONG.jpg" alt="Song Project">
+            <h3>Song </h3>
+          </a>
+        </div>
+        <div class="project-card">
+          <a href="kbc.html">
+            <img src="./Home-image/kbcl.jpeg" alt="KBC Project">
+            <h3>KBC Game </h3>
+          </a>
+        </div>
+        <div class="project-card">
+          <a href="flags.html">
+            <img src="./Home-image/INDIA.jpg" alt="Flags Project">
+            <h3>Flags </h3>
+          </a>
+        </div>
+        <div class="project-card">
+          <a href="test.html">
+            <img src="./Home-image/project.jpg" alt="Test Project">
+            <h3>Test </h3>
+          </a>
+        </div>
+        <div class="project-card">
+          <a href="parent_form.html">
+            <img src="./Home-image/aplcotionform.jpg" alt="Application Project">
+            <h3>Application Form</h3>
+          </a>
+        </div>
+        <div class="project-card">
+          <a href="flex.html">
+            <img src="./Home-image/flex.jpg" alt="Flex Project">
+            <h3>Flex </h3>
+          </a>
+        </div>
+        <div class="project-card">
+          <a href="googlePage.html">
+            <img src="./Home-image/google.jpg" alt="Google Page Project">
+            <h3>Google Page </h3>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    // JavaScript for search functionality
+    const projects = document.querySelectorAll('.project');
+    const searchInput = document.getElementById('searchInput');
+
+    searchInput.addEventListener('input', function () {
+      const inputValue = this.value.trim().toLowerCase();
+
+      projects.forEach(project => {
+        const title = project.querySelector('p').textContent.toLowerCase();
+        if (title.includes(inputValue)) {
+          project.style.display = 'block';
+        } else {
+          project.style.display = 'none';
+        }
+      });
+    });
+
+    // JavaScript for theme switcher
+    const checkbox = document.getElementById('checkbox');
+    const body = document.body;
+
+    checkbox.addEventListener('change', function () {
+      if (this.checked) {
+        body.classList.add('dark-mode');
+      } else {
+        body.classList.remove('dark-mode');
+      }
+    });
+  </script>
+</body>
+
+</html>
