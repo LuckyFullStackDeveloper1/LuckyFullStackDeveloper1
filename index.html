@@ -4,13 +4,15 @@
 <head>
     <title> HOME PAGE</title>
     <style>
+        /* BODY */
         body {
-            background-image: url(https://cdn.pixabay.com/photo/2024/05/28/12/05/workplace-8793724_1280.jpg);
-            background-size: cover; background-repeat: no-repeat;
+            background-image: url(./Home-image/pexels-life-of-pix-42408.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
         }
 
         h1 {
-            color: #000000;
+            color: #050505;
             margin-left: 108px;
             font-size: 50px;
             margin-top: 290px;
@@ -18,12 +20,13 @@
         }
 
         h2 {
-            color: azure;
+            color: rgb(50, 216, 216);
             margin-left: 108px;
             margin-top: -20px;
             font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         }
 
+        /* HOME DIV  */
         div {
             display: flex;
             flex-direction: row;
@@ -33,12 +36,14 @@
 
         a {
             text-decoration: none;
-            color: rgb(248, 255, 55);
+            color: #3e2093;
             font-size: 25px;
             font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
             margin: 0 10px;
             transition: color 0.3s, background-color 0.3s;
         }
+
+        /* PROJECT A */
 
         .home {
             margin-top: 40px;
@@ -59,8 +64,10 @@
             margin-top: 40px;
         }
 
+        /* MEDIA  */
         @media (max-width: 768px) {
             h1 {
+
                 font-size: 36px;
                 margin-top: 100px;
                 margin-left: 20px;
@@ -72,6 +79,7 @@
                 margin-left: 20px;
                 text-align: center;
                 margin-top: 10px;
+                color: #000000;
             }
 
             div {
@@ -86,22 +94,167 @@
                 margin: 10px 0;
             }
 
-            .home, .Projects, .About, .Contact {
+            /* HOME ,PRO , ABO  CON  */
+            .home,
+            .Projects,
+            .About,
+            .Contact {
                 margin-left: 0;
             }
+        }
+
+        /* Styling for the header */
+
+        /* Global CSS reset */
+        a {
+            display: inline-block;
+
+
+            /* Add padding */
+            text-transform: uppercase;
+            /* Transform text to uppercase */
+            letter-spacing: 4px;
+            /* Add letter spacing */
+            color: #000000;
+            /* Text color */
+            font-size: 1.rem;
+            /* Font size */
+            font-weight: bold;
+
+        }
+
+        /* Styling for the navigation links on hover */
+        a:hover {
+            background-color: #00a49f;
+            /* Background color on hover */
+            color: #ffffff;
+            /* Text color on hover */
+            box-shadow: 0 0 5px #019e96, 0 0 25px #00979f, 0 0 50px #03e9f4, 0 0 200px #028f8f;
+            /* Box shadow on hover */
+            -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+            /* Reflection effect */
+        }
+
+        /* Add hue rotation to first and last navigation links */
+        a:first-child {
+            filter: hue-rotate(225deg);
+        }
+
+        a:last-child {
+            filter: hue-rotate(90deg);
+        }
+
+        /* Styling for the animated spans within the links */
+        a span {
+            position: absolute;
+            display: block;
+        }
+
+        /* Animation for first span */
+        a span:nth-child(1) {
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #e54012);
+            animation: animate1 1s infinite;
+            /* Apply animation */
+        }
+
+        /* Animation for second span */
+        @keyframes animate1 {
+            0% {
+                left: -100%;
+            }
+
+            100% {
+                left: 100%;
+            }
+        }
+
+        /* Animation for second span */
+        a span:nth-child(2) {
+            top: -100%;
+            right: 0;
+            width: 3px;
+            height: 100%;
+            background: linear-gradient(180deg, transparent, #f56213);
+            animation: animate2 1s infinite;
+            animation-delay: .25s;
+            /* Delay animation */
+        }
+
+        @keyframes animate2 {
+            0% {
+                top: -100%;
+            }
+
+            100% {
+                top: 100%;
+            }
+        }
+
+        /* Animation for third span */
+        a span:nth-child(3) {
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(20deg, transparent, #f56213);
+            animation: animate3 1s infinite;
+            animation-delay: 0.5s;
+            /* Delay animation */
+        }
+
+        @keyframes animate3 {
+            0% {
+                right: -100%;
+            }
+
+            100% {
+                right: 100%;
+            }
+        }
+
+        /* Animation for fourth span */
+        a span:nth-child(4) {
+            bottom: -100%;
+            left: 0;
+            width: 3px;
+            height: 100%;
+            background: linear-gradient(360deg, transparent, #f56213);
+            animation: animate4 1s infinite;
+            animation-delay: .75s;
+            /* Delay animation */
+        }
+
+        @keyframes animate4 {
+            0% {
+                bottom: -100%;
+            }
+
+            100% {
+                bottom: 100%;
+            }
+
         }
     </style>
 </head>
 
 <body>
+    <!--  H1  -->
     <h1>Lucky Nakade</h1>
+    <!-- H2  -->
     <h2>I'm a Student</h2>
+
+    <!-- HOME DIV -->
     <div>
         <a class="home" href="#">HOME</a>
         <a class="Projects" href="./main.html">PROJECT</a>
         <a class="About" href="./about.html">ABOUT</a>
         <a class="Contact" href="./contact.html">CONTACT</a>
     </div>
+
 </body>
 
 </html>

@@ -5,6 +5,7 @@
   <title>CONTACT SECTION</title>
 
   <style>
+    /* MAIN  */
     .main-container {
       display: flex;
       flex-direction: row;
@@ -17,6 +18,8 @@
       margin-left: 180px;
     }
 
+    /* DIV ONE */
+
     .div-one {
       width: 450px;
       margin-top: 50px;
@@ -24,6 +27,7 @@
       background-color: rgb(30, 28, 28);
     }
 
+    /* DIV TWO */
     .div-two {
       width: 500px;
       height: 130px;
@@ -31,9 +35,13 @@
       background-color: rgb(30, 28, 28);
     }
 
+    /* BODY  */
+
     body {
       background-color: rgb(37, 37, 37);
     }
+
+    /* H1 */
 
     h1 {
       color: white;
@@ -43,6 +51,8 @@
       font-family: "Poppins", sans-serif;
     }
 
+    /* H2 */
+
     h2 {
       color: rgb(82, 201, 92);
       font-size: 20px;
@@ -50,15 +60,19 @@
       font-family: "Poppins", sans-serif;
     }
 
+    /* TWITTER */
+
     .twitter {
       color: azure;
       text-decoration: none;
       font-size: 20px;
       font-family: "Poppins", sans-serif;
-      margin-left: 20px;
+
+      margin: 30px;
       margin-top: 30;
     }
 
+    /* HOME */
     .home {
       color: #fff;
       margin-left: 180px;
@@ -74,6 +88,7 @@
       margin: 30px;
     }
 
+    /* MEDIA */
     @media (max-width: 768px) {
       .main-container {
         flex-direction: column;
@@ -82,12 +97,14 @@
         height: auto;
       }
 
-      .div-one, .div-two {
+      .div-one,
+      .div-two {
         width: auto;
         margin-top: 20px;
       }
 
-      .home, .About {
+      .home,
+      .About {
         margin-left: 0;
         display: block;
         text-align: center;
@@ -104,49 +121,55 @@
         font-size: 18px;
       }
     }
-
-
   </style>
 </head>
 
+<!-- BODY  -->
+
 <body>
-  
+  <!-- HOME -->
 
   <a class="home" href="./index.html">HOME</a>
 
   <br>
   <br>
   <br><b>
-  <div class="main-container">
+    <!-- main-container -->
+    <div class="main-container">
 
-    <div class="div-one">
-      <h2>🔘 My Address</h2>
-      <h1>Katol Dist. Nagpur. India</h1>
-    </div>
-    <div class="div-two">
-      <h2> <img src="https://cdn-icons-png.flaticon.com/512/4187/4187272.png" height="25px" width="24px"> Social
-        Profiles </h2>
-      <br>
-      <div class="social-links">
-        <a href="https://x.com/?lang=en" class="twitter">Twitter</a>
-        <a href="https://www.facebook.com/" class="twitter">Facebook</a>
-        <a href="https://github.com/LuckyFullStackDeveloper1/LuckyFullStackDeveloper1" class="twitter">Github</a>
-        <a href="live:.cid.5f22d3c3cdedd6bc" class="twitter">Skype</a>
-        <a href="https://www.linkedin.com/feed/" class="twitter">Linkedln</a>
+      <!--  DIV ONE -->
+      <div class="div-one">
+        <!-- H2 -->
+        <h2>🔘 My Address</h2>
+        <h1>Katol Dist. Nagpur. India</h1>
+      </div>
+      <div class="div-two">
+        <!-- SOCIAL PROJECT -->
+        <h2> <img src="https://cdn-icons-png.flaticon.com/512/4187/4187272.png" height="25px" width="24px"> Social
+          Profiles </h2>
+        <br>
+        <div class="social-links">
+
+          <a href="https://github.com/LuckyFullStackDeveloper1/LuckyFullStackDeveloper1" class="twitter"><img
+              src="./Home-image/github.jpeg" style="border-radius: 50%;" height="20px" width="20px">  Github</a>
+          <a href="live:.cid.5f22d3c3cdedd6bc" class="twitter"> <img style="border-radius: 50%;"  src="./Home-image/skype.avif" height="20px" width="20px">  Skype</a>
+          <a href="https://www.linkedin.com/feed/" class="twitter"> <img style="border-radius: 50%;"  src="./Home-image/likdin.png" height="20px" width="20px">  Linkedln</a>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="main-container">
-    <div class="div-one">
-      <h2>📞 Contact</h2>
-      <h1> 9226784527</h1>
+    <!-- CONTECT  -->
+    <div class="main-container">
+      <div class="div-one">
+        <h2>📞 Contact</h2>
+        <h1> 9226784527</h1>
+      </div>
+      <!-- DIV TWO -->
+      <div class="div-two">
+        <h2>📧 Email </h2>
+        <h1>nakadelucky8@gmail.com</h1>
+      </div>
     </div>
-    <div class="div-two">
-      <h2>📧 Email </h2>
-      <h1>nakadelucky8@gmail.com</h1>
-    </div>
-  </div>
-
+    <!-- HTML -->
 </body>
 
 </html>
