@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <title>Document</title>
+  <style>
+    .box {
+      height: 1000px;
+      width: 100vw;
+      border-style: solid;
+      text-align: center;
+    }
+
+    #sec-one {
+      background-color: rgb(103, 251, 157);
+      font-family: monospace;
+    }
+
+    #sec-two {
+      background-color: rgb(252, 185, 118);
+      font-family: monospace;
+    }
+
+    #sec-three {
+      background-color: rgb(124, 220, 252);
+      font-family: monospace;
+
+    }
+
+    #sec-four {
+      background-color: rgb(207, 48, 45);
+      font-family: monospace;
+
+    }
+
+    .manu {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      background-color: gray;
+      height: 100px;
+      padding: 50px;
+      position: relative;
+    }
+
+    a {
+      font-size: xx-large;
+      text-decoration: none;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .one {
+      background-color: rgb(255, 255, 255);
+      color: rgb(0, 0, 0);
+
+    }
+  </style>
+</head>
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: 'Lato', sans-serif;
+    }
+
+    .overlay {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: rgb(0, 0, 0);
+      background-color: rgba(0, 0, 0, 0.9);
+      overflow-x: hidden;
+      transition: 0.5s;
+    }
+
+    .overlay-content {
+      position: relative;
+      top: 25%;
+      width: 100%;
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .overlay a {
+      padding: 8px;
+      text-decoration: none;
+      font-size: 36px;
+      color: #ffffff;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .overlay a:hover,
+    .overlay a:focus {
+      color: #f1f1f1;
+    }
+
+    .overlay .closebtn {
+      position: absolute;
+      top: 20px;
+      right: 45px;
+      font-size: 60px;
+    }
+
+    @media screen and (max-height: 450px) {
+      .overlay a {
+        font-size: 20px
+      }
+
+      .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="myNav" class="overlay">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div class="overlay-content">
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Clients</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
+
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+
+  <script>
+    function openNav() {
+      document.getElementById("myNav").style.width = "100%";
+    }
+
+    function closeNav() {
+      document.getElementById("myNav").style.width = "0%";
+    }
+  </script>
+
+</body>
+
+</html>
+
+
+<body style="margin: 0;">
+  <div class="manu">
+    <a href="#sec-one">HOME</a>
+    <a href="#sec-two">ABOUT </a>
+    <a href="#sec-three">CONTACT</a>
+    <a href="#sec-four">PROJECT</a>
+  </div>
+  <div id="sec-one" class="box">
+    <h1 class="one">HOME</h1>
+
+
+  </div>
+  <div id="sec-two" class="box">
+    <h1 class="one">ABOUT </h1>
+
+  </div>
+  <div id="sec-three" class="box">
+    <h1 class="one">CONTACT</h1>
+  </div>
+  <div id="sec-four" class="box">
+    <h1 class="one">PROJECT</h1>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+
+      <title>Home Page</title>
+      <style>
+        /* BODY  */
+        body {
+          font-family: 'Arial', sans-serif;
+          margin: 0;
+          padding: 0;
+          background-color: gray;
+          color: #333;
+        }
+
+
+      
+      </style>
+    </head>
+    <!-- BODY -->
+
+    <body>
+      <div class="lucky ">
+        <!-- link -->
+      </div>
+      <div class="container">
+        <div class="main">
+          <div>
+            <!-- HOME -->
+            <a class="home" href="./index.html">HOME</a>
+          </div>
+          <!-- PROJECT -->
+          <div class="button-container">
+            <div class="project-card">
+              <a href="pageOne.html">
+                <img src="./Home-image/registration .jpg" alt="Form Project">
+                <h3>Form </h3>
+              </a>
+            </div>
+            <div class="project-card">
+              <a href="oddnumber (1).html">
+                <img src="./Home-image/odd or even.jpg" alt="Odd or Even Project">
+                <h3>Odd or Even</h3>
+              </a>
+            </div>
+            <div class="project-card">
+              <a href="./ youtunvideo.html">
+                <img src="./Home-image/youtube.png" alt="YouTube Project">
+                <h3>YouTube </h3>
+              </a>
+            </div>
+            <div class="project-card">
+              <a href="parant_syllabus.html">
+                <img src="./Home-image/SYLLABUS.jpg" alt="Syllabus Project">
+                <h3>Syllabus </h3>
+              </a>
+            </div>
+            <div class="project-card">
+              <a href="parent_calender.html">
+                <img src="./Home-image/ CALENDER .jpg" alt="Calendar Project">
+                <h3>Calendar </h3>
+              </a>
+            </div>
+            <div class="project-card">
+              <a href="parent_chass.html">
+                <img src="./Home-image/chess.jpg" alt="Chess Project">
+                <h3>Chess </h3>
+              </a>
+            </div>
+            <div class="project-card">
+              <a href="Resume.html">
+                <img src="./Home-image/RESUME.jpg" alt="Resume Project">
+                <h3>Resume </h3>
+              </a>
+            </div>
+            <div class="project-card">
+              <a href="calculatorjs.html">
+                <img src="./Home-image/calculator.jpeg" alt="Calculator Project">
+                <h3>Calculator </h3>
+              </a>
+            </div>
+            <div class="project-card">
+              <a href="keyboard.html">
+                <img src="./Home-image/KEYBORAD.jpg" alt="Keyboard Project">
+                <h3>Keyboard </h3>
+              </a>
+            </div>
+            <div class="project-card">
+              <a href="math.html">
+                <img src="./Home-image/MATH.jpg" alt="Math Project">
+                <h3>Math </h3>
+              </a>
+            </div>
+            <div class="project-card">
+              <a href="./ song.html">
+                <img src="./Home-image/SONG.jpg" alt="Song Project">
+                <h3>Song </h3>
+              </a>
+            </div>
+            <div class="project-card">
+              <a href="kbc.html">
+                <img src="./Home-image/kbcl.jpeg" alt="KBC Project">
+                <h3>KBC Game </h3>
+              </a>
+            </div>
+            <div class="project-card">
+              <a href="flags.html">
+                <img src="./Home-image/INDIA.jpg" alt="Flags Project">
+                <h3>Flags </h3>
+              </a>
+            </div>
+            <div class="project-card">
+              <a href="test.html">
+                <img src="./Home-image/project.jpg" alt="Test Project">
+                <h3>Test </h3>
+              </a>
+            </div>
+            <div class="project-card">
+              <a href="parent_form.html">
+                <img src="./Home-image/aplcotionform.jpg" alt="Application Project">
+                <h3>Application Form</h3>
+              </a>
+            </div>
+            <div class="project-card">
+              <a href="flex.html">
+                <img src="./Home-image/flex.jpg" alt="Flex Project">
+                <h3>Flex </h3>
+              </a>
+            </div>
+            <div class="project-card">
+              <a href="googlePage.html">
+                <img src="./Home-image/google.jpg" alt="Google Page Project">
+                <h3>Google Page </h3>
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <script>
+        // JavaScript for search functionality
+        const projects = document.querySelectorAll('.project');
+        const searchInput = document.getElementById('searchInput');
+
+        searchInput.addEventListener('input', function () {
+          const inputValue = this.value.trim().toLowerCase();
+
+          projects.forEach(project => {
+            const title = project.querySelector('p').textContent.toLowerCase();
+            if (title.includes(inputValue)) {
+              project.style.display = 'block';
+            } else {
+              project.style.display = 'none';
+            }
+          });
+        });
+
+        // JavaScript for theme switcher
+        const checkbox = document.getElementById('checkbox');
+        const body = document.body;
+
+        checkbox.addEventListener('change', function () {
+          if (this.checked) {
+            body.classList.add('dark-mode');
+          } else {
+            body.classList.remove('dark-mode');
+          }
+        });
+      </script>
+    </body>
+
+    </html>
+  </div>
+</body>
+
+</html>

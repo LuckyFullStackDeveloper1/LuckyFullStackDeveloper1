@@ -10,7 +10,7 @@
             background-color: #000000;
             grid-template-columns: 1fr;
             width: 70vw;
-            height: 350px;
+            height: 360px;
             margin-right: 1px;
             padding: 15px;
             border-radius: 10px;
@@ -37,6 +37,7 @@
         }
 
         .third {
+
             display: grid;
             grid-template-columns: 1.4fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1.2fr;
             grid-template-rows: 1fr;
@@ -84,6 +85,15 @@
             font-weight: bold;
             font-family: cursive;
             font-size: 13px;
+            border: 2px solid rgb(248, 134, 227);
+            /* Set a default border */
+            transition: border-color 0.3s;
+            /* Smooth transition for border color */
+        }
+
+        .color:hover {
+            border-color: rgb(255, 230, 0);
+            /* Change border color on hover */
         }
 
         .item {
@@ -132,7 +142,7 @@
     </div>
     <div class="left">
         <div class="first">
-            <button class="color">Esc</button>
+            <button class="color" style="border-color: aqua;">Esc</button>
             <button class="color">1</button>
             <button class="color">2</button>
             <button class="color">3</button>
@@ -145,10 +155,11 @@
             <button class="color">F 10</button>
             <button class="color">F 11</button>
             <button class="color">F 12</button>
-            <button class="color" id="submit" onclick="clearFunction()" style="font-family: monospace; background-color: rgb(255, 96, 38);">CLEAR</button>
+            <button class="color" id="submit" onclick="clearFunction()"
+                style="border-color: aqua; font-family: monospace;    background-color: rgb(33, 35, 34);">CLEAR</button>
         </div>
         <div class="sec">
-            <button class="color">~<br>`</button>
+            <button class="color" style="border-color: aqua;">~<br>`</button>
             <button class="color">1</button>
             <button class="color">2</button>
             <button class="color">3</button>
@@ -161,10 +172,10 @@
             <button class="color">0</button>
             <button class="color">*</button>
             <button class="color">+</button>
-            <button class="color">Backspace</button>
+            <button class="color" style="border-color: aqua;">Backspace</button>
         </div>
         <div class="third">
-            <button class="color">Bab</button>
+            <button class="color" style="border-color: aqua;">Bab</button>
             <button class="color">Q</button>
             <button class="color">W</button>
             <button class="color">E</button>
@@ -177,10 +188,10 @@
             <button class="color">P</button>
             <button class="color">-</button>
             <button class="color">/</button>
-            <button class="color">=</button>
+            <button class="color" style="border-color: aqua;">=</button>
         </div>
         <div class="forth-row">
-            <button class="color">Caps lock</button>
+            <button class="color " style="border-color: aqua;">Caps lock</button>
             <button class="color">A</button>
             <button class="color">S</button>
             <button class="color">D</button>
@@ -192,10 +203,10 @@
             <button class="color">L</button>
             <button class="color">:<br>;</button>
             <button class="color">"<br>'</button>
-            <button class="color">Enter</button>
+            <button class="color" style="border-color: aqua;">Enter</button>
         </div>
         <div class="fifth-row">
-            <button class="color">Shift</button>
+            <button class="color" style="border-color: aqua;">Shift</button>
             <button class="color">Z</button>
             <button class="color">X</button>
             <button class="color">C</button>
@@ -203,28 +214,28 @@
             <button class="color">B</button>
             <button class="color">N</button>
             <button class="color">M</button>
-            <button class="color"><br>,</button>
-            <button class="color">.<br>></button>
-            <button class="color">?<br>/</button>
-            <button class="color">Pause<br>Shift</button>
+            <button class="color">,<br>
+                << /button>
+                    <button class="color">.<br>></button>
+                    <button class="color">?<br>/</button>
+                    <button class="color" style="border-color: aqua;">Pause<br>Shift</button>
         </div>
         <div class="sixth-row">
-            <button class="color">Ctrl</button>
+            <button class="color" style="border-color: aqua;">Ctrl</button>
             <button class="color">Fn</button>
             <button class="color"><b>⌘</b></button>
             <button class="color">Alt</button>
-            <button class="color"></button>
+            <button class="color" style="border-color: aqua;">Space</button>
             <button class="color">Alt</button>
             <button class="color">Ctrl</button>
-            <button class="color">◄</button>
+            <button class="color" style="border-color: rgb(255, 85, 0);">◄</button>
             <div style="margin-right: 7px;">
-                <button class="color two-button">▲</button>
-                <button class="color two-button">▼</button>
+                <button class="color two-button" style="border-color: rgb(255, 85, 0);">▲</button>
+                <button class="color two-button" style="border-color: rgb(255, 85, 0);">▼</button>
             </div>
-            <button class="color">►</button>
+            <button class="color" style="border-color: rgb(255, 85, 0);">►</button>
         </div>
     </div>
 </body>
 
 </html>
-``
