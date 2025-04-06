@@ -1,560 +1,263 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="index-main.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./Home-image/home page icon.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
-        rel="stylesheet">
 
-    <title>Lucky Nakade Portfolio</title>
+    <title> HOME PAGE</title>
     <style>
+        /* BODY */
+        body {
+            background-image: url(./Home-image/pexels-life-of-pix-42408.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
 
+        h1 {
+            color: #050505;
+            margin-left: 108px;
+            font-size: 50px;
+            margin-top: 290px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        h2 {
+            color: rgb(50, 216, 216);
+            margin-left: 108px;
+            margin-top: -20px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        
+        /* HOME DIV  */
+        div {
+            display: flex;
+            flex-direction: row;
+            margin-left: 100px;
+            margin-top: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #3e2093;
+            font-size: 25px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            margin: 0 10px;
+            transition: color 0.3s, background-color 0.3s;
+        }
+
+        /* PROJECT A */
+
+        .home {
+            margin-top: 40px;
+        }
+
+        .Projects {
+            margin-left: 40px;
+            margin-top: 40px;
+        }
+
+        .About {
+            margin-left: 40px;
+            margin-top: 40px;
+        }
+
+        .Contact {
+            margin-left: 40px;
+            margin-top: 40px;
+   
+        }
+
+        /* MEDIA  */
+        @media (max-width: 768px) {
+            h1 {
+
+                font-size: 36px;
+                margin-top: 100px;
+                margin-left: 20px;
+                text-align: center;
+            }
+
+            h2 {
+                font-size: 18px;
+                margin-left: 20px;
+                text-align: center;
+                margin-top: 10px;
+                color: #000000;
+            }
+
+            div {
+                flex-direction: column;
+                align-items: center;
+                margin-left: 0;
+                margin-top: 20px;
+            }
+
+            a {
+                font-size: 18px;
+                margin: 10px 0;
+            }
+
+            /* HOME ,PRO , ABO  CON  */
+            .home,
+            .Projects,
+            .About,
+            .Contact {
+                margin-left: 0;
+            }
+        }
+
+        /* Styling for the header */
+
+        /* Global CSS reset */
+        a {
+            display: inline-block;
+
+
+            /* Add padding */
+            text-transform: uppercase;
+            /* Transform text to uppercase */
+            letter-spacing: 4px;
+            /* Add letter spacing */
+            color: #000000;
+            /* Text color */
+            font-size: 1.rem;
+            /* Font size */
+            font-weight: bold;
+
+        }
+
+        /* Styling for the navigation links on hover */
+        a:hover {
+            background-color: #00a49f;
+            /* Background color on hover */
+            color: #ffffff;
+            /* Text color on hover */
+            box-shadow: 0 0 5px #019e96, 0 0 25px #00979f, 0 0 50px #03e9f4, 0 0 200px #028f8f;
+            /* Box shadow on hover */
+            -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+            /* Reflection effect */
+        }
+
+        /* Add hue rotation to first and last navigation links */
+        a:first-child {
+            filter: hue-rotate(225deg);
+        }
+
+        a:last-child {
+            filter: hue-rotate(90deg);
+        }
+
+        /* Styling for the animated spans within the links */
+        a span {
+            position: absolute;
+            display: block;
+        }
+
+        /* Animation for first span */
+        a span:nth-child(1) {
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #e54012);
+            animation: animate1 1s infinite;
+            /* Apply animation */
+        }
+
+        /* Animation for second span */
+        @keyframes animate1 {
+            0% {
+                left: -100%;
+            }
+
+            100% {
+                left: 100%;
+            }
+        }
+
+        /* Animation for second span */
+        a span:nth-child(2) {
+            top: -100%;
+            right: 0;
+            width: 3px;
+            height: 100%;
+            background: linear-gradient(180deg, transparent, #f56213);
+            animation: animate2 1s infinite;
+            animation-delay: .25s;
+            /* Delay animation */
+        }
+
+        @keyframes animate2 {
+            0% {
+                top: -100%;
+            }
+
+            100% {
+                top: 100%;
+            }
+        }
+
+        /* Animation for third span */
+        a span:nth-child(3) {
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(20deg, transparent, #f56213);
+            animation: animate3 1s infinite;
+            animation-delay: 0.5s;
+            /* Delay animation */
+        }
+
+        @keyframes animate3 {
+            0% {
+                right: -100%;
+            }
+
+            100% {
+                right: 100%;
+            }
+        }
+
+        /* Animation for fourth span */
+        a span:nth-child(4) {
+            bottom: -100%;
+            left: 0;
+            width: 3px;
+            height: 100%;
+            background: linear-gradient(360deg, transparent, #f56213);
+            animation: animate4 1s infinite;
+            animation-delay: .75s;
+            /* Delay animation */
+        }
+
+        @keyframes animate4 {
+            0% {
+                bottom: -100%;
+            }
+
+            100% {
+                bottom: 100%;
+            }
+
+        }
     </style>
 </head>
 
 <body>
-    <!-- Navbar -->
-    <nav class="navbar">
-        <a href="#" class="logo">Lucky Nakade</a>
-        <div class="nav-links">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </div>
-        <div class="hamburger">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-content">
-            <h1 class="hero-title">Hi, I'm <span>Lucky Nakade</span></h1>
-            <h2 class="hero-subtitle">Student & Aspiring Developer</h2>
-            <p class="hero-desc">I'm passionate about creating meaningful digital experiences through innovative
-                solutions and clean code.</p>
-            <a href="#projects" class="hero-btn">View My Work</a>
-            <a href="#contact" class="hero-btn secondary">Contact</a>
-        </div>
-
-    </section>
-
-    <!-- About Section -->
-    <section class="about-section" id="about">
-        <div class="container">
-            <div class="section-title">
-                <h2>About Me</h2>
-            </div>
-            <div class="about-content">
-                <div class="about-img">
-                    <img src="./Home-Page-Image/luckyy.JPEG" alt="Lucky Nakade">
-                </div>
-                <div class="about-text">
-                    <h3>Student & Technology Enthusiast</h3>
-                    <p>
-                        I am a passionate student with a keen interest in technology and innovation. Currently pursuing
-                        my degree in Computer Science, I am dedicated to expanding my knowledge and skills in various
-                        programming languages and development frameworks.
-                    </p>
-                    <p>
-                        My journey in technology began with a curiosity about how digital solutions can solve real-world
-                        problems. This curiosity has evolved into a passion for creating clean, efficient, and
-                        user-friendly applications.
-                    </p>
-                    <p>
-                        When I'm not coding or learning new technologies, you can find me exploring the latest industry
-                        trends, participating in hackathons, or collaborating on interesting projects with fellow
-                        students.
-                    </p>
-                    <a href="#contact" class="hero-btn">Let's Connect</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects-section">
-        <div class="container">
-            <div class="section-title">
-                <h2>My Projects</h2>
-            </div>
-
-            <div class="project-categories">
-                <button class="category-btn active" data-filter="all">All</button>
-                <button class="category-btn" data-filter="html-css">HTML / CSS</button>
-                <button class="category-btn" data-filter="javascript">JavaScript</button>
-                <button class="category-btn" data-filter="Html">HTML</button>
-
-                <button class="category-btn" data-filter="responsive">Responsive</button>
-            </div>
-
-            <div class="projects-grid">
-                <!-- Project 1 -->
-                <div class="project-card" data-category="html-css">
-                    <div class="project-img">
-                        <img src="./Home-Page-Image/coding.avif" alt="">
-                        <div class="project-category html-css">HTML / CSS</div>
-                        <div class="project-overlay">
-                            <a href="../parent_chass.html" class="view-project">View Project</a>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>Chess-Project</h3>
-                        <p>Chess-Project is a dynamic, interactive e-learning platform tailored for chess enthusiasts of
-                            all levels.</p>
-
-                    </div>
-                </div>
-
-                <!-- Project 2 -->
-                <div class="project-card" data-category="html-css responsive">
-                    <div class="project-img">
-                        <img src="./Home-Page-Image/coding.avif" alt="">
-
-                        <div class="project-category html-css">HTML / CSS</div>
-                        <div class="project-overlay">
-                            <a href="../parent_form.html" class="view-project">View Project</a>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>FORM</h3>
-                        <p>The Form project is a modern interactive web form designed to capture user data with ease.
-                        </p>
-                        <div class="project-tags">
-                            <span class="project-tag">HTML</span>
-                            <span class="project-tag">CSS</span>
-                            <span class="project-tag">Form Validation</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- HTML -->
-
-                <div class="project-card" data-category="Html">
-                    <div class="project-img">
-                        <img src="./Home-Page-Image/coding.avif" alt="">
-
-                        <div class="project-category html-css">HTML</div>
-                        <div class="project-overlay">
-                            <a href="../Confidence-form.html" class="view-project">View Project</a>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>COMPUTER-FORM</h3>
-                        <p>The Youtube project is a Youtube video management app with user authentication and real-time
-                            updates.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">HTML</span>
-                            <span class="project-tag">CSS</span>
-                            <span class="project-tag">JavaScript</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- TWO -->
-                <div class="project-card" data-category="Html">
-                    <div class="project-img">
-                        <img src="./Home-Page-Image/coding.avif" alt="">
-
-                        <div class="project-category html-css">HTML </div>
-                        <div class="project-overlay">
-                            <a href="../newform.html" class="view-project">View Project</a>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>YOUTH-FORM</h3>
-                        <p>The Youtube project is a Youtube video management app with user authentication and real-time
-                            updates.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">HTML</span>
-                            <span class="project-tag">CSS</span>
-                            <span class="project-tag">JavaScript</span>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="project-card" data-category="html-css">
-                    <div class="project-img">
-                        <img src="./Home-Page-Image/coding.avif" alt="">
-
-                        <div class="project-category html-css">HTML / CSS </div>
-                        <div class="project-overlay">
-                            <a href="../newyoutube.html" class="view-project">View Project</a>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>YOUTUBE</h3>
-                        <p>The Youtube project is a Youtube video management app with user authentication and real-time
-                            updates.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">HTML</span>
-                            <span class="project-tag">CSS</span>
-                            <span class="project-tag">JavaScript</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 4 (Initially hidden) -->
-                <div class="project-card hidden" data-category="html-css">
-                    <div class="project-img">
-                        <img src="./Home-Page-Image/coding.avif" alt="">
-
-                        <div class="project-category html-css">HTML / CSS</div>
-                        <div class="project-overlay">
-                            <a href="../flags.html" class="view-project">View Project</a>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>FLAGS</h3>
-                        <p>The Flags project is an interactive showcase of national flags with a clean and engaging
-                            design.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">HTML</span>
-                            <span class="project-tag">CSS</span>
-                            <span class="project-tag">Interactive</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 5 (Initially hidden) -->
-                <div class="project-card hidden" data-category="html-css responsive">
-                    <div class="project-img">
-                        <img src="./Home-Page-Image/coding.avif" alt="">
-
-                        <div class="project-category html-css">HTML / CSS</div>
-                        <div class="project-overlay">
-                            <a href="../luckyy.html" class="view-project">View Project</a>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>CONTAINER</h3>
-                        <p>The Container project is a sleek, responsive layout tool for organizing and displaying
-                            content seamlessly.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">HTML</span>
-                            <span class="project-tag">CSS</span>
-                            <span class="project-tag">Layout</span>
-                        </div>
-                    </div>
-                </div>
-
-
-
-                <!--  javaScript  -->
-                <!-- ONE javascript -->
-                <div class="project-card hidden" data-category="javascript">
-                    <div class="project-img">
-                        <img src="./Home-Page-Image/coding.avif" alt="">
-
-                        <div class="project-category html-css">HTML / CSS / JavaScript</div>
-                        <div class="project-overlay">
-                            <a href="../kbc.html" class="view-project">View Project</a>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>KBC</h3>
-                        <p>The Container project is a sleek, responsive layout tool for organizing and displaying
-                            content seamlessly.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">HTML</span>
-                            <span class="project-tag">CSS</span>
-                            <span class="project-tag">Layout</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- TWO javascript -->
-                <div class="project-card hidden" data-category="javascript">
-                    <div class="project-img">
-                        <img src="./Home-Page-Image/coding.avif" alt="">
-
-                        <div class="project-category html-css">HTML / CSS / JavaScript</div>
-                        <div class="project-overlay">
-                            <a href="../ song.html" class="view-project">View Project</a>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>SONG</h3>
-                        <p>The Container project is a sleek, responsive layout tool for organizing and displaying
-                            content seamlessly.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">HTML</span>
-                            <span class="project-tag">CSS</span>
-                            <span class="project-tag">Layout</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- THREE  -->
-
-
-                <div class="project-card hidden" data-category="javascript">
-                    <div class="project-img">
-                        <img src="./Home-Page-Image/coding.avif" alt="">
-
-                        <div class="project-category html-css">HTML / CSS / JavaScript</div>
-                        <div class="project-overlay">
-                            <a href="../calculatorjs.html" class="view-project">View Project</a>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>CALCULATOR</h3>
-                        <p>The Container project is a sleek, responsive layout tool for organizing and displaying
-                            content seamlessly.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">HTML</span>
-                            <span class="project-tag">CSS</span>
-                            <span class="project-tag">Layout</span>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-
-
-
-
-
-
-
-
-            <!-- See More Button -->
-            <div class="see-more-container">
-                <button class="see-more-btn">See More Projects</button>
-            </div>
-        </div>
-    </section>
-    <!-- Contact Section -->
-    <section class="contact-section" id="contact">
-        <div class="container">
-            <div class="section-title">
-                <h2>CONTACT</h2>
-            </div>
-            <div class="contact-wrapper">
-                <div class="contact-info">
-                    <h3>Let's Connect</h3>
-                    <div class="contact-item">
-                        <div class="contact-icon">📍</div>
-                        <div class="contact-text">
-                            <h4>Location</h4>
-                            <p>Katol, Maharashtra, India</p>
-                        </div>
-                    </div>
-                    <br>
-                    <div class="contact-item">
-                        <div class="contact-icon">📧</div>
-                        <div class="contact-text">
-                            <h4>Email</h4>
-                            <p>nakadelucky8@gmail.com</p>
-                        </div>
-                    </div>
-                    <br>
-
-                    <div class="contact-item">
-                        <div class="contact-icon">📱</div>
-                        <div class="contact-text">
-                            <h4>Phone</h4>
-                            <p>+91 9226784527</p>
-                        </div>
-                    </div>
-                </div>
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3717.9540047069318!2d78.58340687549595!3d21.273288180437945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd45758875e72f5%3A0xc109bb37c5740045!2sGanesh%20Mandir!5e0!3m2!1sen!2sin!4v1743768025711!5m2!1sen!2sin"
-                    width="650" height="400" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="social-links">
-                <a href="#" class="social-link">TM</a>
-                <a href="#" class="social-link">IG</a>
-                <a href="#" class="social-link">LI</a>
-                <a href="https://github.com/LuckyFullStackDeveloper1/LuckyFullStackDeveloper1"
-                    class="social-link">GH</a>
-            </div>
-            <p class="copyright">© 2025 Lucky Nakade. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <script>
-        // Navbar scroll effect
-        window.addEventListener('scroll', function () {
-            const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 50) {
-                navbar.classList.add('sticky');
-            } else {
-                navbar.classList.remove('sticky');
-            }
-        });
-
-        // Mobile menu toggle
-        const hamburger = document.querySelector('.hamburger');
-        const navLinks = document.querySelector('.nav-links');
-
-        hamburger.addEventListener('click', function () {
-            navLinks.classList.toggle('active');
-            hamburger.classList.toggle('active');
-        });
-
-        // Close mobile menu when clicking on a link
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-                hamburger.classList.remove('active');
-            });
-        });
-
-        // Smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // See More Projects button functionality
-        const seeMoreBtn = document.querySelector('.see-more-btn');
-        const additionalProjects = document.querySelector('.additional-projects');
-
-        seeMoreBtn.addEventListener('click', function () {
-            additionalProjects.classList.toggle('show');
-
-            if (additionalProjects.classList.contains('show')) {
-                seeMoreBtn.textContent = 'Show Less';
-            } else {
-                seeMoreBtn.textContent = 'See More Projects';
-            }
-        });
-        document.addEventListener("DOMContentLoaded", () => {
-            document.querySelectorAll(".tab").forEach((tab) =>
-                tab.addEventListener("click", () => {
-                    document
-                        .querySelectorAll(".tab, .project-section")
-                        .forEach((el) => el.classList.remove("active", "fade-in"));
-
-                    tab.classList.add("active");
-                    document.getElementById(
-                        "category-title"
-                    ).textContent = `${tab.dataset.category} Projects`;
-
-                    const section = document.getElementById(
-                        `${tab.dataset.category}-projects`
-                    );
-                    section.classList.add("active");
-                    void section.offsetWidth; // Trigger reflow
-                    section.classList.add("fade-in");
-                })
-            );
-        });
-        // Projects section functionality
-        document.addEventListener('DOMContentLoaded', function () {
-            // Project filtering
-            const categoryButtons = document.querySelectorAll('.category-btn');
-            const projectCards = document.querySelectorAll('.project-card');
-
-            categoryButtons.forEach(button => {
-                button.addEventListener('click', () => {
-                    // Update active button
-                    categoryButtons.forEach(btn => btn.classList.remove('active'));
-                    button.classList.add('active');
-
-                    const filter = button.getAttribute('data-filter');
-
-                    projectCards.forEach(card => {
-                        // Show all projects that aren't hidden by the "See More" functionality
-                        if (!card.classList.contains('hidden') || document.querySelector('.see-more-btn').textContent === 'Show Less') {
-                            if (filter === 'all') {
-                                card.style.display = 'block';
-
-                                // Add animation
-                                card.classList.add('fade-in');
-                                setTimeout(() => {
-                                    card.classList.remove('fade-in');
-                                }, 500);
-                            } else {
-                                const categories = card.getAttribute('data-category');
-                                if (categories.includes(filter)) {
-                                    card.style.display = 'block';
-
-                                    // Add animation
-                                    card.classList.add('fade-in');
-                                    setTimeout(() => {
-                                        card.classList.remove('fade-in');
-                                    }, 500);
-                                } else {
-                                    card.style.display = 'none';
-                                }
-                            }
-                        }
-                    });
-                });
-            });
-
-            // See More/Less functionality
-            const seeMoreBtn = document.querySelector('.see-more-btn');
-
-            seeMoreBtn.addEventListener('click', function () {
-                const hiddenProjects = document.querySelectorAll('.project-card.hidden');
-                const activeFilter = document.querySelector('.category-btn.active').getAttribute('data-filter');
-
-                if (seeMoreBtn.textContent === 'See More Projects') {
-                    hiddenProjects.forEach(project => {
-                        project.classList.remove('hidden');
-
-                        // Only display projects that match the current filter
-                        if (activeFilter === 'all' || project.getAttribute('data-category').includes(activeFilter)) {
-                            project.style.display = 'block';
-                        } else {
-                            project.style.display = 'none';
-                        }
-
-                        // Add animation
-                        project.classList.add('fade-in');
-                        setTimeout(() => {
-                            project.classList.remove('fade-in');
-                        }, 500);
-                    });
-
-                    seeMoreBtn.textContent = 'Show Less';
-                } else {
-                    hiddenProjects.forEach(project => {
-                        project.classList.add('hidden');
-                        project.style.display = 'none';
-                    });
-
-                    seeMoreBtn.textContent = 'See More Projects';
-                }
-            });
-
-            // Add animation class for CSS transitions
-            const style = document.createElement('style');
-            style.innerHTML = `
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
-        .fade-in {
-            animation: fadeIn 0.5s ease forwards;
-        }
-    `;
-            document.head.appendChild(style);
-        });
-    </script>
+    <!--  H1  -->
+    <h1>Lucky Nakade</h1>
+    <!-- H2  -->
+    <h2>I'm a Student</h2>
+
+    <!-- HOME DIV -->
+    <div>
+        <a class="home" href="#">HOME</a>
+        <a class="Projects" href="./main.html">PROJECT</a>
+        <a class="About" href="./about.html">ABOUT</a>
+        <a class="Contact" href="./contact.html">CONTACT</a>
+    </div>
 
 </body>
 

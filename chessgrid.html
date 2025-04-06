@@ -1,75 +1,74 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
-    /* main container */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      background-image: url(./my_image/babaab.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1 {
+      color: white;
+      margin: 30px 0;
+      text-align: center;
+      font-size: 3rem;
+    }
+
     .grid-container {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-      padding: 3px;
-      width: 90vh;
-      margin-left: 300px;
-
+      grid-template-columns: repeat(8, 1fr);
+      gap: 2px;
+      width: 90vmin;
+      height: 90vmin;
+      max-width: 100vw;
+      max-height: 100vw;
     }
 
-    /* background coler white */
+    .grid-item,
+    .grid-two {
+      aspect-ratio: 1 / 1;
+    }
+
     .grid-item {
       background-color: white;
-      border: 5px solid rgb(0, 0, 0, 0.8);
-      padding: 0%;
-      font-size: 2px;
-      font-size: 40px;
-      height: 90px;
-      text-align: center;
+      border: 1px solid rgba(0, 0, 0, 0.8);
     }
 
-    /* background coler black */
     .grid-two {
-      background-color: rgb(0, 0, 0);
-      text-align: center;
+      background-color: black;
     }
 
-    /*/* background image */
-    .luck {
-      background-image: url(./my_image/babaab.jpg);
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      height: 900px;
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+      }
 
+      .grid-container {
+        width: 95vmin;
+        height: 95vmin;
+      }
     }
   </style>
 </head>
-<h1 style="margin-left: 650PX;">CHASS 😎 </h1>
-<!-- main-body -->
 
-<body class="luck">
+<body>
+  <h1>CHESS 😎</h1>
+
   <div class="grid-container">
-
-    <!-- ONE -->
-
-    <div class="grid-item"> <img style="height: 90px;" src="./my_image/elephant white.png"></div>
-    <div class="grid-two"><img style="height: 90px;" src="./my_image/threepng.png"></div>
-    <div class="grid-item"> <img style="height: 90px;" src="./my_image/four.png"></div>
-    <div class="grid-two"> <img style="height: 90px;" src="./my_image/five.png"></div>
-    <div class="grid-item"> <img style="height: 90px;" src="./my_image/six.png"></div>
-    <div class="grid-two"> <img style="height: 90px;" src="./my_image/four.png"></div>
-    <div class="grid-item"><img style="height: 90px;" src="./my_image/threepng.png"></div>
-    <div class="grid-two"><img style="height: 90px;" src="./my_image/elephant white.png"></div>
-    <!-- TWO -->
-
-    <div class="grid-two"><img style="height: 90px;" src="./my_image/one.png"></div>
-    <div class="grid-item"><img style="height: 90px;" src="./my_image/one.png"></div>
-    <div class="grid-two"><img style="height: 90px;" src="./my_image/one.png"></div>
-    <div class="grid-item"><img style="height: 90px;" src="./my_image/one.png"></div>
-    <div class="grid-two"><img style="height: 90px;" src="./my_image/one.png"></div>
-    <div class="grid-item"><img style="height: 90px;" src="./my_image/one.png"></div>
-    <div class="grid-two"><img style="height: 90px;" src="./my_image/one.png"></div>
-    <div class="grid-item"><img style="height: 90px;" src="./my_image/one.png"></div>
-
-    <!-- THREE -->
-
+    <!-- 8x8 board = 64 squares -->
+    <!-- You had a checkerboard pattern, so repeat alternating cells -->
+    <!-- Row 1 -->
     <div class="grid-item"></div>
     <div class="grid-two"></div>
     <div class="grid-item"></div>
@@ -79,7 +78,7 @@
     <div class="grid-item"></div>
     <div class="grid-two"></div>
 
-    <!-- FOUR -->
+    <!-- Row 2 -->
     <div class="grid-two"></div>
     <div class="grid-item"></div>
     <div class="grid-two"></div>
@@ -89,8 +88,7 @@
     <div class="grid-two"></div>
     <div class="grid-item"></div>
 
-    <!-- FIVE -->
-
+    <!-- Row 3 -->
     <div class="grid-item"></div>
     <div class="grid-two"></div>
     <div class="grid-item"></div>
@@ -100,8 +98,7 @@
     <div class="grid-item"></div>
     <div class="grid-two"></div>
 
-    <!-- SIX -->
-
+    <!-- Row 4 -->
     <div class="grid-two"></div>
     <div class="grid-item"></div>
     <div class="grid-two"></div>
@@ -111,30 +108,46 @@
     <div class="grid-two"></div>
     <div class="grid-item"></div>
 
-    <!-- SEVEN -->
+    <!-- Row 5 -->
+    <div class="grid-item"></div>
+    <div class="grid-two"></div>
+    <div class="grid-item"></div>
+    <div class="grid-two"></div>
+    <div class="grid-item"></div>
+    <div class="grid-two"></div>
+    <div class="grid-item"></div>
+    <div class="grid-two"></div>
 
-    <div class="grid-item"><img style="height: 90px;" class="images" src="./my_image/vvvvvv.png"></div>
-    <div class="grid-two"><img style="height: 90px;" class="images" src="./my_image/vvvvvv.png"></div>
-    <div class="grid-item"><img style="height: 90px;" class="images" src="./my_image/vvvvvv.png"></div>
-    <div class="grid-two"><img style="height: 90px;" class="images" src="./my_image/vvvvvv.png"></div>
-    <div class="grid-item"><img style="height: 90px;" class="images" src="./my_image/vvvvvv.png"></div>
-    <div class="grid-two"><img style="height: 90px;" class="images" src="./my_image/vvvvvv.png"></div>
-    <div class="grid-item"><img style="height: 90px;" class="images" src="./my_image/vvvvvv.png"></div>
-    <div class="grid-two"><img style="height: 90px;" class="images" src="./my_image/vvvvvv.png"></div>
+    <!-- Row 6 -->
+    <div class="grid-two"></div>
+    <div class="grid-item"></div>
+    <div class="grid-two"></div>
+    <div class="grid-item"></div>
+    <div class="grid-two"></div>
+    <div class="grid-item"></div>
+    <div class="grid-two"></div>
+    <div class="grid-item"></div>
 
-    <!-- EIGHT -->
+    <!-- Row 7 -->
+    <div class="grid-item"></div>
+    <div class="grid-two"></div>
+    <div class="grid-item"></div>
+    <div class="grid-two"></div>
+    <div class="grid-item"></div>
+    <div class="grid-two"></div>
+    <div class="grid-item"></div>
+    <div class="grid-two"></div>
 
-    <div class="grid-two"><img style="height: 90px;" class="images" src="./my_image/black elephant.png"></div>
-    <div class="grid-item"><img style="height: 90px;" class="images" src="./my_image/hooooo.png"></div>
-    <div class="grid-two"><img style="height: 90px;" class="images" src="./my_image/eeeeeeee.png"></div>
-    <div class="grid-item"><img style="height: 90px;" class="images" src="./my_image/tttttt.png"></div>
-    <div class="grid-two"><img style="height: 90px;" class="images" src="./my_image/lllllllll.png"></div>
-    <div class="grid-item"><img style="height: 90px;" class="images" src="./my_image/eeeeeeee.png"></div>
-    <div class="grid-two"><img style="height: 90px;" class="images" src="./my_image/hooooo.png"></div>
-    <div class="grid-item"><img style="height: 90px;" class="images" src="./my_image/black elephant.png"></div>
-
+    <!-- Row 8 -->
+    <div class="grid-two"></div>
+    <div class="grid-item"></div>
+    <div class="grid-two"></div>
+    <div class="grid-item"></div>
+    <div class="grid-two"></div>
+    <div class="grid-item"></div>
+    <div class="grid-two"></div>
+    <div class="grid-item"></div>
   </div>
-
 </body>
 
 </html>

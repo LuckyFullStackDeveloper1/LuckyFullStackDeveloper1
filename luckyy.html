@@ -1,110 +1,78 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-     <style>
-          p {
-               font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-               text-align: center;
-          }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-size: cover;
+            background-repeat: no-repeat;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
 
-          body {
-               float: left;
-               background-repeat: no-repeat;
-               background-size: cover;
-               background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjoMbJAMUI2hZ2uZI5Hknau9nKYLbqUYAfZg&s);
-          }
-     </style>
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 50px 20px;
+        }
+
+        .card {
+            background-color: rgb(240, 240, 182);
+       
+              
+            border: 2px solid black;
+            border-radius: 12px;
+            max-width: 300px;
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .card img {
+            border-radius: 50%;
+            width: 90px;
+            height: 90px;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        @media screen and (max-width: 600px) {
+            .card {
+                box-shadow: none;
+                border: 1px solid #ccc;
+            }
+        }
+    </style>
 </head>
-
 <body>
-     <!--  mani division -- -->
+    <div class="container">
+        <div class="card">
+            <img src="./my_image/Hardik pandya.jpeg" alt="Hardik Pandya">
+            <p><strong>Hardik Pandya</strong><br>
+            Born on 11 October 1993 in Surat, Gujarat. Moved to Vadodara for cricket training. Enrolled in Kiran More’s academy. His father supported his cricket career by shutting his business and relocating.</p>
+        </div>
 
-     <div style="background: url(  ./my_image/BBBB.jpeg) ;background-size: cover; height: 680px;">
-          <!-- second mani division -->
-          <div style="display: inline-block">
-               <!-- first division -->
-               <div class=".main-containerH "
-                    style=" background-color: rgb(240, 240, 182);
-                    background-size: cover;
-                    height: 82vh;
-                    margin: 40px auto 0;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: flex-start;
-                    width: 700px;
-                    max-width: 90%;
-                    /* Center container horizontally */
-                    box-sizing: border-box;
-                    box-shadow: rgb(85, 91, 255) 0px 0px 0px 3px, rgb(193, 27, 27) 0px 0px 0px 6px, rgb(255, 217, 19) 0px 0px 0px 9px, rgb(255, 156, 85) 0px 0px 0px 12px, rgb(255, 85, 85) 0px 0px 0px 15px;
-                    height: 500px;width: 300px; border-style: solid ; border-color:black; margin:50px; margin-top:50px; margin: left 20px;  float: left;">
-                    <img style="text-align: left;border-radius: 40px;" src="./my_image/Hardik pandya.jpeg"
-                         height="90px  " width="90px">
-                    <p>
-                         Hardik pandya<br>
-                         Hardik Pandya was born on 11 October 1993 in Choryasi, Surat, Gujarat, India. His father,
-                         Himanshu Pandya, ran a small car finance business in Surat which he shut down and moved to
-                         Vadodara when Hardik was five to provide his sons with better cricket training facilities.
-                         Himanshu Pandya worked as a loan agent in Vadodara.[3] He enrolled his two sons into Kiran
-                         More's cricket academy[which?] in Vadodara. </p>
-               </div>
-               <!-- second division -->
+        <div class="card">
+            <img src="./my_image/R---.jpeg" alt="Shree Ram">
+            <p><strong>Shree Ram</strong><br>
+            Avatar of Lord Surya, born as the son of King Dashrath. His life and values are detailed in the Valmiki Ramayana. A symbol of dharma and sacrifice, paralleled with Karna in Mahabharata.</p>
+        </div>
 
-               <div style=" background-color: rgb(240, 240, 182); background-size: cover; height: 82vh; margin: 40px
-                         auto 0; display: flex; flex-direction: column; justify-content: flex-start; width: 700px;
-                         max-width: 90%; /* Center container horizontally */ box-sizing: border-box; box-shadow: rgb(85,
-                         91, 255) 0px 0px 0px 3px, rgb(31, 193, 27) 0px 0px 0px 6px, rgb(19, 255, 141) 0px 0px 0px 9px,
-                         rgb(255, 156, 85) 0px 0px 0px 12px, rgb(255, 85, 85) 0px 0px 0px 15px; height: 500px;width:
-                         300px; border-style: solid ; border-color:black; margin:50px; margin-top:50px; margin: left
-                         20px; float: left; height: 500px;width: 300px; border-style:solid ; border-color:black;
-                         margin:50px; margin-top:50px; margin: left 20px; float: left;">
-                    <img style="text-align: left;border-radius: 40px;" src="./my_image/R---.jpeg" height="90px"
-                         width="90px">
-                    <p
-                         style=" font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; text-align: center; ">
-                         Shree Ram <br>is known as the son of Lord
-                         Surya and Seventh Avatar of
-                         Hinduism. However, in Valmiki Ramayana, he was the son of Lord Sun (also surya). When king
-                         Dashrath conducted the sacrifice, lord sun presented his portion Rama. Rama's character purely
-                         resembles Karna(the chief protagonist of the Mahabharata). Both were the protagonists of the
-                         two greatest epics. Both were the eldest brother but however Yudhisthira and Bharat were
-                         crowned the king. Both had to be deceived by their .</p>
-               </div>
-
-               <!--3rd division  -->
-
-               <div
-                    style="
-                     background-color: rgb(240, 240, 182);
-                    background-size: cover;
-                    height: 82vh;
-                    margin: 40px auto 0;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: flex-start;
-                    width: 700px;
-                    max-width: 90%;
-                    /* Center container horizontally */
-                    box-sizing: border-box;
-                    box-shadow: rgb(85, 91, 255) 0px 0px 0px 3px, rgb(31, 193, 27) 0px 0px 0px 6px, rgb(123, 10, 203) 0px 0px 0px 9px, rgb(255, 156, 85) 0px 0px 0px 12px, rgb(255, 85, 85) 0px 0px 0px 15px;
-                    height: 500px;width: 300px; border-style: solid ; border-color:black; margin:50px; margin-top:50px; margin: left 20px;  float: left;
-                    height: 500px;width: 300px;border-style:solid 40px; border-style:solid; border-color:black; margin:50px; margin-top:50px; margin: left 20px;  float: left; ">
-                    <img style="text-align: left;border-radius: 40px;" src="./my_image/Y---.jpeg" height="90px"
-                         width="90px ">
-                    <p
-                         style=" font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; text-align: center;">
-                         Vallabhabhāī Jhāvērabhāī Paṭēla <br> 31 October 1875 – 15 December 1950 , commonly known as
-                         Sardar Vallabhbhai Patel,<br>[a] was an Indian independence nationalist and barrister who
-                         served as
-                         the first Deputy Prime Minister and Home Minister of<br> India from 1947 to 1950. He was a
-                         senior
-                         leader <br>of the Indian National Congress, who played a significant role in the country's
-                         struggle
-                         for independence and its political integration.</p>
-               </div>
-          </div>
-     </div>
+        <div class="card">
+            <img src="./my_image/Y---.jpeg" alt="Sardar Vallabhbhai Patel">
+            <p><strong>Sardar Vallabhbhai Patel</strong><br>
+            (1875–1950) Indian independence leader and first Deputy PM of India. Played a major role in political integration post-independence. Known as the Iron Man of India.</p>
+        </div>
+    </div>
 </body>
-
-
 </html>

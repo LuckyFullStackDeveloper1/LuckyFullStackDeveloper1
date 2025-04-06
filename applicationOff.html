@@ -2,259 +2,271 @@
 <html lang="en">
 
 <head>
-    <style>
-        .main-div {
-            display: flex;
-            flex-direction: row;
-            width: 900px;
-            margin-left: 3px;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Application Form</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: monospace;
+      background-color: #f4f4f4;
+    }
 
-        .div {
-            height: 30px;
-            width: 30px;
-            display: flex;
-            border-style: solid;
-            margin-top: 13px;
-            margin: 2px;
-            border-width: 3px;
+    fieldset {
+      max-width: 1000px;
+      margin: 20px auto;
+      padding: 30px;
+      background-color: #c3c1c1;
+      border: none;
+      border-radius: 10px;
+    }
 
-        }
+    legend h1 {
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
 
-        .fieldset {
-            width: 900px;
-            margin-left: 240px;
-            background-color: rgb(195, 193, 193);
-        }
+    h2, h3 {
+      margin: 10px 0;
+    }
 
-        .name {
-            font-family: monospace;
-        }
+    .line {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin: 10px 0;
+    }
 
-        .two-div {
-            display: flex;
-            flex-direction: row;
-            margin-left: 14px;
-        }
+    .box {
+      width: 25px;
+      height: 30px;
+      border: 2px solid #000;
+      background-color: #fff;
+    }
 
-        .type {
-            width: 640px;
-        }
+    .input-group {
+      margin-bottom: 15px;
+    }
 
-        .type2 {
-            width: 420px;
-        }
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
 
-        .type3 {
-            width: 890px;
-            border-color: rgb(21, 22, 22);
-        }
+    input[type="text"], input[type="email"], input[type="tel"] {
+      width: 100%;
+      padding: 8px;
+      box-sizing: border-box;
+    }
 
-        .Yes {
-            height: 70px;
-            width: 290px;
-            border-style: solid;
-            margin: 2px;
+    .radio-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
 
-        }
+    .no {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 20px;
+    }
 
-        .no {
-            display: flex;
-            flex-direction: row;
-        }
+    .Yes {
+      border: 2px solid #333;
+      padding: 10px;
+      background: #e0e0e0;
+      flex: 1;
+      min-width: 250px;
+    }
 
-        .yes {
-            margin-left: 40px;
+    .plane {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 20px;
+    }
 
-        }
+    .plane-one {
+      flex: 1;
+      min-width: 200px;
+      height: 100px;
+      background: #d4d3d3;
+      border: 2px solid #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
 
-        .Plan {
-            margin-left: 7px;
-    
-        }
+    .form-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 30px;
+    }
 
-        .h3 {
-            margin-left: 5px;
-        }
+    .submit, .reset {
+      height: 50px;
+      width: 130px;
+      font-size: 1em;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
 
-        .plane {
-            flex-direction: row;
-            display: flex;
-        }
+    .submit {
+      background-color: rgb(204, 247, 204);
+    }
 
-        .plane-one {
-            height: 100px;
-            width: 440px;
-            background: rgb(212, 211, 211);
-            border: 2px solid white;
-            margin: 3px;
-            font-family: monospace;
-        }
+    .reset {
+      background-color: rgb(242, 183, 183);
+    }
 
-        .abc {
-            margin-left: 10px;
-            color: rgb(81, 79, 79);
-        }
-
-        .inputtype {
-            height: 25.6px;
-            width: 23.8px;
-            background-color: rgb(171, 171, 171);
-            font-size: x-large;
-            text-align: center;
-        }
-
-        .inputtype1 {
-            height: 25.8px;
-            width: 23.8px;
-            background-color: rgb(171, 171, 171);
-            border-style: solid;
-            font-size: x-large;
-            text-align: center;
-         
-        }
-        .month{
-            height: 23px;
-            width: 140px;
-        }
-        .submit{
-            height: 50px;
-            width: 100px;
-            margin: 0px;
-            background-color: rgb(204, 247, 204);
-            margin-left: 130px;
-        }
-        .reset{
-            background-color: rgb(242, 183, 183);
-            height: 50px;
-            width: 100px;
-            margin: 0px;
-            margin-left: 400px;
-        }
-    </style>
+    @media (max-width: 600px) {
+      .form-buttons {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+      }
+    }
+  </style>
 </head>
 
 <body>
-   
+  <form>
+    <fieldset>
+      <legend><h1>APPLICATION FORM</h1></legend>
 
-    <fieldset class="fieldset">
+      <h2>General Questions</h2>
 
-        <legend>
-            <h1 style="font-family: Georgia, 'Times New Roman', Times, serif;">APPLICATION FORM </h1>
-        </legend>
-        <h2>General Questions</h2>
+      <div class="input-group">
+        <label>First Name:</label>
+        <div class="line">
+          <!-- Replace with inputs or keep boxes -->
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+        </div>
+      </div>
 
+      <div class="input-group">
+        <label>Last Name:</label>
+        <div class="line">
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+        </div>
+      </div>
 
-        <div class="main-div">
-            <h2 class="name">First Name:</h2>
-            <div class="div"></div>
-            <div class="div"></div>
-            <div class="div"></div>
-            <div class="div"></div>
-            <div class="div"></div>
-            <div class="div"></div>
-            <div class="div"></div>
-            <div class="div"></div>
-            <div class="div"></div>
-            <div class="div"></div>
-            <div class="div"></div>
-            <div class="div"></div>
-            <div class="div"></div>
-            <div class="div"></div>
-            <div class="div"></div>
-            <div class="div"></div>
-            <div class="div"></div>
-            <div class="div"></div>
-            <div class="div"></div>
+      <div class="input-group">
+        <label>Birthdate (MM/DD/YYYY), Gender, Home Number</label>
+        <div class="radio-group">
+          <input type="text" placeholder="MM/DD/YYYY" class="month" />
+          <label><input type="radio" name="gender"> Man</label>
+          <label><input type="radio" name="gender"> Woman</label>
+          <label><input type="radio" name="gender"> None</label>
+          <input type="tel" placeholder="Home Number">
+        </div>
+      </div>
 
+      <div class="input-group">
+        <label>Address</label>
+        <input type="text" />
+      </div>
 
+      <div class="input-group">
+        <label>Phone Number</label>
+        <input type="tel" />
+      </div>
+
+      <div class="input-group">
+        <label>Email Address</label>
+        <input type="email" />
+      </div>
+
+      <div class="input-group">
+        <label>ID Number</label>
+        <input type="text" />
+      </div>
+
+      <div class="input-group">
+        <label>Social Security Number</label>
+        <input type="text" />
+      </div>
+
+      <div class="radio-group">
+        <label>Status:</label>
+        <label><input type="radio" name="status"> Single</label>
+        <label><input type="radio" name="status"> Married</label>
+        <label><input type="radio" name="status"> Divorced</label>
+        <label><input type="radio" name="status"> Other</label>
+      </div>
+
+      <div class="radio-group">
+        <label>Occupation:</label>
+        <input type="text" />
+        <label>Are you a retiree?</label>
+        <label><input type="radio" name="retiree"> Yes</label>
+        <label><input type="radio" name="retiree"> No</label>
+      </div>
+
+      <h2>Personal Details</h2>
+
+      <div class="input-group">
+        <label>Name of Beneficiary</label>
+        <input type="text" />
+      </div>
+
+      <div class="input-group">
+        <label>Beneficiary's Bank & Address</label>
+        <textarea style="width: 100%; height: 60px;"></textarea>
+      </div>
+
+      <div class="no">
+        <div class="Yes">
+          <h3>Employee</h3>
+          <label><input type="radio" name="employee"> Yes</label>
+          <label><input type="radio" name="employee"> No</label>
+          <h4>Plan Choice</h4>
         </div>
 
-        <div class="two-div">
-            <h2 class="name">Last Name: </h2>
-            <div class="div"></div>
-            <div class="div"></div>
-            <div class="div"></div>
-            <div class="div"></div>
-            <div class="div"></div>
-            <div class="div"></div>
-            <div class="div"></div>
-            <div class="div"></div>
-            <div class="div"></div>
-            <div class="div"></div>
-            <div class="div"></div>
-            <div class="div"></div>
-            <div class="div"></div>
-            <div class="div"></div>
-            <div class="div"></div>
-            <div class="div"></div>
-            <div class="div"></div>
-            <div class="div"></div>
-            <div class="div"></div>
-
-
-        </div>
-              <div class="name">
-            <h2>Month:___/___/___ Gender:<input type="radio">Man <input type="radio">Woman <input
-                    type="radio">None: Home Number: _______________</h2>
-        </div>
-        <h2 class="name">Address: ___________________________________________________________________</h2>
-
-        <h2 class="name"> Phone Number: _________________ Email Address: _____________________________</h2>
-
-        <h2 class="name">ID Number: ___________________ Social Security Number: _____________________</h2>
-        <h2 class="name"> Status: <input type="radio"> Single <input type="radio"> Married <input type="radio"> Devorced
-            <input type="radio"> Others
-        </h2>
-        <h2 class="name"> Occupation: ___________________________________ Are you a retiree <input type="radio">Yes
-            <input type="radio">No
-        </h2>
-        <h2>Personal Details</h2>
-        <h2 class="name">Name of Beneficiary: _______________________________________________________</h2>
-        <h2 class="name"> Name and address of beneficiary's bank: ___________________________________</h2>
-       ________________________________________________________________________________________________________________
-       <br>
-       <br>
-       _____________________________________________________________________________________________________________
-        <br>
-      
-        <br>
-        <div class="no">
-            <div class="Yes name">
-                <h3 class="h3"> Employee <input class="yes" type="radio">Yes <input type="radio">No <br>
-                    <h3 class="Plan "> Plan choice </h3>
-            </div>
-            <div class="Yes name">
-                <h3 class="h3"> Spouse <input class="yes" type="radio">Yes <input type="radio">No <br>
-                    <h3 class="Plan "> Plan choice </h3>
-            </div>
-            <div class="Yes name">
-                <h3 class="h3"> Children <input class="yes" type="radio">Yes <input type="radio">No <br>
-                    <h3 class="Plan "> Plan choice </h3>
-            </div>
+        <div class="Yes">
+          <h3>Spouse</h3>
+          <label><input type="radio" name="spouse"> Yes</label>
+          <label><input type="radio" name="spouse"> No</label>
+          <h4>Plan Choice</h4>
         </div>
 
-        <div class="plane">
-            <h3>
-                <div class="plane-one"> <input type="radio"> PLAN A
-                    <br>
-                    <h4 class="abc"></h4>
-                </div>
-            </h3>
-            <h3>
-                <div class="plane-one"> <input type="radio"> PLAN B
-                    <h4 class="abc"> </h4>
-                </div>
-            </h3>
-
+        <div class="Yes">
+          <h3>Children</h3>
+          <label><input type="radio" name="children"> Yes</label>
+          <label><input type="radio" name="children"> No</label>
+          <h4>Plan Choice</h4>
         </div>
+      </div>
 
+      <div class="plane">
+        <div class="plane-one"><label><input type="radio" name="plan"> PLAN A</label></div>
+        <div class="plane-one"><label><input type="radio" name="plan"> PLAN B</label></div>
+      </div>
 
-
-      <h2> <input class="submit" type="submit"> <input class="reset" type="reset"> </h2> 
-
+      <div class="form-buttons">
+        <input type="submit" value="Submit" class="submit" />
+        <input type="reset" value="Reset" class="reset" />
+      </div>
     </fieldset>
-     
+  </form>
 </body>
 
 </html>
