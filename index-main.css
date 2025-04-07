@@ -1,5 +1,5 @@
- /* Global Styles */
- * {
+/* Global Styles */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -67,12 +67,7 @@ body {
     font-family: 'Roboto';
     font-weight: 400;
     font-size: 1rem;
-    
-  font:bold;
-  
-
 }
-
 
 .nav-links a::after {
     content: '';
@@ -566,6 +561,18 @@ textarea.form-control {
         flex-direction: column;
         gap: 2rem;
     }
+    
+    .navbar {
+        padding: 1.5rem 5%;
+    }
+    
+    .navbar.sticky {
+        padding: 0.8rem 5%;
+    }
+    
+    .nav-links {
+        gap: 1.5rem;
+    }
 }
 
 @media (max-width: 768px) {
@@ -573,25 +580,13 @@ textarea.form-control {
         padding: 1.5rem 5%;
     }
 
-    .nav-links {
-        position: absolute;
-        right: 0;
-        top: 70px;
-        background-color: rgba(0, 0, 0, 0.9);
-        flex-direction: column;
-        width: 100%;
-        text-align: center;
-        transform: translateX(100%);
-        transition: 0.5s ease;
-        padding: 2rem 0;
-    }
-
-    .nav-links.active {
-        transform: translateX(0);
+    .navbar.sticky {
+        padding: 0.8rem 5%;
     }
 
     .hamburger {
         display: block;
+        z-index: 1001;
     }
 
     .hamburger.active div:nth-child(1) {
@@ -604,6 +599,30 @@ textarea.form-control {
 
     .hamburger.active div:nth-child(3) {
         transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    .nav-links {
+        position: fixed;
+        right: -100%;
+        top: 0;
+        height: 100vh;
+        width: 250px;
+        background-color: rgba(0, 0, 0, 0.9);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        transition: 0.5s ease;
+        z-index: 1000;
+        padding: 2rem 0;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-links a {
+        margin: 1rem 0;
     }
 
     .hero-title {
@@ -622,13 +641,46 @@ textarea.form-control {
         grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     }
 }
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 1rem 4%;
+    }
+    
+    .navbar.sticky {
+        padding: 0.6rem 4%;
+    }
+    
+    .logo {
+        font-size: 1.2rem;
+    }
+    
+    .nav-links {
+        width: 200px;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .hero-btn {
+        padding: 0.6rem 1.5rem;
+        font-size: 0.9rem;
+        margin-right: 0.5rem;
+    }
+}
+
 .chess{
     font-size: 40px;
     text-align: center;
     margin-top: 25%;
 }
- /* Projects Section */
- /* Project Section Styling */
+
+/* Project Section Styling */
 .projects-section {
     padding: 6rem 0;
     background-color: #f8f9fa;
