@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achievements</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        
+        header {
+            background-color: #2c3e50;
+            color: #fff;
+            text-align: center;
+            padding: 2rem 0;
+        }
+        
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .achievement-section {
+            margin-bottom: 3rem;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .section-header {
+            background-color: #3498db;
+            color: white;
+            padding: 1rem 2rem;
+            font-size: 1.5rem;
+        }
+        
+        .section-content {
+            padding: 2rem;
+        }
+        
+        .achievement-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .achievement-card {
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        
+        .achievement-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .achievement-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .achievement-info {
+            padding: 1.5rem;
+        }
+        
+        .achievement-title {
+            font-size: 1.25rem;
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+            color: #2c3e50;
+        }
+        
+        .achievement-date {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        
+        .achievement-description {
+            color: #555;
+        }
+        
+        .stats-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .stat-box {
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            flex: 1;
+            min-width: 150px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #3498db;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            color: #555;
+            font-size: 1rem;
+        }
+        
+        .milestone-timeline {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .milestone-timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: #3498db;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+        
+        .milestone {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+        }
+        
+        .milestone::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -12px;
+            background-color: white;
+            border: 4px solid #3498db;
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        
+        .left {
+            left: 0;
+        }
+        
+        .right {
+            left: 50%;
+        }
+        
+        .right::after {
+            left: -12px;
+        }
+        
+        .milestone-content {
+            padding: 20px;
+            background-color: white;
+            position: relative;
+            border-radius: 6px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .testimonial {
+            background-color: #f9f9f9;
+            border-left: 4px solid #3498db;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+        
+        .testimonial-author {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        
+        @media screen and (max-width: 768px) {
+            .milestone-timeline::after {
+                left: 31px;
+            }
+            
+            .milestone {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            
+            .milestone::after {
+                left: 18px;
+            }
+            
+            .right {
+                left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Our Achievements</h1>
+        <p>Celebrating Success and Excellence</p>
+    </header>
+    
+    <div class="container">
+        <!-- Key Statistics Section -->
+        <div class="achievement-section">
+            <div class="section-header">Key Statistics</div>
+            <div class="section-content">
+                <div class="stats-container">
+                    <div class="stat-box">
+                        <div class="stat-number">150+</div>
+                        <div class="stat-label">Projects Completed</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">42</div>
+                        <div class="stat-label">Awards Won</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">98%</div>
+                        <div class="stat-label">Client Satisfaction</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">12</div>
+                        <div class="stat-label">Years of Excellence</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Awards & Recognition Section -->
+        <div class="achievement-section">
+            <div class="section-header">Awards & Recognition</div>
+            <div class="section-content">
+                <div class="achievement-grid">
+                    <div class="achievement-card">
+                        <img class="achievement-img" src="/api/placeholder/400/320" alt="Excellence Award">
+                        <div class="achievement-info">
+                            <h3 class="achievement-title">Excellence in Innovation Award</h3>
+                            <div class="achievement-date">June 2024</div>
+                            <p class="achievement-description">Recognized for outstanding innovation in technology solutions that transformed client operations.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="achievement-card">
+                        <img class="achievement-img" src="/api/placeholder/400/320" alt="Best Company Award">
+                        <div class="achievement-info">
+                            <h3 class="achievement-title">Best Place to Work</h3>
+                            <div class="achievement-date">March 2024</div>
+                            <p class="achievement-description">Named among the top companies for employee satisfaction and workplace culture.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="achievement-card">
+                        <img class="achievement-img" src="/api/placeholder/400/320" alt="Industry Leader Award">
+                        <div class="achievement-info">
+                            <h3 class="achievement-title">Industry Leadership Award</h3>
+                            <div class="achievement-date">November 2023</div>
+                            <p class="achievement-description">Recognized for setting standards and leading innovation in our industry sector.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Major Projects Section -->
+        <div class="achievement-section">
+            <div class="section-header">Major Projects</div>
+            <div class="section-content">
+                <div class="achievement-grid">
+                    <div class="achievement-card">
+                        <img class="achievement-img" src="/api/placeholder/400/320" alt="City Development Project">
+                        <div class="achievement-info">
+                            <h3 class="achievement-title">Metropolitan Smart City Initiative</h3>
+                            <div class="achievement-date">2023-2024</div>
+                            <p class="achievement-description">Implemented smart technology solutions across the city, improving efficiency by 35% and reducing costs by 28%.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="achievement-card">
+                        <img class="achievement-img" src="/api/placeholder/400/320" alt="Healthcare System">
+                        <div class="achievement-info">
+                            <h3 class="achievement-title">National Healthcare System Upgrade</h3>
+                            <div class="achievement-date">2022-2023</div>
+                            <p class="achievement-description">Modernized the healthcare information system for 50+ hospitals, improving patient care and reducing wait times.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="achievement-card">
+                        <img class="achievement-img" src="/api/placeholder/400/320" alt="Green Energy Project">
+                        <div class="achievement-info">
+                            <h3 class="achievement-title">Renewable Energy Implementation</h3>
+                            <div class="achievement-date">2021-2022</div>
+                            <p class="achievement-description">Developed and deployed renewable energy solutions resulting in 40% reduction in carbon emissions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Key Milestones Section -->
+        <div class="achievement-section">
+            <div class="section-header">Key Milestones</div>
+            <div class="section-content">
+                <div class="milestone-timeline">
+                    <div class="milestone left">
+                        <div class="milestone-content">
+                            <h3>Company Founded</h3>
+                            <p>2012</p>
+                            <p>Started with a team of 5 dedicated professionals with a vision to transform the industry.</p>
+                        </div>
+                    </div>
+                    <div class="milestone right">
+                        <div class="milestone-content">
+                            <h3>First Major Client</h3>
+                            <p>2014</p>
+                            <p>Secured our first enterprise client, marking the beginning of our growth journey.</p>
+                        </div>
+                    </div>
+                    <div class="milestone left">
+                        <div class="milestone-content">
+                            <h3>International Expansion</h3>
+                            <p>2017</p>
+                            <p>Opened our first international office, expanding our global presence.</p>
+                        </div>
+                    </div>
+                    <div class="milestone right">
+                        <div class="milestone-content">
+                            <h3>100th Project Completion</h3>
+                            <p>2020</p>
+                            <p>Successfully delivered our 100th major project with 100% client satisfaction.</p>
+                        </div>
+                    </div>
+                    <div class="milestone left">
+                        <div class="milestone-content">
+                            <h3>Sustainable Initiative Launch</h3>
+                            <p>2022</p>
+                            <p>Launched our commitment to sustainability with zero carbon footprint goal.</p>
+                        </div>
+                    </div>
+                    <div class="milestone right">
+                        <div class="milestone-content">
+                            <h3>Industry Recognition</h3>
+                            <p>2024</p>
+                            <p>Recognized as an industry leader with multiple prestigious awards.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Client Testimonials Section -->
+        <div class="achievement-section">
+            <div class="section-header">Client Testimonials</div>
+            <div class="section-content">
+                <div class="testimonial">
+                    <p class="testimonial-text">"Working with this team has transformed our business operations. Their innovative solutions have helped us achieve unprecedented growth and efficiency."</p>
+                    <p class="testimonial-author">- Sarah Johnson, CEO of TechInnovate</p>
+                </div>
+                
+                <div class="testimonial">
+                    <p class="testimonial-text">"The level of professionalism and expertise demonstrated by the team is outstanding. They delivered beyond our expectations and within the timeline."</p>
+                    <p class="testimonial-author">- Michael Chen, CTO of Global Systems</p>
+                </div>
+                
+                <div class="testimonial">
+                    <p class="testimonial-text">"Their commitment to excellence and customer satisfaction is unmatched in the industry. We've seen remarkable improvements in our performance metrics."</p>
+                    <p class="testimonial-author">- Emma Rodriguez, Operations Director at Enterprise Solutions</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

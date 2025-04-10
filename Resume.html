@@ -1,141 +1,335 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Resume</title>
+  <title>Lucky Ranjit Nakade - Resume</title>
   <style>
-    .font {
-      font-family: 'Courier New', Courier, monospace;
-      margin-left: 1px;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
     }
-
-    .six {
-      margin-left: 10px;
-      font-family: monospace;
-      background-color: rgb(223, 255, 191);
-      background-image: url('./my_image/BBBB.jpeg');
-    }
-
-    .one {
-      background-color: rgb(255, 142, 142);
-    }
-
-    .two {
-      text-align: end;
-    }
-
-    .name {
-      font-family: monospace;
-    }
-
-    .background {
- background-color: rgb(199, 199, 199);
-      margin-left: 250px;
-      background-size: cover;
-      text-align: center;
-      border-style: solid;
-      width: 900px;
-      height: 1900px;
+    
+    body {
+      background-color: #f5f5f5;
+      display: flex;
+      justify-content: center;
       padding: 20px;
     }
-
-    /* Responsive design */
+    
+    .resume {
+      width: 210mm; /* A4 width */
+      height: 297mm; /* A4 height */
+      background-color: white;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      display: flex;
+    }
+    
+    .sidebar {
+      width: 30%;
+      background-color: #2c3e50;
+      color: white;
+      padding: 30px 20px;
+    }
+    
+    .main {
+      width: 70%;
+      padding: 30px;
+    }
+    
+    .profile-img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 3px solid white;
+      display: block;
+      margin: 0 auto 20px;
+      object-fit: cover;
+    }
+    
+    .contact-info {
+      margin-bottom: 30px;
+    }
+    
+    .contact-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+    
+    .icon {
+      margin-right: 10px;
+      width: 16px;
+      text-align: center;
+    }
+    
+    .section-title {
+      font-size: 18px;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+      position: relative;
+      padding-bottom: 10px;
+    }
+    
+    .section-title::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 50px;
+      height: 3px;
+      background-color: #3498db;
+    }
+    
+    .sidebar .section-title::after {
+      background-color: white;
+    }
+    
+    .main .section-title {
+      color: #2c3e50;
+    }
+    
+    .skill-category {
+      margin-bottom: 20px;
+    }
+    
+    .skill-category h4 {
+      font-size: 16px;
+      margin-bottom: 10px;
+      color: #3498db;
+    }
+    
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 15px;
+    }
+    
+    .skill-item {
+      background-color: #f0f0f0;
+      padding: 5px 10px;
+      border-radius: 3px;
+      font-size: 14px;
+      color: #2c3e50;
+    }
+    
+    .sidebar .skill-item {
+      background-color: rgba(255, 255, 255, 0.1);
+      color: white;
+    }
+    
+    .name {
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 5px;
+      color: #2c3e50;
+    }
+    
+    .job-title {
+      font-size: 18px;
+      color: #7f8c8d;
+      margin-bottom: 30px;
+    }
+    
+    .social-links a {
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    
+    .social-links a:hover {
+      color: #3498db;
+    }
+    
+    .thank-you {
+      margin-top: 30px;
+      text-align: center;
+      font-style: italic;
+      color: #7f8c8d;
+    }
+    
+    @media print {
+      body {
+        background-color: white;
+        padding: 0;
+      }
+      
+      .resume {
+        width: 100%;
+        height: auto;
+        box-shadow: none;
+      }
+    }
+    
     @media screen and (max-width: 768px) {
-      .background {
-        margin-left: 0;
-        width: auto;
+      .resume {
+        flex-direction: column;
+        width: 100%;
         height: auto;
       }
-
-      .two {
-        text-align: left;
-      }
-
-      .font,
-      .name,
-      .six {
-        margin-left: 5px;
+      
+      .sidebar, .main {
+        width: 100%;
       }
     }
   </style>
 </head>
 
 <body>
-  <div class="background">
-    <!-- INTERNAL STYLE -->
-    <h1 class="one">RESUME 😎</h1>
-    <br>
-    <h2 class="name"> Name: Lucky Ranjit Nakade</h2>
-    <div class="name"> 🔘 Katol Dist. Nagpur, India</div>
-    <p class="name"> 📞 9226784527</p>
-    <br>
-
-    <!-- LINKS -->
-    <hr>
-    <hr>
-    <div style="text-align: left;">
-      <img style="height: 170px; width: 160px; border-radius: 100px;" src="./Home-image/lucky.jpg">
+  <div class="resume">
+    <div class="sidebar">
+      <img class="profile-img" src="./Home-Page-Image/luckynakade.jpeg" alt="Lucky Ranjit Nakade">
+      
+      <div class="contact-info">
+        <h3 class="section-title">Contact</h3>
+        <div class="contact-item">
+          <span class="icon">📍</span>
+          <span>Katol Dist. Nagpur, India</span>
+        </div>
+        <div class="contact-item">
+          <span class="icon">📞</span>
+          <span>+91 9226784527</span>
+        </div>
+        <div class="contact-item">
+          <span class="icon">✉️</span>
+          <span>nakadelucky8@gmail.com</span>
+        </div>
+      </div>
+      
+      <div class="social-links">
+        <h3 class="section-title">Social</h3>
+        <div class="contact-item">
+          <span class="icon">🔗</span>
+          <a href="https://www.linkedin.com/feed/" target="_blank">LinkedIn: Lucky Nakade</a>
+        </div>
+        <div class="contact-item">
+          <span class="icon">💻</span>
+          <a href="https://github.com/LuckyFullStackDeveloper1" target="_blank">GitHub: LuckyFullStackDeveloper1</a>
+        </div>
+        <div class="contact-item">
+          <span class="icon">📱</span>
+          <span>Skype: Lucky Nakade</span>
+        </div>
+      </div>
+      
+      <div class="tools">
+        <h3 class="section-title">Tools & IDE</h3>
+        <div class="skills-list">
+          <span class="skill-item">HTML</span>
+          <span class="skill-item">JIRA</span>
+          <span class="skill-item">GitHub</span>
+          <span class="skill-item">SourceTree</span>
+          <span class="skill-item">Postman</span>
+          <span class="skill-item">Figma</span>
+          <span class="skill-item">VS Code</span>
+          <span class="skill-item">Xcode</span>
+          <span class="skill-item">Android Studio</span>
+        </div>
+      </div>
+      
+      <div class="languages">
+        <h3 class="section-title">Languages</h3>
+        <div class="skills-list">
+          <span class="skill-item">Java</span>
+          <span class="skill-item">Swift</span>
+          <span class="skill-item">JavaScript</span>
+          <span class="skill-item">Python</span>
+        </div>
+      </div>
     </div>
-
-    <!--INFORMATION  -->
-    <div class="two"> Linked🆔 <a href="https://www.linkedin.com/feed/?trk=guest_homepage-basic_google-one-tap-submit" style="font-family: monospace;"> Lucky Nakade </a> </div>
-    <br>
-    <div class="two"> Github 🆔 <a href="https://github.com/LuckyFullStackDeveloper1/LuckyFullStackDeveloper1" style="font-family: monospace;"> LuckyFulStackdeveloper1 </a></div>
-    <br>
-    <div class="two"> Skyp 🆔 Lucky nakade </div>
-    <br>
-    <div class="two"> Σ nakadelucky8@gmail.com</div>
-    <hr>
-    <br>
-
-    <!-- skill -->
-    <h2 class="five">Sᴋɪʟʟ</h2>
-    <hr>
-    <br>
-    <h3 class="six"> 〈 Web Development 〉</h3>
-    <hr>
-    <p class="font">JavaScript, React, Web Design Standards, Web Testing. Simple project: Simple HTML ⏎</p>
-    <hr>
-    <br>
-    <h3 class="six"> 〈 Mobile Development 〉</h3>
-    <hr>
-    <p class="font">Android Development, Native iOS Development, React Native, Mobile Testing. Simple Project: Simple ⏎</p>
-    <hr>
-    <br>
-    <h3 class="six"> 〈 Middle Layer 〉</h3>
-    <hr>
-    <p class="font">NodeJS, ExpressJS, API Testing. Sample Project: Sample ⏎</p>
-    <hr>
-    <br>
-    <h3 class="six">〈 Database 〉 </h3>
-    <hr>
-    <p class="font">PL/SQL, Database Design, Database Testing, PostgreSQL. Sample Project ⏎</p>
-    <hr>
-    <br>
-    <h3 class="six">〈 Automation 〉</h3>
-    <hr>
-    <p class="font">Selenium, Cypress ⏎</p>
-    <hr>
-    <br>
-    <h3 class="six"> 〈 Languages Known 〉</h3>
-    <hr>
-    <p class="font">Java, Swift, JavaScript, Python ⏎</p>
-    <hr>
-    <br>
-    <h3 class="six"> 〈 Tools used for Development 〉</h3>
-    <hr>
-    <p class="font">HTML, JIRA, GitHub, SourceTree, Postman, Figma ⏎</p>
-    <hr>
-    <br>
-    <h3 class="six">〈 IDE 〉 </h3>
-    <hr>
-    <p class="font">Visual Studio Code, Xcode, Android Studio ⏎</p>
-    <hr>
-    <br>
-    <h1 class="eight">ᴛʜᴀɴᴋ ʏᴏᴜ 🌹</h1>
+    
+    <div class="main">
+      <h1 class="name">Lucky Ranjit Nakade</h1>
+      <h2 class="job-title">Full Stack Developer</h2>
+      
+      <div class="skills-section">
+        <h3 class="section-title">Professional Skills</h3>
+        
+        <div class="skill-category">
+          <h4>Web Development</h4>
+          <div class="skills-list">
+            <span class="skill-item">JavaScript</span>
+            <span class="skill-item">React</span>
+            <span class="skill-item">Web Design Standards</span>
+            <span class="skill-item">Web Testing</span>
+            <span class="skill-item">HTML/CSS</span>
+          </div>
+        </div>
+        
+        <div class="skill-category">
+          <h4>Mobile Development</h4>
+          <div class="skills-list">
+            <span class="skill-item">Android Development</span>
+            <span class="skill-item">Native iOS Development</span>
+            <span class="skill-item">React Native</span>
+            <span class="skill-item">Mobile Testing</span>
+          </div>
+        </div>
+        
+        <div class="skill-category">
+          <h4>Middle Layer</h4>
+          <div class="skills-list">
+            <span class="skill-item">NodeJS</span>
+            <span class="skill-item">ExpressJS</span>
+            <span class="skill-item">RESTful APIs</span>
+            <span class="skill-item">API Testing</span>
+          </div>
+        </div>
+        
+        <div class="skill-category">
+          <h4>Database</h4>
+          <div class="skills-list">
+            <span class="skill-item">PL/SQL</span>
+            <span class="skill-item">Database Design</span>
+            <span class="skill-item">Database Testing</span>
+            <span class="skill-item">PostgreSQL</span>
+          </div>
+        </div>
+        
+        <div class="skill-category">
+          <h4>Automation</h4>
+          <div class="skills-list">
+            <span class="skill-item">Selenium</span>
+            <span class="skill-item">Cypress</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Professional Experience section can be added here -->
+      <div class="experience-section">
+        <h3 class="section-title">Professional Experience</h3>
+        <!-- You can add your work experience here -->
+        <div class="experience-item">
+          <p style="font-style: italic; color: #7f8c8d;">Add your work experience details here</p>
+        </div>
+      </div>
+      
+      <!-- Education section can be added here -->
+      <div class="education-section">
+        <h3 class="section-title">Education</h3>
+        <!-- You can add your education details here -->
+        <div class="education-item">
+          <p style="font-style: italic; color: #7f8c8d;">Add your education details here</p>
+        </div>
+      </div>
+      
+      <!-- Projects section can be added here -->
+      <div class="projects-section">
+        <h3 class="section-title">Projects</h3>
+        <!-- You can add your projects here -->
+        <div class="project-item">
+          <p style="font-style: italic; color: #7f8c8d;">Add your project details here</p>
+        </div>
+      </div>
+      
+      <div class="thank-you">
+        Thank you for considering my application
+      </div>
+    </div>
   </div>
 </body>
-
 </html>
