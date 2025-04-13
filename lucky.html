@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucky Nakade - Home</title>
+
+    <link rel="stylesheet" href="lucky.css">
+    <script src="dat.gui.min.js"></script>
+</head>
+
+<body>
+    <canvas id="fluid-canvas"></canvas>
+
+    <h1>Lucky Nakade</h1>
+    <h2>I'm a Student</h2>
+
+    <div class="nav">
+        <a class="home" href="#">HOME</a>
+        <a class="projects" href="./main.html">PROJECT</a>
+        <a class="about" href="./about.html">ABOUT</a>
+        <a class="contact" href="./contact.html">CONTACT</a>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        const canvas = document.getElementById('fluid-canvas');
+        resizeCanvas();
+
+        const { gl, ext } = getWebGLContext(canvas);
+
+        if (!ext.supportLinearFiltering) {
+            config.SHADING = false;
+            config.BLOOM = false;
+            config.SUNRAYS = false;
+        }
+
+        startGUI();
+
+    </script>
+</body>
+
+</html>
