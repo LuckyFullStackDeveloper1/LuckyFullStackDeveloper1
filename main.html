@@ -1,355 +1,230 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Cache-Control" content="no-cache">
 
-<head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="mobile-web-app-capable" content="yes">
 
-  <title>Home Page</title>
-  <style>
-    /* BODY  */
-    body {
-      font-family: 'Arial', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #000000;
-      color: #333;
-    }
+        <link rel="apple-touch-icon" href="logo.png">
+        <link rel="icon" href="logo.png">
 
-    /* CONTAINER  */
-    .container {
-      max-width: 1500px;
-      margin: 0 auto;
-      padding: 20px;
-    }
+        <title>WebGL Fluid Simulation</title>
+        <meta name="description" content="A WebGL fluid simulation that works in mobile browsers.">
 
-    /* MAIN */
-    .main {
-      margin-top: 50px;
-      padding: 20px;
-      border-radius: 10px;
-      background: rgb(30, 29, 29);
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    }
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Webgl Fluid Simulation">
+        <meta property="og:description" content="A WebGL fluid simulation that works in mobile browsers.">
+        <meta property="og:url" content="https://paveldogreat.github.io/WebGL-Fluid-Simulation/">
+        <meta property="og:image" content="https://paveldogreat.github.io/WebGL-Fluid-Simulation/logo.png">
 
-    .nav {
-      display: flex;
-      justify-content: center;
-      list-style: none;
-      padding: 0;
-      margin: 40px 0;
-    }
+        <script type="text/javascript" src="dat.gui.min.js"></script>
 
-    .nav li {
-      margin: 0 15px;
-    }
+        <style>
+            
+            @font-face {
+                font-family: 'iconfont';
+                src: url('iconfont.ttf') format('truetype');
+            }
 
-    .nav a {
-      display: block;
-      width: 60px;
-      height: 60px;
-      text-align: center;
-      line-height: 60px;
-      background: #333;
-      border-radius: 50%;
-      font-size: 30px;
-      color: #fff;
-      position: relative;
-      transition: all 0.5s;
-      overflow: hidden;
-    }
+            * {
+                user-select: none;
+            }
 
-    .nav a img {
-      width: 100%;
-      height: 100%;
-      border-radius: 50%;
-      transition: all 0.5s;
-    }
+            html, body {
+                overflow: hidden;
+                background-color: #000;
+            }
 
-    .nav a:hover img {
-      transform: scale(1.1);
-      box-shadow: 0 0 15px #70ff10;
-    }
+            body {
+                margin: 0;
+                position: fixed;
+                width: 100%;
+                height: 100%;
+            }
 
-    /* Button-container */
-    .button-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
-      margin-top: 30px;
-    }
+            canvas {
+                width: 100%;
+                height: 100%;
+            }
 
-    .project-card {
-      border: 3px solid #70c5b6;
-      border-radius: 10px;
-      overflow: hidden;
-      transition: transform 0.3s, box-shadow 0.3s;
-      background: #6e5c5c;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-      text-align: center;
-    }
+            .dg {
+                opacity: 0.9;
+            }
 
-    .project-card img {
-      width: 100%;
-      height: 150px;
-      object-fit: cover;
-      transition: transform 0.3s;
-    }
+            .dg .property-name {
+                overflow: visible;
+            }
 
-    .project-card h3 {
-      margin: 0;
-      padding: 15px;
-      background: #8d5858;
-      color: #000000;
-      font-size: 18px;
-    }
+            .bigFont {
+                font-size: 150%;
+                color: #8C8C8C;
+            }
 
-    .project-card:hover img {
-      transform: scale(1.1);
-    }
+            .cr.function.appBigFont {
+                font-size: 150%;
+                line-height: 27px;
+                color: #A5F8D3;
+                background-color: #023C40;
+            }
 
-    /* FOOTER */
+            .cr.function.appBigFont .property-name {
+                float: none;
+            }
 
-    .footer {
-      text-align: center;
-      margin-top: 50px;
-      padding: 20px;
-      border-top: 1px solid #ccc;
-      background: #fff;
-      box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
-    }
+            .cr.function.appBigFont .icon {
+                position: sticky;
+                bottom: 27px;
+            }
 
-    .footer p {
-      margin: 0;
-    }
+            .icon {
+                font-family: 'iconfont';
+                font-size: 130%;
+                float: right;
+            }
 
-    .Home {
-      font-size: x-large;
-      font-family: monospace;
-      color: #f4f4f4;
-      margin-left: 540px;
-      text-decoration: none;
+            .twitter:before {
+                content: 'a';
+            }
+
+            .github:before {
+                content: 'b';
+            }
+
+            .app:before {
+                content: 'c';
+            }
+
+            .discord:before {
+                content: 'd';
+            }
+
+            .promo {
+                display: none;
+                /* display: table; */  
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+                overflow: auto;
+                color: lightblue;
+                background-color: rgba(0,0,0,0.4);
+                animation: promo-appear-animation 0.35s ease-out;
+            }
+
+            .promo-middle {
+                display: table-cell;
+                vertical-align: middle;
+            }
+
+            .promo-content {
+                width: 80vw;
+                height: 80vh;
+                max-width: 80vh;
+                max-height: 80vw;
+                margin: auto;
+                padding: 0;
+                font-size: 2.8vmax;
+                font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+                text-align: center;
+                background-image: url("promo_back.png");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                border-radius: 15px;
+                box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+            }
+
+            .promo-header {
+                height: 10%;
+                padding: 2px 16px;
+            }
+
+            .promo-close {
+                width: 10%;
+                height: 100%;
+                text-align: left;
+                float: left;
+                font-size: 1.3em;
+                /* transition: 0.2s; */
+            }
+
+            .promo-close:hover {
+                /* transform: scale(1.25); */
+                cursor: pointer;
+            }
+
+            .promo-body {
+                padding: 8px 16px 16px 16px;
+                margin: auto;
+            }
+
+            .promo-body p {
+                margin-top: 0;
+                mix-blend-mode: color-dodge;
+            }
+
+            .link {
+                width: 100%;
+                display: inline-block;
+            }
+
+            .link img {
+                width: 100%;
+            }
+
+            @keyframes promo-appear-animation {
+                0% {
+                    transform: scale(2.0);
+                    opacity: 0;
+                }
+                100% {
+                    transform: scale(1.0);
+                    opacity: 1;
+                }
+            }
+            
+        </style>
       
-    }
+        <script>
+            window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+            ga('create', 'UA-105392568-1', 'auto');
+            ga('send', 'pageview');
+        </script>
+        <script async src="https://www.google-analytics.com/analytics.js"></script>
+    </head>
+    <body>
+        <canvas></canvas>
 
-    a {
-      text-decoration: none;
-    }
-
-    /* HOME */
-
-    .home {
-      color: #fff;
-      margin-left: 50px;
-      font-size: 20px;
-      cursor: w-resize;     }
-
-    .Projects {
-      margin-left: 40px;
-      color: #fff;
-      font-size: 20px;
-    }
-
-    img:hover {
-      animation: shake 0.5s;
-      animation-iteration-count: infinite;
-    }
-
-    @keyframes shake {
-      0% {
-        transform: translate(1px, 1px) rotate(0deg);
-      }
-
-      10% {
-        transform: translate(-1px, -2px) rotate(-1deg);
-      }
-
-      20% {
-        transform: translate(-3px, 0px) rotate(1deg);
-      }
-
-      30% {
-        transform: translate(3px, 2px) rotate(0deg);
-      }
-
-      40% {
-        transform: translate(1px, -1px) rotate(1deg);
-      }
-
-      50% {
-        transform: translate(-1px, 2px) rotate(-1deg);
-      }
-
-      60% {
-        transform: translate(-3px, 1px) rotate(0deg);
-      }
-
-      70% {
-        transform: translate(3px, 1px) rotate(-1deg);
-      }
-
-      80% {
-        transform: translate(-1px, -1px) rotate(1deg);
-      }
-
-      90% {
-        transform: translate(1px, 2px) rotate(0deg);
-      }
-
-      100% {
-        transform: translate(1px, -2px) rotate(-1deg);
-      }
-    }
-  </style>
-</head>
-<!-- BODY -->
-
-<body>
-  <div class="lucky ">
-    <!-- link -->
-  </div>
-  <div class="container">
-    <div class="main">
-      <div>
-        <!-- HOME -->
-        <a class="home" href="./index.html">HOME</a>
-      </div>
-      <!-- PROJECT -->
-      <div class="button-container">
-        <div class="project-card">
-          <a href="pageOne.html">
-            <img src="./Home-image/registration .jpg" alt="Form Project">
-            <h3>Form </h3>
-          </a>
-        </div>
-        <div class="project-card">
-          <a href="oddnumber (1).html">
-            <img src="./Home-image/odd or even.jpg" alt="Odd or Even Project">
-            <h3>Odd or Even</h3>
-          </a>
-        </div>
-        <div class="project-card">
-          <a href="./ youtunvideo.html">
-            <img src="./Home-image/youtube.png" alt="YouTube Project">
-            <h3>YouTube </h3>
-          </a>
-        </div>
-        <div class="project-card">
-          <a href="parant_syllabus.html">
-            <img src="./Home-image/SYLLABUS.jpg" alt="Syllabus Project">
-            <h3>Syllabus </h3>
-          </a>
-        </div>
-        <div class="project-card">
-          <a href="parent_calender.html">
-            <img src="./Home-image/ CALENDER .jpg" alt="Calendar Project">
-            <h3>Calendar </h3>
-          </a>
-        </div>
-        <div class="project-card">
-          <a href="parent_chass.html">
-            <img src="./Home-image/chess.jpg" alt="Chess Project">
-            <h3>Chess </h3>
-          </a>
-        </div>
-        <div class="project-card">
-          <a href="Resume.html">
-            <img src="./Home-image/RESUME.jpg" alt="Resume Project">
-            <h3>Resume </h3>
-          </a>
-        </div>
-        <div class="project-card">
-          <a href="calculatorjs.html">
-            <img src="./Home-image/calculator.jpeg" alt="Calculator Project">
-            <h3>Calculator </h3>
-          </a>
-        </div>
-        <div class="project-card">
-          <a href="keyboard.html">
-            <img src="./Home-image/KEYBORAD.jpg" alt="Keyboard Project">
-            <h3>Keyboard </h3>
-          </a>
-        </div>
-        <div class="project-card">
-          <a href="math.html">
-            <img src="./Home-image/MATH.jpg" alt="Math Project">
-            <h3>Math </h3>
-          </a>
-        </div>
-        <div class="project-card">
-          <a href="./ song.html">
-            <img src="./Home-image/SONG.jpg" alt="Song Project">
-            <h3>Song </h3>
-          </a>
-        </div>
-        <div class="project-card">
-          <a href="kbc.html">
-            <img src="./Home-image/kbcl.jpeg" alt="KBC Project">
-            <h3>KBC Game </h3>
-          </a>
-        </div>
-        <div class="project-card">
-          <a href="flags.html">
-            <img src="./Home-image/INDIA.jpg" alt="Flags Project">
-            <h3>Flags </h3>
-          </a>
-        </div>
-        <div class="project-card">
-          <a href="test.html">
-            <img src="./Home-image/project.jpg" alt="Test Project">
-            <h3>Test </h3>
-          </a>
-        </div>
-        <div class="project-card">
-          <a href="parent_form.html">
-            <img src="./Home-image/aplcotionform.jpg" alt="Application Project">
-            <h3>Application Form</h3>
-          </a>
-        </div>
-        <div class="project-card">
-          <a href="flex.html">
-            <img src="./Home-image/flex.jpg" alt="Flex Project">
-            <h3>Flex </h3>
-          </a>
-        </div>
-        <div class="project-card">
-          <a href="googlePage.html">
-            <img src="./Home-image/google.jpg" alt="Google Page Project">
-            <h3>Google Page </h3>
-          </a>
+        <!-- Mother of God, pls forgive me -->
+        <div class="promo">
+            <div class="promo-middle">
+                <div class="promo-content">
+                    <div class="promo-header">
+                        <span class="promo-close">&times;</span>
+                    </div>
+                    <div class="promo-body">
+                        <p>Try Fluid Simulation app!</p>
+                        <div class="links-container">
+                            <a class="link" id="apple_link" target="_blank">
+                                <img class="link-img" alt="Download on the App Store" src="app_badge.png"/>
+                            </a>
+                            <a class="link" id="google_link" target="_blank">
+                                <img class="link-img" alt="Get it on Google Play" src="gp_badge.png"/>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
-      </div>
-    </div>
-  </div>
-  <script>
-    // JavaScript for search functionality
-    const projects = document.querySelectorAll('.project');
-    const searchInput = document.getElementById('searchInput');
+        <script src="./script.js"></script>
+        <a class="home" href="#">HOME</a>
 
-    searchInput.addEventListener('input', function () {
-      const inputValue = this.value.trim().toLowerCase();
-
-      projects.forEach(project => {
-        const title = project.querySelector('p').textContent.toLowerCase();
-        if (title.includes(inputValue)) {
-          project.style.display = 'block';
-        } else {
-          project.style.display = 'none';
-        }
-      });
-    });
-
-    // JavaScript for theme switcher
-    const checkbox = document.getElementById('checkbox');
-    const body = document.body;
-
-    checkbox.addEventListener('change', function () {
-      if (this.checked) {
-        body.classList.add('dark-mode');
-      } else {
-        body.classList.remove('dark-mode');
-      }
-    });
-  </script>
-</body>
-
+    </body>
 </html>
