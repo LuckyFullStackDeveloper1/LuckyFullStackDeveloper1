@@ -2,205 +2,549 @@
 <html lang="en">
 
 <head>
+    <link rel="stylesheet" href="index-main.css">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- index styla css -->
-    <link rel="stylesheet" href="./index.css">
-    <link rel="icon" href="./image_amezoon/lklllll.jpeg">
+    <link rel="icon" href="./Home-Page-Image/icon-home.jpeg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Codystar:wght@300;400&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Julius+Sans+One&family=Kumbh+Sans:wght@100..900&family=Merienda:wght@300..900&display=swap"
+        rel="stylesheet">
+
+    <title>Lucky Nakade Portfolio</title>
+    <style>
+
+    </style>
 </head>
 
 <body>
-    <div class="nevi">
-
-        <div class="search-bar">
-            <input type="text" placeholder="Search...">
-        </div>
-
-        <div class="cart-counter">
-            <!-- Cart: <span id="cart-count">0</span> items -->
-        </div>
-    </div>
-    <br><br><br><br><br><br><br><br>
-
-    <div class="products">
-        <div class="product-box" data-title="Mahindra XUV 3XO" data-price="$30,000"
-            data-description="A compact SUV with modern features.">
-            <img src="./image_amezoon/Mercedes.jpeg" alt="Product 1" class="product-image">
-            <div class="product-title">Mercedes Benz</div>
-            <div class="product-price">Rs.55.80 L</div>
-            <button class="add-to-cart">Add to Cart</button>
-            <button class="more-info"><a class="text" href="./more-Mercedes.html">More Information</a> </button>
-        </div>
-        <div class="product-box" data-title="BMW" data-price="$50,000"
-            data-description="A luxury sedan with high performance.">
-            <img src="./image_amezoon/BMW 7.jpeg" alt="Product 2" class="product-image">
-            <div class="product-title">BMW 7 </div>
-            <div class="product-price">Rs.44.40 L</div>
-            <button class="add-to-cart">Add to Cart</button>
-            <button class="more-info"> <a class="text" href="./more-bmw.html">More Information</a></button>
-        </div>
-        <div class="product-box" data-title="Rolls-Royce" data-price="$300,000"
-            data-description="A symbol of luxury and elegance.">
-            <img src="./image_amezoon/Rolls-Royce-two.png" alt="Product 3" class="product-image">
-            <div class="product-title">Rolls-Royce</div>
-            <div class="product-price">Rs.9.50 Cr</div>
-            <button class="add-to-cart">Add to Cart</button>
-            <button class="more-info"> <a class="text" href="./more-rolls-royce.html">More Information</a></button>
-        </div>
-        <div class="product-box" data-title="Hyundai i20" data-price="$2,500,000"
-            data-description="A high-performance sports car.">
-            <img src="./image_amezoon/audi8.jpeg" alt="Product 4" class="product-image">
-            <div class="product-title">Audi R8</div>
-            <div class="product-price">Rs.1.1 Cr</div>
-            <button class="add-to-cart">Add to Cart</button>
-            <button class="more-info"> More Information</button>
-        </div>
-        <!-- Add more products as needed -->
-        <div class="product-box">
-            <img src="./image_amezoon/Mahindra-image/eight.jpeg" alt="Product 5" class="product-image">
-            <div class="product-title">Mahindra XUV 3XO</div>
-            <div class="product-price">Rs.15.10 L</div> <!-- Price Section -->
-            <button class="add-to-cart">Add to Cart</button>
-            <button class="more-info"> <a class="text" href="./More-Mahindra.html">More Information</a></button>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="#" class="logo">Lucky Nakade</a>
+        <div class="nav-links">
+            <a href="#home">HOME</a>
+            <a href="#about">ABOUT</a>
+            <a href="#projects">PROJECTS</a>
+            <a href="#contact">CONTACT</a>
+            <a href="./Resume.html">RESUME</a>
 
         </div>
-        <div class="product-box">
-            <img src="./image_amezoon/ Fronx.jpeg" alt="Product 6" class="product-image">
-            <div class="product-title">Maruti Suzuki Fronx</div>
-            <div class="product-price">Rs.13.04 L</div> <!-- Price Section -->
-            <button class="add-to-cart">Add to Cart</button>
-            <button class="more-info">More Information</button>
-
+        <div class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
         </div>
-        <div class="product-box">
-            <img src="./image_amezoon/Hyundai Creta.jpeg" alt="Product 7" class="product-image">
-            <div class="product-title">Hyundai Creta</div>
-            <div class="product-price">Rs.11 - 20.L</div> <!-- Price Section -->
-            <button class="add-to-cart">Add to Cart</button>
-            <button class="more-info">More Information</button>
+    </nav>
 
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1 class="hero-title">Hi, I'm <span>Lucky Nakade</span></h1>
+            <h2 class="hero-subtitle">Student & Aspiring Developer</h2>
+            <p class="hero-desc">I'm passionate about creating meaningful digital experiences through innovative
+                solutions and clean code.</p>
+            <a href="#projects" class="hero-btn">View My Work</a>
+            <a href="#contact" class="hero-btn secondary">Contact</a>
         </div>
-        <div class="product-box">
-            <img src="./image_amezoon/Dzire.jpeg" alt="Product 8" class="product-image">
-            <div class="product-title"> Dzire</div>
-            <div class="product-price">Rs.10.19 L</div> <!-- Price Section -->
-            <button class="add-to-cart">Add to Cart</button>
-            <button class="more-info">More Information</button>
 
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Me</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-img">
+                    <img src="./Home-Page-Image/luckyy.JPEG" alt="Lucky Nakade">
+                </div>
+                <div class="about-text">
+                    <h3>Student & Technology Enthusiast</h3>
+                    <p>
+                        I am a passionate student with a keen interest in technology and innovation. Currently pursuing
+                        my degree in Computer Science, I am dedicated to expanding my knowledge and skills in various
+                        programming languages and development frameworks.
+                    </p>
+                    <p>
+                        My journey in technology began with a curiosity about how digital solutions can solve real-world
+                        problems. This curiosity has evolved into a passion for creating clean, efficient, and
+                        user-friendly applications.
+                    </p>
+                    <p>
+                        When I'm not coding or learning new technologies, you can find me exploring the latest industry
+                        trends, participating in hackathons, or collaborating on interesting projects with fellow
+                        students.
+                    </p>
+                    <a href="#contact" class="hero-btn">Let's Connect</a>
+                </div>
+            </div>
         </div>
-        <div class="product-box">
-            <img src="./image_amezoon/Mahindra XUV.jpeg" alt="Product 9" class="product-image">
-            <div class="product-title">Mahindra XUV</div>
-            <div class="product-price">Rs.20 L</div> <!-- Price Section -->
-            <button class="add-to-cart">Add to Cart</button>
-            <button class="more-info">More Information</button>
+    </section>
 
+    <!-- Projects Section -->
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>My Projects</h2>
+            </div>
+
+            <div class="project-categories">
+                <button class="category-btn active" data-filter="all">All</button>
+                <button class="category-btn" data-filter="html-css">HTML / CSS</button>
+                <button class="category-btn" data-filter="javascript">JAVASCRIPT</button>
+                <button class="category-btn" data-filter="live-project">LIVE PROJECT</button>
+                <button class="category-btn" data-filter="Html">HTML</button>
+
+            </div>
+
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card" data-category="html-css">
+                    <div class="project-img">
+                        <img src="./Home-Page-Image/coding.avif" alt="">
+                        <div class="project-category html-css">HTML / CSS</div>
+                        <div class="project-overlay">
+                            <a href="./parent_chass.html" class="view-project">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Chess-Project</h3>
+                        <p>A classic two-player chess game with smooth gameplay and clean design.</p>
+                        <p style="    color: #00a49f;">Using : Table Tags</p>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card" data-category="html-css responsive">
+                    <div class="project-img">
+                        <img src="./Home-Page-Image/coding.avif" alt="">
+
+                        <div class="project-category html-css">HTML / CSS</div>
+                        <div class="project-overlay">
+                            <a href="./parent_form.html" class="view-project">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>FORM</h3>
+                        <p>Effortless data collection with our custom-built online form.
+                        <p style="  color: #00a49f;">Using : Input and Label Tags</p>
+
+
+                        </p>
+                        <div class="project-tags">
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- HTML -->
+
+
+                <!-- TWO -->
+                <div class="project-card" data-category="Html">
+                    <div class="project-img">
+                        <img src="./Home-Page-Image/coding.avif" alt="">
+
+                        <div class="project-category html-css">HTML </div>
+                        <div class="project-overlay">
+                            <a href="./student_details.html" class="view-project">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>STUDENT DETAILS</h3>
+                        <p>Effortless data collection with our custom-built online form.
+                        <p style="  color: #00a49f;">Using : Fieldset Tags</p>
+
+                        </p>
+
+                    </div>
+                </div>
+
+
+                <div class="project-card" data-category="html-css">
+                    <div class="project-img">
+                        <img src="./Home-Page-Image/coding.avif" alt="">
+
+                        <div class="project-category html-css">HTML / CSS </div>
+                        <div class="project-overlay">
+                            <a href="./newyoutube.html" class="view-project">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>YOUTUBE</h3>
+                        <p>A mini YouTube clone for browsing, searching, and playing videos online.
+                        <p style="  color: #00a49f;">Using : Table and Iframe Tags </p>
+
+                        </p>
+
+                    </div>
+                </div>
+
+                <!-- Project 4 (Initially hidden) -->
+                <div class="project-card hidden" data-category="html-css">
+                    <div class="project-img">
+                        <img src="./Home-Page-Image/coding.avif" alt="">
+
+                        <div class="project-category html-css">HTML / CSS</div>
+                        <div class="project-overlay">
+                            <a href="./flags.html" class="view-project">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>FLAGS</h3>
+                        <p>The Flags project is an interactive showcase of national flags with a clean and engaging
+                            design.
+                        <p style="  color: #00a49f;">Using : Div and Image Tags </p>
+                        </p>
+
+                    </div>
+                </div>
+
+                <!-- Project 5 (Initially hidden) -->
+                <div class="project-card hidden" data-category="html-css responsive">
+                    <div class="project-img">
+                        <img src="./Home-Page-Image/coding.avif" alt="">
+
+                        <div class="project-category html-css">HTML / CSS</div>
+                        <div class="project-overlay">
+                            <a href="./luckyy.html" class="view-project">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>CONTAINER</h3>
+                        <p>The Container project is a sleek, responsive layout tool for organizing and displaying
+                            content seamlessly.
+                        <p style="  color: #00a49f;">Using : Div , Image and P Tags </p>
+                        </p>
+
+                    </div>
+                </div>
+
+
+
+                <!--  javaScript  -->
+                <!-- ONE javascript -->
+                <div class="project-card hidden" data-category="javascript">
+                    <div class="project-img">
+                        <img src="./Home-Page-Image/coding.avif" alt="">
+
+                        <div class="project-category html-css">HTML / CSS / JavaScript</div>
+                        <div class="project-overlay">
+                            <a href="./kbc.html" class="view-project">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>KBC</h3>
+                        <p>A quiz-based game inspired by KBC to test knowledge and win virtual rewards.
+                        <p style="  color: #00a49f;">Using JS Language: Script and button Tags </p>
+
+                        </p>
+
+                    </div>
+                </div>
+                <!-- TWO javascript -->
+                <div class="project-card hidden" data-category="javascript">
+                    <div class="project-img">
+                        <img src="./Home-Page-Image/coding.avif" alt="">
+
+                        <div class="project-category html-css">HTML / CSS / JavaScript</div>
+                        <div class="project-overlay">
+                            <a href="./ song.html" class="view-project">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>SONG</h3>
+                        <p>A simple music player project to play, pause, and enjoy your favorite songs.
+                        <p style="  color: #00a49f;">Using JS Language: Script ,audio and Option Tags </p>
+
+                        </p>
+
+                    </div>
+                </div>
+                <!-- THREE  -->
+
+
+                <div class="project-card hidden" data-category="javascript">
+                    <div class="project-img">
+                        <img src="./Home-Page-Image/coding.avif" alt="">
+
+                        <div class="project-category html-css">HTML / CSS / JavaScript</div>
+                        <div class="project-overlay">
+                            <a href="./calculatorjs.html" class="view-project">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>CALCULATOR</h3>
+                        <p>A simple and efficient calculator for quick and accurate computations.
+                        <p style="  color: #00a49f;">Using JS Language: Script and Div Tags </p>
+
+                        </p>
+
+                    </div>
+                </div>
+
+                <!-- FOUR -->
+                <div class="project-card hidden" data-category="javascript">
+                    <div class="project-img">
+                        <img src="./Home-Page-Image/coding.avif" alt="">
+
+                        <div class="project-category html-css">HTML / CSS / JavaScript</div>
+                        <div class="project-overlay">
+                            <a href="./oddnumber (1).html" class="view-project">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>ODD AN EVEN</h3>
+                        <p>A simple tool to check whether a number is odd or even.
+                        <p style="  color: #00a49f;">Using JS Language: Script and Div Tags </p>
+
+                        </p>
+
+                    </div>
+                </div>
+                <!-- FIVE -->
+                <div class="project-card hidden" data-category="javascript">
+                    <div class="project-img">
+                        <img src="./Home-Page-Image/coding.avif" alt="">
+
+                        <div class="project-category html-css">HTML / CSS / JavaScript</div>
+                        <div class="project-overlay">
+                            <a href="./hello.html" class="view-project">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>HELLO</h3>
+                        <p>A simple 'Hello World' project to kickstart your programming journey
+                        <p style="  color: #00a49f;">Using JS Language: Script and Div Tags </p>
+
+                        </p>
+
+                    </div>
+                </div>
+                <!-- SIX -->
+                <div class="project-card hidden" data-category="javascript">
+                    <div class="project-img">
+                        <img src="./Home-Page-Image/coding.avif" alt="">
+
+                        <div class="project-category html-css">HTML / CSS / JavaScript</div>
+                        <div class="project-overlay">
+                            <a href="./login.html" class="view-project">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>LOGIN PAGE</h3>
+                        <p>Simple and stylish login interface for accessing your application.
+                        <p style="  color: #00a49f;">Using JS Language: Script, Input and Label Tags </p>
+
+                        </p>
+
+                    </div>
+                </div>
+
+                <!-- SEVEN -->
+                <div class="project-card hidden" data-category="javascript">
+                    <div class="project-img">
+                        <img src="./Home-Page-Image/coding.avif" alt="">
+
+                        <div class="project-category html-css">HTML / CSS / JavaScript</div>
+                        <div class="project-overlay">
+                            <a href="./lottery.html" class="view-project">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>LOTTERY</h3>
+                        <p>A fun and random number-based lottery game to test your luck.
+                        <p style="  color: #00a49f;">Using JS Language: Script and Input Tags </p>
+
+                        </p>
+
+                    </div>
+                </div>
+                <!-- eight -->
+                <div class="project-card hidden" data-category="javascript">
+                    <div class="project-img">
+                        <img src="./Home-Page-Image/coding.avif" alt="">
+
+                        <div class="project-category html-css">HTML / CSS / JavaScript</div>
+                        <div class="project-overlay">
+                            <a href="./math.html" class="view-project">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>MATH TABLE</h3>
+                        <p>A fun and random number-based lottery game to test your luck.
+                        <p style="  color: #00a49f;">Using JS Language: Script and Button Tags </p>
+
+                        </p>
+
+                    </div>
+                </div>
+                <!-- NINE -->
+                <div class="project-card hidden" data-category="javascript">
+                    <div class="project-img">
+                        <img src="./Home-Page-Image/coding.avif" alt="">
+
+                        <div class="project-category html-css">HTML / CSS / JavaScript</div>
+                        <div class="project-overlay">
+                            <a href="./main.html" class="view-project">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>CURSOR STYLE</h3>
+                        <p>A fun and random number-based lottery game to test your luck.
+                        <p style="  color: #00a49f;">Using JS Language: Script and Div Tags </p>
+
+                        </p>
+
+                    </div>
+                </div>
+
+                <!-- LIVE PROJECT -->
+
+
+                <!-- ONE -->
+
+                <div class="project-card hidden" data-category="live-project">
+                    <div class="project-img">
+                        <img src="./ep _project/image_amezoon/Rolls-Royce-image/back-image.jpeg" alt="">
+
+                        <div class="project-category html-css">HTML / CSS / JavaScript</div>
+                        <div class="project-overlay">
+                            <a href="./ep _project/index.html" class="view-project">View Live Project</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>CAR PROJECT</h3>
+                        <p>A fun and random number-based lottery game to test your luck.
+                        <p style="  color: #00a49f;">Using JS Language: Script and Div Tags </p>
+
+                        </p>
+
+                    </div>
+                </div>
+
+
+                <!-- TWO -->
+
+                <div class="project-card hidden" data-category="live-project">
+                    <div class="project-img">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSf3-fP2nl4yiWIC_bkPbMjZutwLF427XcCcQ&s"
+                            alt="">
+
+                        <div class="project-category html-css">HTML / CSS / JavaScript</div>
+                        <div class="project-overlay">
+                            <a href="#" class="view-project">View Live Project</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>TUTION PROJECT</h3>
+                        <p>A fun and random number-based lottery game to test your luck.
+                        <p style="  color: #00a49f;">Using JS Language: Script and Div Tags </p>
+
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+            <!-- See More Button -->
+            <div class="see-more-container">
+                <button class="see-more-btn">See More Projects</button>
+            </div>
         </div>
-        <div class="product-box">
-            <img src="./image_amezoon/Brezza.png" alt="Product 9" class="product-image">
-            <div class="product-title"> Brezza</div>
-            <div class="product-price">Rs.14.14 L</div> <!-- Price Section -->
-            <button class="add-to-cart">Add to Cart</button>
-            <button class="more-info">More Information</button>
+    </section>
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>CONTACT</h2>
+            </div>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h3>Let's Connect</h3>
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div class="contact-text">
+                            <h4>Location</h4>
+                            <p>Katol, Maharashtra, India</p>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <div class="contact-text">
+                            <h4>Email</h4>
+                            <p>nakadelucky8@gmail.com</p>
+                        </div>
+                    </div>
+                    <br>
 
+                    <div class="contact-item">
+                        <div class="contact-icon">📱</div>
+                        <div class="contact-text">
+                            <h4>Phone</h4>
+                            <p>+91 9226784527</p>
+                        </div>
+                    </div>
+                </div>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3717.9540047069318!2d78.58340687549595!3d21.273288180437945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd45758875e72f5%3A0xc109bb37c5740045!2sGanesh%20Mandir!5e0!3m2!1sen!2sin!4v1743768025711!5m2!1sen!2sin"
+                    width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="social-links">
+                <a href="https://join.skype.com/invite/qFXuilrCltAf" class="social-link">SK</a>
+                <a href="https://www.linkedin.com/feed/?trk=guest_homepage-basic_google-one-tap-submit"
+                    class="social-link">LI</a>
+                <a href="https://github.com/LuckyFullStackDeveloper1/LuckyFullStackDeveloper1"
+                    class="social-link">GH</a>
+            </div>
+            <p class="copyright">© 2025 Lucky Nakade. All rights reserved.</p>
         </div>
-        <div class="product-box">
-            <img src="./image_amezoon/Punch.jpeg" alt="Product 7" class="product-image">
-            <div class="product-title">Tata Punch</div>
-            <div class="product-price">Rs.9.2 L</div> <!-- Price Section -->
-            <button class="add-to-cart">Add to Cart</button>
-            <button class="more-info">More Information</button>
-
-        </div>
-        <div class="product-box">
-            <img src="./image_amezoon/Swift.jpeg" alt="Product 8" class="product-image">
-            <div class="product-title">Swift</div>
-            <div class="product-price">Rs.7.4 L</div> <!-- Price Section -->
-            <button class="add-to-cart">Add to Cart</button>
-            <button class="more-info">More Information</button>
-
-        </div>
-        <!-- 2 -->
-
-
-        <div class="product-box">
-            <img src="./image_amezoon/Toyota Fortuner-two.png" alt="Product 5" class="product-image">
-            <div class="product-title">Toyota Fortuner</div>
-            <div class="product-price">Rs. 45.4 L</div> <!-- Price Section -->
-            <button class="add-to-cart">Add to Cart</button>
-            <button class="more-info">More Information</button>
-
-        </div>
-        <div class="product-box">
-            <img src="./image_amezoon/Kia Seltos-two.png" alt="Product 6" class="product-image">
-            <div class="product-title">Kia Seltos</div>
-            <div class="product-price">Rs.13 - 20 L</div> <!-- Price Section -->
-            <button class="add-to-cart">Add to Cart</button>
-            <button class="more-info">More Information</button>
-
-        </div>
-        <div class="product-box">
-            <img src="./image_amezoon/Honda Amaze.jpeg" alt="Product 7" class="product-image">
-            <div class="product-title">Honda Amaze</div>
-            <div class="product-price">Rs.11 - 17 L</div> <!-- Price Section -->
-            <button class="add-to-cart">Add to Cart</button>
-            <button class="more-info">More Information</button>
-
-        </div>
-        <div class="product-box">
-            <img src="./image_amezoon/Skoda Kylaq.jpeg" alt="Product 8" class="product-image">
-            <div class="product-title">Skoda Kylaq</div>
-            <div class="product-price">Rs.9 L </div> <!-- Price Section -->
-            <button class="add-to-cart">Add to Cart</button>
-            <button class="more-info">More Information</button>
-
-        </div>
-        <!-- 3 -->
-
-
-        <div class="product-box">
-            <img src="./image_amezoon/Volkswagen Virtus.png" alt="Product 5" class="product-image">
-            <div class="product-title">Volkswagen Virtus</div>
-            <div class="product-price">Rs.11,10 L</div> <!-- Price Section -->
-            <button class="add-to-cart">Add to Cart</button>
-            <button class="more-info">More Information</button>
-
-        </div>
-        <div class="product-box">
-            <img src="./image_amezoon/Jeep Compass.jpeg" alt="Product 6" class="product-image">
-            <div class="product-title">Jeep Compass</div>
-            <div class="product-price">Rs.19 L</div> <!-- Price Section -->
-            <button class="add-to-cart">Add to Cart</button>
-            <button class="more-info">More Information</button>
-
-        </div>
-        <div class="product-box">
-            <img src="./image_amezoon/mga.jpeg" alt="Product 7" class="product-image">
-            <div class="product-title">MG Hector</div>
-            <div class="product-price"> Rs.17 L </div> <!-- Price Section -->
-            <button class="add-to-cart">Add to Cart</button>
-            <button class="more-info">More Information</button>
-
-        </div>
-        <div class="product-box">
-            <img src="./image_amezoon/jak.jpeg" alt="Product 8" class="product-image">
-            <div class="product-title">Jaguar F-Pace</div>
-            <div class="product-price">Rs.72.90 L</div> <!-- Price Section -->
-            <button class="add-to-cart">Add to Cart</button>
-            <button class="more-info">More Information</button>
-
-        </div>
-    </div>
-
-    <!-- Cart Items -->
-
-    <!-- Modal for Product Information -->
-
-    </div>
-    </div>
+    </footer>
 
     <script>
-
+        window.addEventListener('scroll', () => { const e = document.querySelector('.navbar'); window.scrollY > 50 ? e.classList.add('sticky') : e.classList.remove('sticky') });
+        const hamburger = document.querySelector('.hamburger'), navLinks = document.querySelector('.nav-links');
+        hamburger.addEventListener('click', () => { navLinks.classList.toggle('active'), hamburger.classList.toggle('active') });
+        document.querySelectorAll('.nav-links a').forEach(e => { e.addEventListener('click', () => { navLinks.classList.remove('active'), hamburger.classList.remove('active') }) });
+        document.querySelectorAll('a[href^="#"]').forEach(e => { e.addEventListener('click', t => { t.preventDefault(), document.querySelector(e.getAttribute('href')).scrollIntoView({ behavior: 'smooth' }) }) });
+        const seeMoreBtn = document.querySelector('.see-more-btn'), additionalProjects = document.querySelector('.additional-projects');
+        seeMoreBtn.addEventListener('click', () => { additionalProjects.classList.toggle('show'), seeMoreBtn.textContent = additionalProjects.classList.contains('show') ? 'Show Less' : 'See More Projects' });
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.tab').forEach(t => t.addEventListener('click', () => {
+                document.querySelectorAll('.tab,.project-section').forEach(e => e.classList.remove('active', 'fade-in'));
+                t.classList.add('active'), document.getElementById('category-title').textContent = `${t.dataset.category} Projects`;
+                const e = document.getElementById(`${t.dataset.category}-projects`);
+                e.classList.add('active'), void e.offsetWidth, e.classList.add('fade-in')
+            }));
+            const e = document.createElement('style');
+            e.innerHTML = `@keyframes fadeIn{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}.fade-in{animation:fadeIn 0.5s ease forwards;}`, document.head.appendChild(e);
+            const t = document.querySelectorAll('.category-btn'), n = document.querySelectorAll('.project-card');
+            t.forEach(c => { c.addEventListener('click', () => { t.forEach(e => e.classList.remove('active')), c.classList.add('active'); const o = c.getAttribute('data-filter'); n.forEach(r => { if (!r.classList.contains('hidden') || seeMoreBtn.textContent === 'Show Less') { if (o === 'all' || r.getAttribute('data-category').includes(o)) { r.style.display = 'block', r.classList.add('fade-in'), setTimeout(() => { r.classList.remove('fade-in') }, 500) } else r.style.display = 'none' } }) }) });
+            seeMoreBtn.addEventListener('click', () => { const o = document.querySelectorAll('.project-card.hidden'), a = document.querySelector('.category-btn.active').getAttribute('data-filter'); if (seeMoreBtn.textContent === 'See More Projects') { o.forEach(r => { r.classList.remove('hidden'); (a === 'all' || r.getAttribute('data-category').includes(a)) ? r.style.display = 'block' : r.style.display = 'none'; r.classList.add('fade-in'), setTimeout(() => { r.classList.remove('fade-in') }, 500) }), seeMoreBtn.textContent = 'Show Less' } else { o.forEach(r => { r.classList.add('hidden'), r.style.display = 'none' }), seeMoreBtn.textContent = 'See More Projects' } });
+        });
     </script>
+
+
 </body>
 
 </html>
