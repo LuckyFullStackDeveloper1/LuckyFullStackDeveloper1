@@ -12,7 +12,7 @@
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-color:  #f4f4f4;
+            background-color: #f4f4f4;
             color: #333;
             transition: background-color 0.5s ease;
         }
@@ -158,9 +158,10 @@
         <section class="car-details">
             <div class="car-info">
                 <div class="">
-                    <h2>    BMW 7 Series</h2>
+                    <h2> 
+                        Mercedes Benz</h2>
                     <p><strong>Price:</strong> 1.84 - 1.87 Cr</p>
-                    <p><strong>Type:</strong> RWD / AWD                    </p>
+                    <p><strong>Type:</strong> RWD / AWD </p>
                     <p><strong>Color:</strong> Maltipal Color</p>
                     <p><strong>Engine:</strong> B57 turbo I6 </p>
                     <p><strong>Global NCAP Safety Rating:</strong> 5 Star</p>
@@ -169,19 +170,22 @@
 
                     <section class="color-buttons">
                         <button
-                            style="background-color: rgb(214, 207, 207); color: black; border-radius: 40%;font-size: 90%;"
-                            onclick="changeCarImageByColor('gray')">gray </button>
+                            style="background-color: silver; color: black; border-radius: 40%;font-size: 90%;"
+                            onclick="changeCarImageByColor('Silver')"> Silver </button>
                         <button
-                            style="background-color: rgb(230, 210, 210); color: black;  border-radius: 40%; font-size: 90%;"
-                            onclick="changeCarImageByColor('white')">white</button>
-                       
+                            style="background-color: rgb(32, 44, 209); color: rgb(251, 251, 251);  border-radius: 40%; font-size: 90%;"
+                            onclick="changeCarImageByColor('Blue')">Blue</button>
+
                         <button style="background-color: rgb(13, 12, 12);  border-radius: 40%;font-size: 90%;"
                             onclick="changeCarImageByColor('Black')">Black</button>
+
+                        <button style="background-color: rgb(250, 246, 246);  border-radius: 40%;font-size: 90%;color: black;"
+                            onclick="changeCarImageByColor('white')">White</button>
                     </section>
                 </div>
 
                 <div class="car-image">
-                    <img id="car-img" src="./image_amezoon/BMW-image/black'.jpeg" alt="Mahindra XUV 3XO">
+                    <img id="car-img" src="./image_amezoon/grey.jpeg" alt="Mahindra XUV 3XO">
                 </div>
 
             </div>
@@ -221,10 +225,11 @@
 
     <script>
         let carImages = {
-            gray: "/Users/enjoy_23_ep/Documents/ep _project/image_amezoon/BMW-image/white.jpeg",
-            white: "image_amezoon/BMW-image/total.jpeg",
-            Black: "image_amezoon/BMW-image/black'.jpeg",
-            
+            Silver: "image_amezoon/Mercedes-image/Silver.jpeg",
+            Blue: "image_amezoon/Mercedes-image/blue.jpeg",
+            white: "image_amezoon/Mercedes-image/white.jpeg",
+            Black: "image_amezoon/Mercedes-image/black.jpeg",
+
         };
 
         function changeCarImageByColor(color) {
