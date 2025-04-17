@@ -514,7 +514,7 @@ textarea.form-control {
 
 /* Footer */
 .footer {
-    background-color: #FF6E31;
+    background-color: #00a49f;
     color: #fff;
     padding: 2rem 0;
     text-align: center;
@@ -541,7 +541,7 @@ textarea.form-control {
 }
 
 .social-link:hover {
-    background-color: #00a49f;
+    background-color: #5fac0d;
     transform: translateY(-5px);
 }
 
@@ -786,11 +786,13 @@ textarea.form-control {
 }
 
 .project-category.html-css {
-    background-color: #e34c26;
+    background-color: #00a49f;
+    ;
 }
 
 .project-category.javascript {
-    background-color: #f04f4f;
+    background-color: #00a49f;
+ 
     color: #323330;
 }
 
@@ -819,7 +821,7 @@ textarea.form-control {
 .view-project {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #00a49f;
+    background-color: #23b340;
     color: white;
     border-radius: 30px;
     text-decoration: none;
