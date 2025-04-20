@@ -523,13 +523,13 @@ textarea.form-control {
 .social-links {
     display: flex;
     justify-content: center;
-    gap: 1rem;
+    gap: 2rem;
     margin-bottom: 1rem;
 }
 
 .social-link {
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
     background-color: #444;
     border-radius: 50%;
     display: flex;
@@ -541,7 +541,7 @@ textarea.form-control {
 }
 
 .social-link:hover {
-    background-color: #5fac0d;
+    background-color: #00779c;
     transform: translateY(-5px);
 }
 
